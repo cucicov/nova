@@ -22,6 +22,84 @@
     <meta name="theme-color" content="#fafafa">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        jQuery(function ($) {
+
+            $(function() {
+                <!-- mobile check -->
+                var is_mobile = true;
+
+                if( $('#isMobile').css('display')==='none') {
+                    is_mobile = false;
+                }
+
+                <!-- random default inits -->
+                $('#accordion a').click(function($e) {
+                    $e.preventDefault();
+                });
+
+                <!-- accordion menu -->
+                var Accordion = function(el, multiple) {
+                    this.el = el || {};
+                    this.multiple = multiple || false;
+
+                    // Variables privadas
+                    var links = this.el.find('.link');
+                    // Evento
+                    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+                }
+
+                Accordion.prototype.dropdown = function(e) {
+                    var $el = e.data.el;
+                    $this = $(this);
+                    $next = $this.next();
+
+                    $next.slideToggle();
+                    $this.parent().toggleClass('open');
+
+                    if (!e.data.multiple) {
+                        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                    };
+                }
+
+                var accordion = new Accordion($('#accordion'), false);
+
+                if (is_mobile) {
+                    $(".submenu .main-menu-item ").click(function () {
+                        let selectedOption = $(this).text();
+                        $('#mobile-selected').html(selectedOption);
+
+                        // toggle list back.
+                        $next = $('.link').next();
+                        $next.slideToggle();
+                        $('.link').parent().toggleClass('open');
+
+                        return false;
+                    });
+                } else {
+                    $(".main-menu-item").click(function () {
+                        $(".main-menu-item").removeClass("active-main-menu-item");
+                        $(this).addClass("active-main-menu-item");
+                        return false;
+                    });
+                }
+
+                // init dates background
+                $('.calendar-day-container').each(function() {
+                    let cal_date = $(this).find('.day-date-nr').text();
+                    $(this).css('background-image', 'url(\'../img/' + cal_date.trim() + '.svg\')');
+
+                });
+
+            });
+
+        });
+
+    </script>
+
 </head>
 
 <body>
@@ -30,11 +108,12 @@
     <source src="img/panamea.mp4" type="video/mp4">
 </video>
 
+<div id="isMobile"></div>
+
 <div class = "wrapper">
     <div class="content">
-    <!--    <div>-->
 
-    <!--    </div>-->
+        <!-- HEADER -->
         <div class="content-container-row">
             <div id="logo">
                 <img src="img/logo.svg">
@@ -47,6 +126,7 @@
                 </div>
             </div>
         </div>
+
         <div class="content-container-row">
             <div id="languages">
                 <a href="#">RO</a>
@@ -62,21 +142,694 @@
                 </div>
             </div>
         </div>
+
         <div class="content-container-row">
             <div id="box2">
             </div>
         </div>
-        <div class="content-container-row pad-bot-130">
-            <div class="main-menu-item">
-                Festival
-                <div class="main-menu-arrow">
-                    <img src="img/arrow.png"/>
+
+        <div class="content-container-row pad-top-130">
+
+            <!-- MENU MOBILE -->
+
+            <div id="menu-mobile">
+                <ul id="accordion" class="accordion">
+                    <li>
+                        <div class="link active-main-menu-item" style="display: flex; flex-direction: row;">
+                            <a href="#">
+                                <div id="mobile-selected" class="main-menu-item-text">
+                                    Festival
+                                </div>
+                            </a>
+                            <div class="main-menu-arrow">
+                                <img src="img/arrow.png"/>
+                            </div>
+                        </div>
+                        <ul class="submenu">
+                            <li>
+                                <div class="main-menu-item">
+                                    <a href="#">
+                                        <div id="mobile-festival" class="main-menu-item-text">
+                                            Festival
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="main-menu-item">
+                                    <a href="#">
+                                        <div id="mobile-performance" class="main-menu-item-text">
+                                            Performance
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="main-menu-item">
+                                    <a href="#">
+                                        <div id="mobile-artist-talks" class="main-menu-item-text">
+                                            Artist Talks
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="main-menu-item">
+                                    <a href="#">
+                                        <div id="mobile-workshops" class="main-menu-item-text">
+                                            Workshops
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- MENU DESKTOP -->
+
+            <div id="menu-desktop">
+                <div class="main-menu-item active-main-menu-item">
+                    <a href="#">
+                        <div id="festival" class="main-menu-item-text">Festival</div>
+                    </a>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
+                </div>
+                <div class="main-menu-item">
+                    <a href="#">
+                        <div id="performance" class="main-menu-item-text">Performance</div>
+                    </a>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
+                </div>
+                <div class="main-menu-item">
+                    <a href="#">
+                        <div id="artist-talks" class="main-menu-item-text">Artist Talks</div>
+                    </a>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
+                </div>
+                <div class="main-menu-item">
+                    <a href="#">
+                        <div id="workshops" class="main-menu-item-text">Workshops</div>
+                    </a>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
                 </div>
             </div>
-            <div class="main-menu-item">Performance</div>
-            <div class="main-menu-item">Artist Talks</div>
-            <div class="main-menu-item">Workshops</div>
+
+            <div class="main-menu-item-bell">
+                <a href="#">
+                    <div id="bell">
+                        <img src="img/bell.svg"/>
+                    </div>
+                </a>
+            </div>
         </div>
+
+        <!-- CONTENT -->
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            23
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="day-event-type">
+                            PERFORMANCE
+                        </div>
+                        <div class="day-event-name">
+                            Speak Sun
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            DESCHIS GASTROBAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="calendar-day-container" style="flex-direction: column">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            24
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+<!--                        <div class="day-event-type">-->
+<!--                            EVENT-->
+<!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            25
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-special">
+                    <div class="day-special-left">
+                        <div class="day-date-part">
+                            <div class="day-date-nr">
+                                23
+                            </div>
+                            <div class="day-date-mon">
+                                AUG
+                            </div>
+                        </div>
+                        <div class="day-event-part">
+                            <div class="day-event-type">
+                                EVENT
+                            </div>
+                            <div class="day-event-name">
+                                Exhibition Opening
+                            </div>
+                            <div class="day-event-time">
+                                18:00 - 21:00
+                            </div>
+                            <div class="day-event-location">
+                                GOETHE INSTITUTE
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-special-right" style="background-image: url('../img/sample.jpg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container" style="flex-direction: column">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            24
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            25
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="calendar-day-container">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="day-event-type">
+                            EVENT
+                        </div>
+                        <div class="day-event-name">
+                            Exhibition Opening
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="day-event-type">
+                            PERFORMANCE
+                        </div>
+                        <div class="day-event-name">
+                            Speak Sun
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            DESCHIS GASTROBAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="calendar-day-container" style="flex-direction: column">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            24
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            25
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-special">
+                    <div class="day-special-left">
+                        <div class="day-date-part">
+                            <div class="day-date-nr">
+                                23
+                            </div>
+                            <div class="day-date-mon">
+                                AUG
+                            </div>
+                        </div>
+                        <div class="day-event-part">
+                            <div class="day-event-type">
+                                EVENT
+                            </div>
+                            <div class="day-event-name">
+                                Exhibition Opening
+                            </div>
+                            <div class="day-event-time">
+                                18:00 - 21:00
+                            </div>
+                            <div class="day-event-location">
+                                GOETHE INSTITUTE
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-special-right" style="background-image: url('../img/sample.jpg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-special">
+                    <div class="day-special-left">
+                        <div class="day-date-part">
+                            <div class="day-date-nr">
+                                23
+                            </div>
+                            <div class="day-date-mon">
+                                AUG
+                            </div>
+                        </div>
+                        <div class="day-event-part">
+                            <div class="day-event-type">
+                                EVENT
+                            </div>
+                            <div class="day-event-name">
+                                Exhibition Opening
+                            </div>
+                            <div class="day-event-time">
+                                18:00 - 21:00
+                            </div>
+                            <div class="day-event-location">
+                                GOETHE INSTITUTE
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-special-right" style="background-image: url('../img/sample.jpg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container" style="flex-direction: column">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            24
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part-simple">
+                        <!--                        <div class="day-event-type">-->
+                        <!--                            EVENT-->
+                        <!--                        </div>-->
+                        <div class="day-event-name">
+                            Exhibition Open
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="calendar-day-container">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            23
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="day-event-type">
+                            EVENT
+                        </div>
+                        <div class="day-event-name">
+                            Exhibition Opening
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            GOETHE INSTITUTE
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-special">
+                    <div class="day-special-left">
+                        <div class="day-date-part">
+                            <div class="day-date-nr">
+                                23
+                            </div>
+                            <div class="day-date-mon">
+                                AUG
+                            </div>
+                        </div>
+                        <div class="day-event-part">
+                            <div class="day-event-type">
+                                EVENT
+                            </div>
+                            <div class="day-event-name">
+                                Exhibition Opening
+                            </div>
+                            <div class="day-event-time">
+                                18:00 - 21:00
+                            </div>
+                            <div class="day-event-location">
+                                GOETHE INSTITUTE
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-special-right" style="background-image: url('../img/sample.jpg');">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="calendar-day-container">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="day-event-type">
+                            PERFORMANCE
+                        </div>
+                        <div class="day-event-name">
+                            Speak Sun
+                        </div>
+                        <div class="day-event-time">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            DESCHIS GASTROBAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="calendar-day-container">
+            </div>
+
+        </div>
+
         <div class="content-container-row">
             ll <br/>
             ll <br/>
