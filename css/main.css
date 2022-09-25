@@ -8,6 +8,10 @@
  */
 
 
+@font-face {
+  font-family: 'OpenSansCondensed';
+  src: url('fonts/OpenSans_Condensed-SemiBold.ttf') format('truetype');
+}
 
 #accordion {
   margin: 0;
@@ -110,6 +114,11 @@ a {
   display: none;
   /*background: #444359;*/
   /*font-size: 14px;*/
+  margin-left: -40px;
+}
+
+.submenu .main-menu-item-text {
+  font-size: 24px;
 }
 
 /*.submenu li { border-bottom: 1px solid #4b4a5e; }*/
@@ -118,7 +127,7 @@ a {
   display: block;
   text-decoration: none;
   padding: 12px;
-  padding-left: 42px;
+  padding-left: 0px;
   -webkit-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
@@ -130,6 +139,7 @@ a {
 
 #menu-mobile {
   display: none;
+  margin-bottom: 24px;
 }
 
 /* ==========================================================================
@@ -138,11 +148,6 @@ a {
 
 #isMobile {
   display: none;
-}
-
-@font-face {
-  font-family: Moderat;
-  src: url('fonts/Moderat-Regular.ttf');
 }
 
 html, body {
@@ -157,15 +162,21 @@ html, body {
 .wrapper {
   max-width: 1440px;
   margin: auto;
+  background-image: url('../img/footer-bg.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.sponsor-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .content {
   display: flex;
   height: 100%;
-  background-image: url('../img/footer-bg.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: contain;
   position: relative;
   margin: 50px 100px 0px 100px;
   flex-direction: column;
@@ -178,7 +189,7 @@ html, body {
 }
 
 #panamea {
-  position: fixed;
+  position: absolute;
   top: -550px;
   right: -550px;
 }
@@ -206,14 +217,27 @@ html, body {
 
 #logo-text-content{
   padding-left: 16px;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+
 }
 
 #languages {
   font-style: normal;
   font-weight: 200;
   font-size: 20px;
-  min-width: 100px;
-  margin-right: 25px;
+  margin-right: 20px;
+  margin-top: 7px;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
 }
 
 #languages a {
@@ -237,12 +261,35 @@ html, body {
   display: flex;
   align-items: center;
 
-  font-family: Moderat;
+  font-family: OpenSansCondensed;
   font-size: 20px;
   font-weight: 300;
   line-height: 22px;
   letter-spacing: -0.02em;
   text-align: left;
+
+  margin-left: 125px;
+}
+
+
+#program-hours {
+  padding: 15px;
+  margin-top: -40px;
+  background: #FF95E7;
+  color: rgba(0, 0, 28, 1);
+  border-radius: 2px;
+  /*margin-left: 25px;*/
+  display: flex;
+  align-items: center;
+
+  font-family: OpenSansCondensed;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  text-align: left;
+
+  margin-left: 140px;
 }
 
 #box1 {
@@ -273,11 +320,8 @@ html, body {
 
 #program-text {
   padding-left: 16px;
-  font-family: 'Open Sans';
+  font-family: 'OpenSansCondensed';
   font-size: 20px;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: -0.02em;
   text-align: left;
 
 }
@@ -301,6 +345,8 @@ html, body {
 
 .main-menu-item-bell {
   margin-left: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 .main-menu-item a{
@@ -318,6 +364,88 @@ html, body {
 .active-main-menu-item .main-menu-arrow{
   display: inline;
 }
+
+.active-main-menu-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+
+.generic-header .main-menu-item-text {
+  color: #fff;
+}
+
+.generic-header .main-menu-arrow{
+  display: inline;
+}
+
+.generic-header {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 60px;
+  margin-bottom: 24px;
+}
+
+.expo-item{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  aspect-ratio: 1 / 1 ;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.expo-static-text {
+  align-items: flex-end;
+  font-family: Open Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: rgba(173, 174, 203, 1);
+  margin-top: auto;
+}
+
+.expo-link-title {
+  font-family: Open Sans;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.clickable-expo-item {
+  cursor: pointer;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: var(--bg-image);
+}
+
+.clickable-expo-item-hover::before {
+  position: absolute;
+  content: "";
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: var(--bg-image);
+  filter: url('#blackCurrant-and-mint') sepia(0.14) contrast(1.8) brightness(0.7) hue-rotate(341deg) grayscale(0.19);
+}
+
+.clickable-expo-item-container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#filter-icon {
+  margin-left: auto;
+}
+
 
 .main-menu-item-text {
   font-family: 'Open Sans', serif;
@@ -407,7 +535,7 @@ html, body {
   box-sizing: border-box;
 }
 
-.day-event-type {
+.small-pink-heading {
   font-family: 'Open Sans';
   font-size: 12px;
   font-weight: 600;
@@ -430,7 +558,7 @@ html, body {
   color: #fff;
 }
 
-.day-event-time {
+.small-not-so-pink-footer {
   flex: 1 1;
   display: flex;
   align-items: flex-end;
@@ -441,6 +569,16 @@ html, body {
   letter-spacing: 0.12em;
   text-align: left;
   color: rgba(173, 174, 203, 1);
+}
+
+.small-not-so-pink-footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.small-not-so-pink-footer-line {
+  margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
 .day-event-location {
@@ -672,7 +810,7 @@ textarea {
   }
 
   #panamea {
-    position: fixed;
+    position: absolute;
     top: -550px;
     left: -120px;
   }
@@ -691,12 +829,26 @@ textarea {
   }
 
   .pad-top-130 {
-    margin-top: 15px;
+    margin-top: 80px;
   }
 
   .main-menu-item-bell {
     order: -1;
-    margin-bottom: 25px;
+    margin-bottom: -40px;
+  }
+
+  #program{
+    margin-left: 0px;
+    margin-top: 24px;
+  }
+
+  .expo-item{
+    flex: 1;
+    margin-bottom: 24px;
+  }
+
+  .expo-static-text {
+    margin-top: 70px;
   }
 
   #menu-desktop {
@@ -750,7 +902,7 @@ textarea {
 @media only screen and (max-width: 1440px) and (min-width: 600px) {
   /* Style adjustments for viewports that meet the condition */
   #panamea {
-    position: fixed;
+    position: absolute;
     top: -550px;
     left: 160px;
   }
