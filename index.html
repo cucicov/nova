@@ -28,18 +28,180 @@
     <script>
         jQuery(function ($) {
 
-            $(function() {
-                <!-- mobile check -->
-                var is_mobile = true;
+            <!-- mobile check -->
+            var is_mobile = true;
 
-                if( $('#isMobile').css('display')==='none') {
-                    is_mobile = false;
+            if( $('#isMobile').css('display')==='none') {
+                is_mobile = false;
+            }
+
+            var refreshCalendarDateSpacings = function(id) {
+                if(!is_mobile){
+                    $(".calendar-day-container").css("margin-left", "0px");
+                    $(".calendar-day-container-wide").css("margin-left", "0px");
+                    $(id+":odd").css("margin-left", "24px");
+
+                    // $("calendar-day-container-wide").css("margin-left", "0px");
+                    setTimeout(function () {
+                        if ($(".calendar-day-container:visible").length % 2 == 1) {
+                            console.log($(".calendar-day-container:visible").length);
+                            var rrand = Math.floor(Math.random() * 10);
+                            $(".calendar-day-container").last().css("margin-left", "0px");
+                            console.log($(".calendar-day-container").last());
+                            console.log(rrand);
+                        }
+                    }, 300);
                 }
+            }
+
+            refreshCalendarDateSpacings(".calendar-day-container");
+
+            var filterCalendar = function(id) {
+                console.log(id);
+                var delay = 250;
+                $(".performance, .artist-talks, .workshops").hide(delay, 'swing', function () {
+
+                    if ($(".performance:visible").length === 0 &&
+                        $(".artist-talks:visible").length === 0 &&
+                        $(".workshops:visible").length === 0) {
+                        if (id === 'festival') {
+                            refreshCalendarDateSpacings(".calendar-day-container");
+                            $(".performance").show(delay, 'swing');
+                            $(".artist-talks").show(delay, 'swing');
+                            $(".workshops").show(delay, 'swing');
+
+                        } else if (id === 'performance') {
+                            refreshCalendarDateSpacings(".performance");
+                            $(".performance").show(delay, 'swing');
+                        } else if (id === 'artist-talks') {
+                            refreshCalendarDateSpacings(".artist-talks");
+                            $(".artist-talks").show(delay, 'swing');
+                        } else if (id === 'workshops') {
+                            refreshCalendarDateSpacings(".workshops");
+                            $(".workshops").show(delay, 'swing');
+                        }
+
+                    }
+
+                });
+
+
+                // setTimeout(refreshCalendarDateSpacings(".artist-talks"), 2000);
+
+            }
+
+            $(function() {
+
+                // translations
+                // The active locale
+                let locale = "en";
+
+                // We can have as many locales here as we want,
+                // and use any locales we want. We have English
+                // and Arabic as locales here as examples.
+                const translations = {
+                    // English translations
+                    "en": {
+                        "starts": "starts",
+                        "start-date": "nov. 22",
+                        "ends": "ends",
+                        "end-date": "dec. 17",
+                        "open-info": "The exhibition is open every day from 10AM to 7PM",
+                        "festival": "Festival",
+                        "performance": "Performance",
+                        "artist-talks": "Artist Talks",
+                        "artist-talk": "Artist Talk",
+                        "workshops": "Workshops",
+                        "workshop": "Workshop",
+                        "nov": "nov",
+                        "dec": "dec",
+                        "installation": "installation",
+                        "sponsors": "Our sponsors",
+                        "prev-ed": "previous editions",
+                        "concept-text-1": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
+                            "                    <br/><br/>\n" +
+                            "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
+                        "concept-text-2": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
+                            "                    <br/><br/>\n" +
+                            "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
+                    },
+
+                    // Arabic translations
+                    "ro": {
+                        "starts": "începe pe",
+                        "start-date": "22 noiembrie",
+                        "ends": "se încheie pe",
+                        "end-date": "17 decembrie",
+                        "open-info": "Expoziția este deschisă zilnic între 10:00 și 19:00",
+                        "festival": "Festival",
+                        "performance": "Performance",
+                        "artist-talks": "Artist Talks",
+                        "artist-talk": "Artist Talk",
+                        "workshops": "Ateliere",
+                        "workshop": "Atelier",
+                        "nov": "nov",
+                        "dec": "dec",
+                        "installation": "instalație",
+                        "sponsors": "Sponsorii noștri",
+                        "prev-ed": "ediții anterioare",
+                        "concept-text-1": "RO RO RORORORORORORORORORO  RORORORORO RORO vRO",
+                        "concept-text-2": "RO RO RORORORORORORORORORO  RORORORORO RORO vRO",
+                    },
+                };
+
+                // When the page content is ready...
+                document
+                    .querySelectorAll("[data-i18n-key]")
+                    .forEach(translateElement);
+
+                function translateElement(element) {
+                    const key = element.getAttribute("data-i18n-key");
+                    const translation = translations[locale][key];
+                    element.innerText = translation;
+                }
+
+                // ----- translations
+
+                function GetURLParameter(sParam){
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++)
+                    {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam)
+                        {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+
+                function getLocalStream() {
+                    // navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
+                    //     window.localStream = stream; // A
+                    //     window.localAudio.srcObject = stream; // B
+                    //     window.localAudio.autoplay = true; // C
+                    // }).catch((err) => {
+                    //     console.error(`you got an error: ${err}`)
+                    // });
+                }
+
+
+                const expo_item_audio_click = new Audio("sound/softer-click.mp3" );
+                const calendar_item_audio_click = new Audio("sound/pull-plant.mp3" );
 
                 <!-- random default inits -->
                 $('#accordion a').click(function($e) {
                     $e.preventDefault();
                 });
+
+                // load category from url
+                let category = GetURLParameter('category');
+                if (category !== undefined && $(".main-menu-item-"+category).length > 0) {
+                    $(".main-menu-item").removeClass("active-main-menu-item");
+                    $(".main-menu-item-"+category).addClass("active-main-menu-item");
+                    $('#mobile-selected').html(translations[locale][category]);
+                    filterCalendar(category);
+                }
 
                 <!-- accordion menu -->
                 var Accordion = function(el, multiple) {
@@ -67,8 +229,9 @@
 
                 var accordion = new Accordion($('#accordion'), false);
 
+                // menu behavior for mobile and desktop.
                 if (is_mobile) {
-                    $(".submenu .main-menu-item ").click(function () {
+                    $(".submenu .main-menu-item ").on("click", function () {
                         let selectedOption = $(this).text();
                         $('#mobile-selected').html(selectedOption);
 
@@ -81,12 +244,30 @@
                         $(".main-menu-item").removeClass("active-main-menu-item");
                         $(this).addClass("active-main-menu-item");
 
+                        filterCalendar($(this).find('.main-menu-item-text').attr('id'));
+
+                        selectedOption = $(this).find(".main-menu-item-text").attr('id');
+                        const url = new URL(window.location);
+                        url.searchParams.set('category', selectedOption.trim());
+                        window.history.pushState({}, '', url);
+                        // parent.location.hash = "?category=" + selectedOption;
+
                         return false;
                     });
                 } else {
-                    $(".main-menu-item").click(function () {
+                    $(".main-menu-item").on("click", function () {
+                        let selectedOption = $(this).find(".main-menu-item-text").attr('id');
                         $(".main-menu-item").removeClass("active-main-menu-item");
                         $(this).addClass("active-main-menu-item");
+
+                        filterCalendar($(this).find('.main-menu-item-text').attr('id'));
+
+                        const url = new URL(window.location);
+                        url.searchParams.set('category', selectedOption.trim());
+                        window.history.pushState({}, '', url);
+
+                        // parent.location.hash = "?category=" + selectedOption.trim();
+
                         return false;
                     });
                 }
@@ -101,18 +282,65 @@
                 // set notification visibility
                 // $("#bell").hide();
 
+                // calendar items links
+                $(".calendar-day-container").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                $(".calendar-day-container-wide").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                $('.calendar-day-container').on({
+                    mouseenter: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 400px");
+                        $(this).find(".day-event-part").css("transition", "all 0.4s");
+                        calendar_item_audio_click.play();
+                    },
+                    mouseleave: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 348px");
+                        $(this).find(".day-event-part").css("transition", "all 2s");
+                    }
+                });
+
+                $('.calendar-day-container-wide').on({
+                    mouseenter: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 300px");
+                        $(this).find(".day-special-right").css("flex", "0 1 800px");
+                        $(this).find(".day-event-part").css("transition", "all 0.3s");
+                        calendar_item_audio_click.play();
+                        // $(this).find(".day-special-right").css("transition", "all 0.4s");
+                    },
+                    mouseleave: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 348px");
+                        $(this).find(".day-special-right").css("flex", "0 1 632px");
+                        $(this).find(".day-event-part").css("transition", "all 1s");
+                        // $(this).find(".day-special-right").css("transition", "all 2s");
+                    }
+                });
+
                 // expo items links
-                $(".clickable-expo-item").click(function() {
+
+                $(".clickable-expo-item").on("click", function() {
                     window.location = $(this).attr("href");
                     return false;
                 });
 
                 $(".clickable-expo-item").on({
                     mouseenter: function() {
-                        $(this).addClass("clickable-expo-item-hover");
+                        $(this).fadeTo(100, 0.5, function (){
+                            $(this).addClass("clickable-expo-item-hover");
+                            expo_item_audio_click.play();
+                        });
+                        $(this).fadeTo(300, 1);
                     },
                     mouseleave: function() {
-                        $(this).removeClass("clickable-expo-item-hover");
+                        $(this).fadeTo(100, 0.5, function () {
+                            $(this).removeClass("clickable-expo-item-hover");
+                        });
+                        $(this).fadeTo(300, 1.0);
                     }
                 })
 
@@ -121,6 +349,34 @@
                     $(this).css('--bg-image', 'url(\'' + $(this).attr("bgimg") + '\')');
                 });
 
+                // footer button links
+                $(".footer-button").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                // language links
+                $("#lang-en").on("click", function() {
+                    locale = "en";
+                    $("#lang-en").addClass("active");
+                    $("#lang-ro").removeClass("active");
+                    document
+                        .querySelectorAll("[data-i18n-key]")
+                        .forEach(translateElement);
+                    return false;
+                });
+
+                $("#lang-ro").on("click", function() {
+                    locale = "ro";
+                    $("#lang-en").removeClass("active");
+                    $("#lang-ro").addClass("active");
+                    document
+                        .querySelectorAll("[data-i18n-key]")
+                        .forEach(translateElement);
+                    return false;
+                });
+
+                getLocalStream();
             });
 
         });
@@ -487,9 +743,11 @@
     </defs>
 </svg>
 
-<video playsinline autoplay muted loop id="panamea">
-    <source src="img/panamea.mp4" type="video/mp4">
-</video>
+<div class="video-wrapper">
+    <video playsinline autoplay muted loop id="panamea">
+        <source src="img/panamea.mp4" type="video/mp4">
+    </video>
+</div>
 
 <div id="isMobile"></div>
 
@@ -509,23 +767,27 @@
                 </div>
             </div>
             <div class="main-menu-item-bell">
-                <div id="languages">
-                    <a href="#">EN</a>
-                    <a href="#">RO</a>
-                </div>
-                <a href="#">
+                <a href="#" style="align-self: flex-end;">
                     <div id="bell">
                         <img src="img/bell.svg"/>
                     </div>
                 </a>
+                <div id="languages">
+                    <a href="" id="lang-en" class="active">
+                    </a>
+                    <a href="" id="lang-ro">
+                    </a>
+                </div>
             </div>
         </div>
 
         <div class="content-container-row">
             <div id="program">
                 <div id="program-text">
-                    <span style="color: #FF95E7">STARTS</span> <span style="color: #00001C">NOV. 22</span> <br/>
-                    <span style="color: #FF95E7">ENDS</span> <span style="color: #00001C">DEC.17</span> <br/>
+                    <span style="color: #FF95E7" data-i18n-key="starts">STARTS</span>
+                    <span style="color: #00001C" data-i18n-key="start-date">NOV. 22</span> <br/>
+                    <span style="color: #FF95E7" data-i18n-key="ends">ENDS</span>
+                    <span style="color: #00001C" data-i18n-key="end-date">DEC.17</span> <br/>
                     <span style="color: #FF95E7">2022</span> <br/>
                 </div>
                 <div id="box1">
@@ -534,7 +796,7 @@
         </div>
 
         <div class="content-container-row">
-            <div id="program-hours">
+            <div id="program-hours" data-i18n-key="open-info">
                 The exhibition is open every day from 10AM to 7PM
             </div>
         </div>
@@ -553,7 +815,7 @@
                     <li>
                         <div class="link active-main-menu-item" style="display: flex; flex-direction: row;">
 <!--                            <a href="#">-->
-                                <div id="mobile-selected" class="main-menu-item-text">
+                                <div id="mobile-selected" class="main-menu-item-text" data-i18n-key="festival">
                                     Festival
                                 </div>
 
@@ -569,35 +831,35 @@
                         <ul class="submenu">
                             <li>
                                 <div class="main-menu-item">
-                                    <a href="#">
-                                        <div id="mobile-festival" class="main-menu-item-text">
+                                    <a href="">
+                                        <div id="festival" class="main-menu-item-text" data-i18n-key="festival">
                                             Festival
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li>
-                                <div class="main-menu-item">
-                                    <a href="#">
-                                        <div id="mobile-performance" class="main-menu-item-text">
+                                <div class="main-menu-item main-menu-item-performance">
+                                    <a href="">
+                                        <div id="performance" class="main-menu-item-text" data-i18n-key="performance">
                                             Performance
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li>
-                                <div class="main-menu-item">
-                                    <a href="#">
-                                        <div id="mobile-artist-talks" class="main-menu-item-text">
+                                <div class="main-menu-item  main-menu-item-artist-talks">
+                                    <a href="">
+                                        <div id="artist-talks" class="main-menu-item-text" data-i18n-key="artist-talks">
                                             Artist Talks
                                         </div>
                                     </a>
                                 </div>
                             </li>
                             <li>
-                                <div class="main-menu-item">
-                                    <a href="#">
-                                        <div id="mobile-workshops" class="main-menu-item-text">
+                                <div class="main-menu-item main-menu-item-workshops">
+                                    <a href="">
+                                        <div id="workshops" class="main-menu-item-text" data-i18n-key="workshops">
                                             Workshops
                                         </div>
                                     </a>
@@ -613,32 +875,32 @@
 
             <div id="menu-desktop">
                 <div class="main-menu-item active-main-menu-item">
-                    <a href="#">
-                        <div id="festival" class="main-menu-item-text">Festival</div>
+                    <a href="">
+                        <div id="festival" class="main-menu-item-text" data-i18n-key="festival">Festival</div>
                     </a>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
                     </div>
                 </div>
-                <div class="main-menu-item">
-                    <a href="#">
-                        <div id="performance" class="main-menu-item-text">Performance</div>
+                <div class="main-menu-item main-menu-item-performance">
+                    <a href="">
+                        <div id="performance" class="main-menu-item-text" data-i18n-key="performance">Performance</div>
                     </a>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
                     </div>
                 </div>
-                <div class="main-menu-item">
-                    <a href="#">
-                        <div id="artist-talks" class="main-menu-item-text">Artist Talks</div>
+                <div class="main-menu-item  main-menu-item-artist-talks">
+                    <a href="">
+                        <div id="artist-talks" class="main-menu-item-text" data-i18n-key="artist-talks">Artist Talks</div>
                     </a>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
                     </div>
                 </div>
-                <div class="main-menu-item">
-                    <a href="#">
-                        <div id="workshops" class="main-menu-item-text">Workshops</div>
+                <div class="main-menu-item main-menu-item-workshops">
+                    <a href="">
+                        <div id="workshops" class="main-menu-item-text" data-i18n-key="workshops">Workshops</div>
                     </a>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
@@ -651,18 +913,18 @@
         <!-- CONTENT -->
 
         <div class="content-container-row calendar-container">
-            <div class="calendar-day-container">
+            <div class="calendar-day-container performance" href="#">
                 <div class="day-simple">
                     <div class="day-date-part">
                         <div class="day-date-nr">
                             23
                         </div>
-                        <div class="day-date-mon">
+                        <div class="day-date-mon" data-i18n-key="nov">
                             AUG
                         </div>
                     </div>
                     <div class="day-event-part">
-                        <div class="small-pink-heading">
+                        <div class="small-pink-heading" data-i18n-key="performance">
                             PERFORMANCE
                         </div>
                         <div class="day-event-name">
@@ -678,50 +940,50 @@
                 </div>
             </div>
 
-            <div class="date-separator"></div>
+<!--            <div class="date-separator"></div>-->
 
-            <div class="calendar-day-container">
+            <div class="calendar-day-container workshops" href="#">
                 <div class="day-simple">
                     <div class="day-date-part">
                         <div class="day-date-nr">
                             26
                         </div>
-                        <div class="day-date-mon">
+                        <div class="day-date-mon" data-i18n-key="nov">
                             AUG
                         </div>
                     </div>
                     <div class="day-event-part">
-                        <div class="small-pink-heading">
-                            PERFORMANCE
+                        <div class="small-pink-heading" data-i18n-key="workshop">
+                            WORKSHOP
                         </div>
                         <div class="day-event-name">
-                            Speak Sun
+                            AI for arts
                         </div>
                         <div class="small-not-so-pink-footer">
                             18:00 - 21:00
                         </div>
                         <div class="day-event-location">
-                            DESCHIS GASTROBAR
+                            CINETIC
                         </div>
                     </div>
                 </div>
             </div>
+<!--        </div>-->
 
-        </div>
-        <div class="content-container-row calendar-container">
-            <div class="calendar-day-container">
+<!--        <div class="content-container-row calendar-container">-->
+            <div class="calendar-day-container-wide artist-talks" href="#">
                 <div class="day-special">
                     <div class="day-special-left">
                         <div class="day-date-part">
                             <div class="day-date-nr">
                                 26
                             </div>
-                            <div class="day-date-mon">
+                            <div class="day-date-mon" data-i18n-key="nov">
                                 AUG
                             </div>
                         </div>
                         <div class="day-event-part">
-                            <div class="small-pink-heading">
+                            <div class="small-pink-heading" data-i18n-key="artist-talk">
                                 ARTIST TALK
                             </div>
                             <div class="day-event-name">
@@ -740,7 +1002,158 @@
                     </div>
                 </div>
             </div>
+<!--        </div>-->
+
+<!--        <div class="content-container-row calendar-container">-->
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            23
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="nov">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshop">
+                            WORKSHOP
+                        </div>
+                        <div class="day-event-name">
+                            Speak Sun
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            DESCHIS GASTROBAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="date-separator"></div>-->
+
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="nov">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshop">
+                            WORKSHOP
+                        </div>
+                        <div class="day-event-name">
+                            AI for arts
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            CINETIC
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--        </div>-->
+
+<!--        <div class="content-container-row calendar-container">-->
+            <div class="calendar-day-container performance" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            23
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="performance">
+                            PERFORMANCE
+                        </div>
+                        <div class="day-event-name">
+                            Speak Sun
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            DESCHIS GASTROBAR
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="date-separator"></div>-->
+
+            <div class="calendar-day-container artist-talks" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            26
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            AUG
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="artist-talk">
+                            ARTIST TALK
+                        </div>
+                        <div class="day-event-name">
+                            AI for arts
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            CINETIC
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--        </div>-->
+
+<!--        <div class="content-container-row calendar-container">-->
+            <div class="calendar-day-container-wide performance" href="#">
+                <div class="day-special">
+                    <div class="day-special-left">
+                        <div class="day-date-part">
+                            <div class="day-date-nr">
+                                26
+                            </div>
+                            <div class="day-date-mon" data-i18n-key="dec">
+                                AUG
+                            </div>
+                        </div>
+                        <div class="day-event-part">
+                            <div class="small-pink-heading" data-i18n-key="performance">
+                                PERFORMANCE
+                            </div>
+                            <div class="day-event-name">
+                                Interface Cultures, meeting the challenges of our global media society
+                            </div>
+                            <div class="small-not-so-pink-footer">
+                                18:00 - 21:00
+                            </div>
+                            <div class="day-event-location">
+                                GOETHE INSTITUTE
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="day-special-right" style="background-image: url('../img/img2.png');">
+                    </div>
+                </div>
+            </div>
         </div>
+
 
         <!-- EXPO -->
 
@@ -756,11 +1169,11 @@
 
         <div class="content-container-row calendar-container">
 
-            <div class="expo-item">
+            <div class="expo-item concept-item">
                 <div class="small-pink-heading">
                     CONCEPT
                 </div>
-                <div class="expo-static-text">
+                <div class="expo-static-text"  data-i18n-key="concept-text-1">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.
                     <br/><br/>
                     Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.
@@ -771,11 +1184,11 @@
 
             <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img1.png">
                 <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading">
-                        CONCEPT
+                    <div class="small-pink-heading"  data-i18n-key="installation">
+                        INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Generative Chorus
+                        Generative Chorus 2
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
@@ -792,8 +1205,92 @@
         </div>
 
         <div class="content-container-row calendar-container">
+            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img1.png">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Generative Chorus 3
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                Marine Theunissen
+                            </div>
+                            <div class="small-not-so-pink-footer-line">
+                                Raphael Dely (CA)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img1.png">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading" data-i18n-key="installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Generative Chorus 4
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                Marine Theunissen
+                            </div>
+                            <div class="small-not-so-pink-footer-line">
+                                Raphael Dely (CA)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-container-row calendar-container">
+            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img2.png">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Generative Chorus
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                Marine Theunissen
+                            </div>
+                            <div class="small-not-so-pink-footer-line">
+                                Raphael Dely (CA)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="expo-item concept-item">
+                <div class="small-pink-heading">
+                    CONCEPT
+                </div>
+                <div class="expo-static-text"  data-i18n-key="concept-text-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.
+                    <br/><br/>
+                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="content-container-row calendar-container">
             <div class="generic-header">
-                <div id="sponsors" class="main-menu-item-text">Our sponsors</div>
+                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="sponsors">Our sponsors</div>
                 <div class="main-menu-arrow">
                     <img src="img/arrow.png"/>
                 </div>
@@ -806,35 +1303,56 @@
                     <img src="img/sponsor/img.png">
                 </div>
                 <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
+                    <img src="img/sponsor/img_1.png">
                 </div>
                 <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
+                    <img src="img/sponsor/img_2.png">
                 </div>
             </div>
         </div>
+
+
+        <div class="content-container-row" style="margin-bottom: 0px;">
+            <div class="footer">
+                <div class="footer-headings custom-footer-padding">
+                    <div class="small-pink-heading"  data-i18n-key="prev-ed">
+                        PREVIOUS EDITIONS
+                    </div>
+                    <div class="footer-buttons">
+                        <div class="footer-button" href="#">
+                            2020 Edition
+                        </div>
+                        <div class="footer-button" href="#">
+                            2021 Edition
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-headings" style="margin-bottom: 0px;">
+                    <div class="small-pink-heading custom-footer-align">
+                        CONTACT
+                    </div>
+                    <div class="footer-buttons custom-footer-align">
+                        <div class="footer-button" href="#"
+                             style="height: 24px;">
+                            <img src="img/fb.svg">
+                        </div>
+                        <div class="footer-button" href="#"
+                             style="height: 24px;">
+                            <img src="img/insta.svg">
+                        </div>
+                        <div class="footer-button" href="#"
+                             style="margin-right: 0px">
+                            contact@nova.ro
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+
 </div>
 
 <!-- Add your site or application content here -->

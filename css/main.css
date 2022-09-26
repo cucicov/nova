@@ -171,7 +171,19 @@ html, body {
 .sponsor-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.sponsor-item {
+  margin: 50px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-item img {
+  width: 50%;
 }
 
 .content {
@@ -186,10 +198,18 @@ html, body {
   display: flex;
   flex-direction: row;
   margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.video-wrapper{
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  margin-top: -50px;
 }
 
 #panamea {
-  position: absolute;
+  position: relative;
   top: -550px;
   right: -550px;
 }
@@ -230,7 +250,6 @@ html, body {
   font-style: normal;
   font-weight: 200;
   font-size: 20px;
-  margin-right: 20px;
   margin-top: 7px;
   font-family: Open Sans;
   font-size: 16px;
@@ -238,6 +257,34 @@ html, body {
   line-height: 24px;
   letter-spacing: -0.02em;
   text-align: left;
+  flex-direction: row;
+  display: flex;
+}
+
+#lang-en {
+  height: 38px;
+  width: 38px;
+  background-image: url('../img/en.svg');
+  display: flex;
+  background-color: #70FBFB;
+  border-radius: 50% 0% 0% 50%;
+}
+
+#lang-en.active{
+  background-image: url('../img/en-selected.svg');
+}
+
+#lang-ro {
+  height: 38px;
+  width: 38px;
+  background-image: url('../img/ro.svg');
+  display: flex;
+  background-color: #70FBFB;
+  border-radius: 0% 50% 50% 0%;
+}
+
+#lang-ro.active{
+  background-image: url('../img/ro-selected.svg');
 }
 
 #languages a {
@@ -245,9 +292,6 @@ html, body {
   text-decoration: none;
 }
 
-#languages a:hover {
-  text-decoration: underline;
-}
 
 #program {
   min-width: 224px;
@@ -323,7 +367,7 @@ html, body {
   font-family: 'OpenSansCondensed';
   font-size: 20px;
   text-align: left;
-
+  text-transform: uppercase;
 }
 
 #bell {
@@ -346,7 +390,7 @@ html, body {
 .main-menu-item-bell {
   margin-left: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .main-menu-item a{
@@ -393,6 +437,9 @@ html, body {
   aspect-ratio: 1 / 1 ;
   padding: 24px;
   background-color: rgba(255, 255, 255, 0.1);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .expo-static-text {
@@ -484,13 +531,24 @@ html, body {
 }
 
 .calendar-day-container {
-  flex: 1 1;
+  flex: 1 1 45%;
   display: flex;
 
   background-repeat: no-repeat;
   background-position: left bottom;
 
+  margin-bottom:24px;
+
+  cursor: pointer;
+
   /*background-image: url('../img/23.svg');*/
+}
+
+.calendar-day-container-wide {
+  flex: 1 1 100%;
+  margin-left: 0px;
+  margin-bottom:24px;
+  cursor: pointer;
 }
 
 .day-simple {
@@ -523,6 +581,16 @@ html, body {
   flex-direction: column;
   padding: 24px;
   box-sizing: border-box;
+  transition: all 0.4s;
+  transition-timing-function: ease-out;
+}
+
+.calendar-day-container-wide .day-event-part{
+  transition: all 0.5s;
+}
+
+.calendar-day-container-wide .day-special-right{
+  transition: all 0.5s;
 }
 
 .day-event-part-simple {
@@ -542,6 +610,7 @@ html, body {
   line-height: 17px;
   letter-spacing: 0.12em;
   text-align: left;
+  text-transform: uppercase;
 
   color: rgba(255, 149, 231, 1);
 }
@@ -621,6 +690,7 @@ html, body {
   flex: 1 1;
   display: flex;
   align-items: flex-end;
+  text-transform: uppercase;
 }
 
 .day-special-left {
@@ -632,9 +702,65 @@ html, body {
 .day-special-right {
   flex: 0 1 632px;
   background-size: cover;
+  background-position: center;
   display: flex;
   flex-direction: row;
 }
+
+.footer {
+  margin-top: 50px;
+  border-top: 1px solid #70FBFB;
+  background: linear-gradient(0deg, #00001C 0%, rgba(0, 0, 28, 0) 100%);
+  padding: 24px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.footer-headings {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.custom-footer-padding {
+  margin-bottom: 0px;
+}
+
+.footer-buttons {
+  display: flex;
+  flex-display: row;
+  margin-top: 10px;
+  flex-wrap: wrap;
+
+}
+
+.footer-button {
+  color: #70FBFB;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+
+  cursor: pointer;
+  padding: 13px;
+  background: #1A1A33;
+  border-radius: 4px;
+
+  margin-right: 10px;
+  align-content: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.custom-footer-align {
+  align-self: flex-end;
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -810,9 +936,13 @@ textarea {
   }
 
   #panamea {
-    position: absolute;
+    position: relative;
     top: -550px;
-    left: -120px;
+    left: -200px;
+  }
+
+  #logo {
+    margin-right: 100px;
   }
 
   #logo img {
@@ -835,6 +965,7 @@ textarea {
   .main-menu-item-bell {
     order: -1;
     margin-bottom: -40px;
+    flex-direction: row-reverse;
   }
 
   #program{
@@ -845,6 +976,9 @@ textarea {
   .expo-item{
     flex: 1;
     margin-bottom: 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 
   .expo-static-text {
@@ -880,8 +1014,15 @@ textarea {
     background-repeat: no-repeat;
     background-position: left bottom;
 
+    margin-bottom: 0px;
+
     /*background-image: url('../img/23.svg');*/
     background-size: 200px;
+  }
+
+
+  .calendar-day-container-wide{
+    margin-bottom: 0px;
   }
 
   #box2, #box1 {
@@ -896,13 +1037,42 @@ textarea {
     flex: 0 1 200px;
   }
 
+  .footer{
+    flex-direction: column;
+  }
+
+  .custom-footer-align {
+    align-self: flex-start;
+  }
+
+  .custom-footer-padding {
+    margin-bottom: 24px;
+  }
+
+  .date-separator {
+    min-width: 0px;
+  }
+
+  .concept-item {
+    aspect-ratio: 0;
+  }
+
+  #bell {
+    border-radius: 0% 50% 50% 0%;
+  }
+
+  #lang-ro {
+    border-radius: 0%;
+  }
+
 }
 
 /* media queries for screens smaller that max container width 1440px */
 @media only screen and (max-width: 1440px) and (min-width: 600px) {
   /* Style adjustments for viewports that meet the condition */
+
   #panamea {
-    position: absolute;
+    position: relative;
     top: -550px;
     left: 160px;
   }
