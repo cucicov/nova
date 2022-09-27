@@ -119,10 +119,10 @@
                         "sponsors": "Our sponsors",
                         "prev-ed": "previous editions",
                         "concept-text-1": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
-                            "                    <br/><br/>\n" +
+                            "                    \n" +
                             "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
                         "concept-text-2": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
-                            "                    <br/><br/>\n" +
+                            "                    \n" +
                             "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
                     },
 
@@ -331,14 +331,14 @@
                 $(".clickable-expo-item").on({
                     mouseenter: function() {
                         $(this).fadeTo(100, 0.5, function (){
-                            $(this).addClass("clickable-expo-item-hover");
+                            $(this).removeClass("clickable-expo-item-hover");
                             expo_item_audio_click.play();
                         });
                         $(this).fadeTo(300, 1);
                     },
                     mouseleave: function() {
                         $(this).fadeTo(100, 0.5, function () {
-                            $(this).removeClass("clickable-expo-item-hover");
+                            $(this).addClass("clickable-expo-item-hover");
                         });
                         $(this).fadeTo(300, 1.0);
                     }
@@ -1182,7 +1182,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img1.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img1.png">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="installation">
                         INSTALLATION
@@ -1205,7 +1205,7 @@
         </div>
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img1.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img1.png">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="installation">
                         INSTALLATION
@@ -1228,7 +1228,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img1.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img1.png">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading" data-i18n-key="installation">
                         INSTALLATION
@@ -1252,7 +1252,7 @@
         </div>
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item" href="#" bgimg="../img/img2.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img2.png">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="installation">
                         INSTALLATION
