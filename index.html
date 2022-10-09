@@ -35,6 +35,22 @@
                 is_mobile = false;
             }
 
+            function getCookie(cname) {
+                let name = cname + "=";
+                let decodedCookie = decodeURIComponent(document.cookie);
+                let ca = decodedCookie.split(';');
+                for(let i = 0; i <ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length, c.length);
+                    }
+                }
+                return "";
+            }
+
             var refreshCalendarDateSpacings = function(id) {
                 if(!is_mobile){
                     $(".calendar-day-container").css("margin-left", "0px");
@@ -44,11 +60,11 @@
                     // $("calendar-day-container-wide").css("margin-left", "0px");
                     setTimeout(function () {
                         if ($(".calendar-day-container:visible").length % 2 == 1) {
-                            console.log($(".calendar-day-container:visible").length);
+                            // console.log($(".calendar-day-container:visible").length);
                             var rrand = Math.floor(Math.random() * 10);
                             $(".calendar-day-container").last().css("margin-left", "0px");
-                            console.log($(".calendar-day-container").last());
-                            console.log(rrand);
+                            // console.log($(".calendar-day-container").last());
+                            // console.log(rrand);
                         }
                     }, 300);
                 }
@@ -57,7 +73,7 @@
             refreshCalendarDateSpacings(".calendar-day-container");
 
             var filterCalendar = function(id) {
-                console.log(id);
+                // console.log(id);
                 var delay = 250;
                 $(".performance, .artist-talks, .workshops, .festival").hide(delay, 'swing', function () {
 
@@ -91,11 +107,22 @@
 
             }
 
+            if(getCookie("lang").length == 0){
+                document.cookie = "lang=ro";
+            }
+
             $(function() {
 
                 // translations
                 // The active locale
-                let locale = "ro";
+                let locale = getCookie("lang");
+                if(locale === "ro") {
+                    $("#lang-en").removeClass("active");
+                    $("#lang-ro").addClass("active");
+                } else {
+                    $("#lang-ro").removeClass("active");
+                    $("#lang-en").addClass("active");
+                }
 
                 // We can have as many locales here as we want,
                 // and use any locales we want. We have English
@@ -104,20 +131,23 @@
                     // English translations
                     "en": {
                         "starts": "starts",
-                        "start-date": "nov. 22",
+                        "start-date": "november 22",
                         "ends": "ends",
-                        "end-date": "dec. 17",
+                        "end-date": "december 17",
                         "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
                         "festival": "Festival",
+                        "expo": "Expo",
                         "performance": "Performance",
-                        "artist-talks": "NOVA TALKS",
-                        "artist-talk": "NOVA TALK",
-                        "workshops": "EDU",
-                        "workshop": "EDU",
+                        "artist-talks": "Talks",
+                        "nova-talks": "Nova talks",
+                        "artist-talk": "Talk",
+                        "workshops": "Edu",
+                        "workshop": "Edu",
                         "nov": "nov",
                         "dec": "dec",
                         "installation": "installation",
                         "interactive-installation": "multi-channel video installation",
+                        "interactive-installation-peep": "interactive installation peep media",
                         "video-installation-multi-channel": "multi-channel video installation",
                         "video-installation": "video installation",
                         "interactive-video-installation": "interactive video installation",
@@ -136,12 +166,12 @@
                         "expo-opening": "Exhibition opening",
                         "expo-closing": "Exhibition closing",
                         "festival": "Festival",
-                        "space-and-spatiality": "SPACE AND SPATIALITY IN ART INSTALLATIONS // Iulia Gherghescu",
-                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
-                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
-                        "sound-design": "SOUND DESIGN FOR IMAGINARY WORLDS // Ștefan Damian",
-                        "style-gan": "REAL-TIME INTERACTION WITH StyleGAN // Grigore Burloiu",
-                        "deep-learning": "USING DEEP LEARNING TO GENERATE DIALOGUE TEXT // Grigore Burloiu",
+                        "space-and-spatiality": "Space and spatiality in art installations // IULIA GHERGHESCU",
+                        "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
+                        "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
+                        "sound-design": "Sound design for imaginary worlds // ȘTEFAN DAMIAN",
+                        "style-gan": "Real-time interaction with StyleGAN // GRIGORE BURLOIU",
+                        "deep-learning": "Using Deep Learning to generate dialogue text // GRIGORE BURLOIU",
                         "a-project": "A project by",
                         "presented-by": "Presented by",
                         "with-support-of": "With the support of",
@@ -158,15 +188,18 @@
                         "end-date": "17 decembrie",
                         "open-info": "Expoziția este deschisă de marți până vineri 16:00 - 21:00 și sâmbătă 11:00 - 21:00",
                         "festival": "Festival",
+                        "expo": "Expo",
                         "performance": "Performance",
-                        "artist-talks": "NOVA TALKS",
-                        "artist-talk": "NOVA TALK",
-                        "workshops": "EDU",
-                        "workshop": "EDU",
+                        "artist-talks": "Talks",
+                        "nova-talks": "Nova talks",
+                        "artist-talk": "Talk",
+                        "workshops": "Edu",
+                        "workshop": "Edu",
                         "nov": "nov",
                         "dec": "dec",
                         "installation": "instalație",
                         "interactive-installation": "instalație interactivă",
+                        "interactive-installation-peep": " instalație interactivă peep media",
                         "video-installation-multi-channel": "instalație video multi-channel",
                         "video-installation": "instalație video",
                         "interactive-video-installation": "instalație video interactivă",
@@ -187,15 +220,15 @@
                         "expo-opening": "Vernisaj expoziție",
                         "expo-closing": "Finisaj expoziție",
                         "festival": "Festival",
-                        "space-and-spatiality": "SPAȚIU ȘI SPAȚIALITATE ÎN CREAȚIA INSTALAȚIILOR ARTISTICE // Iulia Gherghescu",
-                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
-                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
-                        "sound-design": "SOUND DESIGN PENTRU LUMI IMAGINATE // Ștefan Damian",
-                        "style-gan": "INTERACȚIUNE CU StyleGAN ÎN TIMP REAL // Grigore Burloiu",
-                        "deep-learning": "FOLOSIREA DEEP LEARNING PENTRU GENERARE DE TEXT DIALOG // Grigore Burloiu",
+                        "space-and-spatiality": "Spațiu și spațialitate în creația instalațiilor artistice // IULIA GHERGHESCU",
+                        "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
+                        "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
+                        "sound-design": "Sound design pentru lumi imaginate // ȘTEFAN DAMIAN",
+                        "style-gan": "Interacțiune CU StyleGAN în timp real // GRIGORE BURLOIU",
+                        "deep-learning": "Folosirea Deel Learning pentur generare de text dialog // GRIGORE BURLOIU",
                         "a-project": "Un proiect de",
                         "presented-by": "Prezentat de",
-                        "with-support-of": "Cu prijinul",
+                        "with-support-of": "Cu sprijinul",
                         "sponsors": "Parteneri",
                         "our-sponsors": "Partenerii noștri",
                         "media-partners": "Parteneri media",
@@ -342,11 +375,11 @@
                 });
 
                 $(".calendar-day-container-wide").on("click", function() {
-                    // window.location = $(this).attr("href");  //TODO: uncomment when details ready.
+                    window.location = $(this).attr("href");
                     return false;
                 });
 
-                $('.calendar-day-container').on({
+                $('.calendar-day-container, .calendar-day-container-wide-plain').on({
                     mouseenter: function() {
                         $(this).find(".day-event-part").css("flex", "0 1 400px");
                         $(this).find(".day-event-part").css("transition", "all 0.4s");
@@ -423,6 +456,7 @@
                     document
                         .querySelectorAll("[data-i18n-key]")
                         .forEach(translateElement);
+                    document.cookie = "lang=en";
                     return false;
                 });
 
@@ -433,6 +467,7 @@
                     document
                         .querySelectorAll("[data-i18n-key]")
                         .forEach(translateElement);
+                    document.cookie = "lang=ro";
                     return false;
                 });
 
@@ -816,7 +851,7 @@
 
         <!-- HEADER -->
         <div class="content-container-row">
-            <div id="logo" href="https://novanova.ro/">
+            <div id="logo" href="/">
                 <img src="img/logo.svg">
             </div>
             <div id="logo-text">
@@ -974,7 +1009,7 @@
 
         <div class="content-container-row calendar-container">
 
-            <div class="calendar-day-container-wide performance" href="#">
+            <div class="calendar-day-container-wide performance" href="seeing-double.html">
                 <div class="day-special">
                     <div class="day-special-left">
                         <div class="day-date-part">
@@ -986,11 +1021,11 @@
                             </div>
                         </div>
                         <div class="day-event-part">
-                            <div class="small-pink-heading" data-i18n-key="performance">
-                                NOVA TALK
+                            <div class="small-pink-heading">
+                                PERFORMANCE-LECTURE
                             </div>
                             <div class="day-event-name">
-                                SEEING DOUBLE - BRIDGING DUALITIES WITH RELATIONAL INTELLIGENCE //
+                                Seeing double - bridging dualities with relational intelligence //
                                 SOUGWEN 愫君 CHUNG
                             </div>
                             <div class="small-not-so-pink-footer">
@@ -1007,7 +1042,7 @@
                 </div>
             </div>
 
-            <div class="calendar-day-container festival" href="#">
+            <div class="calendar-day-container-wide-plain festival" href="#">
                 <div class="day-simple">
                     <div class="day-date-part">
                         <div class="day-date-nr">
@@ -1018,7 +1053,7 @@
                         </div>
                     </div>
                     <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="festival">
+                        <div class="small-pink-heading" data-i18n-key="expo">
                             FESTIVAL
                         </div>
                         <div class="day-event-name" data-i18n-key="expo-opening">
@@ -1036,32 +1071,37 @@
 
 <!--            <div class="date-separator"></div>-->
 
-            <div class="calendar-day-container artist-talks" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            26
+            <div class="calendar-day-container-wide artist-talks" href="#">
+                <div class="day-special">
+                    <div class="day-special-left">
+                        <div class="day-date-part">
+                            <div class="day-date-nr">
+                                26
+                            </div>
+                            <div class="day-date-mon" data-i18n-key="nov">
+                                NOV
+                            </div>
                         </div>
-                        <div class="day-date-mon" data-i18n-key="nov">
-                            NOV
+                        <div class="day-event-part">
+                            <div class="small-pink-heading" data-i18n-key="nova-talks">
+                                NOVA TALKS
+                            </div>
+                            <div class="day-event-name">
+                            </div>
+                            <div class="small-not-so-pink-footer">
+                                11:00 - 15:30
+                            </div>
+                            <div class="day-event-location">
+                                CINETIC
+                            </div>
                         </div>
                     </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="artist-talks">
-                            NOVA TALKS
-                        </div>
-                        <div class="day-event-name">
 
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            11:00 - 15:30
-                        </div>
-                        <div class="day-event-location">
-                            CINETIC
-                        </div>
+                    <div title="Exquisite corpus 2019" class="day-special-right" style="background-image: url('../img/content/img.png');">
                     </div>
                 </div>
             </div>
+
 <!--        </div>-->
 
 <!--        <div class="content-container-row calendar-container">-->
@@ -1250,7 +1290,7 @@
                         </div>
                     </div>
                     <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="festival">
+                        <div class="small-pink-heading" data-i18n-key="expo">
                             FESTIVAL
                         </div>
                         <div class="day-event-name" data-i18n-key="expo-closing">
@@ -1306,7 +1346,7 @@
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        New home of mind
+                        New Home of Mind
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
@@ -1345,13 +1385,13 @@
         <!-- EXPO CHUNK -->
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/acquaalta.JPG">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/acquaalta.jpg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="ar-installation">
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Acqua Alta – Crossing the mirror
+                        Acqua Alta – Crossing the Mirror
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
@@ -1415,7 +1455,7 @@
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
                             <div class="small-not-so-pink-footer-line">
-                                MARIUS JURCĂ
+                                MARIUS JURCA
                             </div>
                         </div>
                     </div>
@@ -1424,13 +1464,13 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/rhiza.JPG">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/rhiza.jpg">
                 <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="installation">
+                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        RHIZA
+                        Rhiza
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
@@ -1452,7 +1492,7 @@
         <div class="content-container-row calendar-container">
             <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/senrian.jpg">
                 <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
+                    <div class="small-pink-heading"  data-i18n-key="interactive-installation-peep">
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
@@ -1523,7 +1563,7 @@
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Wind in my pages
+                        Wind in My Pages
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
@@ -1548,7 +1588,7 @@
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Ear to ear
+                        Ear to Ear
                         <br/><br/><br/><br/>
                     </div>
                     <div class="small-not-so-pink-footer">
@@ -1574,13 +1614,13 @@
 
         <!-- PARTNERS -->
 
-        <div class="content-container-row sponsors-container">
-            <div class="generic-header">
-                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="our-sponsors">Our partners</div>
-                <div class="main-menu-arrow">
-                    <img src="img/arrow.png"/>
-                </div>
-            </div>
+        <div class="content-container-row sponsors-container" style="margin-top: 86px">
+<!--            <div class="generic-header">-->
+<!--                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="our-sponsors">Our partners</div>-->
+<!--                <div class="main-menu-arrow">-->
+<!--                    <img src="img/arrow.png"/>-->
+<!--                </div>-->
+<!--            </div>-->
         </div>
 
         <div class="partners-subtitles"  data-i18n-key="a-project">
@@ -1632,37 +1672,37 @@
 
         <div class="content-container-row">
             <div class="sponsor-container">
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/goethe.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/institiutfrancais.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/forumul.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/spaniola.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/ambasada.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/excelsior.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/unatc.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/interfacecultures.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/kunst.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/cinetic.png">
                 </div>
-                <div class="sponsor-item">
+                <div class="sponsor-item-crowded">
                     <img src="img/sponsor/unarte.png">
                 </div>
                 <div class="sponsor-item">
@@ -1688,6 +1728,9 @@
                 </div>
                 <div class="sponsor-item">
                     <img src="img/sponsor/iqads.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/feeder.png">
                 </div>
             </div>
         </div>
