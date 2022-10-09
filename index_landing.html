@@ -1,0 +1,427 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nova</title>
+    <meta name="description" content=""> <!-- TODO: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content=""> <!-- TODO: -->
+    <meta property="og:type" content=""> <!-- TODO: -->
+    <meta property="og:url" content=""> <!-- TODO: -->
+    <meta property="og:image" content=""> <!-- TODO: -->
+
+<!--    <link rel="manifest" href="site.webmanifest">-->
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        jQuery(function ($) {
+
+            <!-- mobile check -->
+            var is_mobile = true;
+
+            if( $('#isMobile').css('display')==='none') {
+                is_mobile = false;
+            }
+
+            var refreshCalendarDateSpacings = function(id) {
+                if(!is_mobile){
+                    $(".calendar-day-container").css("margin-left", "0px");
+                    $(".calendar-day-container-wide").css("margin-left", "0px");
+                    $(id+":odd").css("margin-left", "24px");
+
+                    // $("calendar-day-container-wide").css("margin-left", "0px");
+                    setTimeout(function () {
+                        if ($(".calendar-day-container:visible").length % 2 == 1) {
+                            console.log($(".calendar-day-container:visible").length);
+                            var rrand = Math.floor(Math.random() * 10);
+                            $(".calendar-day-container").last().css("margin-left", "0px");
+                            console.log($(".calendar-day-container").last());
+                            console.log(rrand);
+                        }
+                    }, 300);
+                }
+            }
+
+            refreshCalendarDateSpacings(".calendar-day-container");
+
+            var filterCalendar = function(id) {
+                console.log(id);
+                var delay = 250;
+                $(".performance, .artist-talks, .workshops").hide(delay, 'swing', function () {
+
+                    if ($(".performance:visible").length === 0 &&
+                        $(".artist-talks:visible").length === 0 &&
+                        $(".workshops:visible").length === 0) {
+                        if (id === 'festival') {
+                            refreshCalendarDateSpacings(".calendar-day-container");
+                            $(".performance").show(delay, 'swing');
+                            $(".artist-talks").show(delay, 'swing');
+                            $(".workshops").show(delay, 'swing');
+
+                        } else if (id === 'performance') {
+                            refreshCalendarDateSpacings(".performance");
+                            $(".performance").show(delay, 'swing');
+                        } else if (id === 'artist-talks') {
+                            refreshCalendarDateSpacings(".artist-talks");
+                            $(".artist-talks").show(delay, 'swing');
+                        } else if (id === 'workshops') {
+                            refreshCalendarDateSpacings(".workshops");
+                            $(".workshops").show(delay, 'swing');
+                        }
+
+                    }
+
+                });
+
+
+                // setTimeout(refreshCalendarDateSpacings(".artist-talks"), 2000);
+
+            }
+
+            $(function() {
+
+                // translations
+                // The active locale
+                let locale = "ro";
+
+                // We can have as many locales here as we want,
+                // and use any locales we want. We have English
+                // and Arabic as locales here as examples.
+                const translations = {
+                    // English translations
+                    "en": {
+                        "starts": "starts",
+                        "start-date": "nov. 22",
+                        "ends": "ends",
+                        "end-date": "dec. 17",
+                        "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
+                        "festival": "Festival",
+                        "performance": "Performance",
+                        "artist-talks": "Artist Talks",
+                        "artist-talk": "Artist Talk",
+                        "workshops": "Workshops",
+                        "workshop": "Workshop",
+                        "nov": "nov",
+                        "dec": "dec",
+                        "installation": "installation",
+                        "sponsors": "Our partners",
+                        "prev-ed": "previous editions",
+                        "concept-text-1": "Created as a connecting experience, this year's exhibition literally and figuratively embraces you and creates a context where you discover different dimensions of intimacy. You can explore them in a profound or light way, depending on how open you are to the experience." +
+                            "\n" +
+                            "\n" +
+                            "We propose an immersive path, constantly moving and transforming, that responds to your presence in surprising ways."+
+                            "\n" +
+                            "\n" +
+                            "We start from 11 individual works and create connections between them so that the experience of the exhibition takes you on a journey of becoming, from one work to another, from you to them and vice versa, each element influencing the whole."+
+                            "\n" +
+                            "\n" +
+                            "We can't wait to see how you set this living space into motion!"+
+                            "\n" +
+                            "\n" +
+                            "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology.",
+                        "concept-text-2": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
+                            "                    \n" +
+                            "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
+                    },
+
+                    // Arabic translations
+                    "ro": {
+                        "starts": "începe pe",
+                        "start-date": "22 noiembrie",
+                        "ends": "se încheie pe",
+                        "end-date": "17 decembrie",
+                        "open-info": "Expoziția este de marți pînă vineri 16:00 - 21:00 și sîmbătă 11:00 - 21:00",
+                        "festival": "Festival",
+                        "performance": "Performance",
+                        "artist-talks": "Artist Talks",
+                        "artist-talk": "Artist Talk",
+                        "workshops": "Ateliere",
+                        "workshop": "Atelier",
+                        "nov": "nov",
+                        "dec": "dec",
+                        "installation": "instalație",
+                        "sponsors": "Partenerii noștri",
+                        "prev-ed": "ediții anterioare",
+                        "concept-text-1": "Construită ca o experiență de conectare, expoziția de anul acesta te ia în brațe la propriu și la figurat și îți creează un context în care descoperi diferite dimensiuni ale intimității. Le poți explora mai profund sau mai domol, în funcție de deschiderea ta către acest proces. \n" +
+                            "\n" +
+                            "Îți propunem un traseu imersiv, în continuă mișcare și transformare, care răspunde la prezența ta în feluri surprinzătoare. " +
+                            "\n" +
+                            "\n" +
+                            "Pornim de la 11 lucrări pilon și creăm legături între acestea astfel încât traseul expoziției să te poarte printr-o suită de deveniri, de la o lucrare la alta, de la tine la ele și viceversa, fiecare element influențând întregul. \n" +
+                            "\n" +
+                            "Abia așteptăm să vedem ritmurile specifice în care vei pune în mișcare acest spațiu viu!\n" +
+                            "\n" +
+                            "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie. \n" +
+                            "\n",
+                        "concept-text-2": "",
+                    },
+                };
+
+                // When the page content is ready...
+                document
+                    .querySelectorAll("[data-i18n-key]")
+                    .forEach(translateElement);
+
+                function translateElement(element) {
+                    const key = element.getAttribute("data-i18n-key");
+                    const translation = translations[locale][key];
+                    element.innerText = translation;
+                }
+
+                // ----- translations
+
+                function GetURLParameter(sParam){
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++)
+                    {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam)
+                        {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+
+                function getLocalStream() {
+                    // navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
+                    //     window.localStream = stream; // A
+                    //     window.localAudio.srcObject = stream; // B
+                    //     window.localAudio.autoplay = true; // C
+                    // }).catch((err) => {
+                    //     console.error(`you got an error: ${err}`)
+                    // });
+                }
+
+
+                const expo_item_audio_click = new Audio("sound/softer-click.mp3" );
+                const calendar_item_audio_click = new Audio("sound/pull-plant.mp3" );
+
+                <!-- random default inits -->
+                $('#accordion a').click(function($e) {
+                    $e.preventDefault();
+                });
+
+                // load category from url
+                let category = GetURLParameter('category');
+                if (category !== undefined && $(".main-menu-item-"+category).length > 0) {
+                    $(".main-menu-item").removeClass("active-main-menu-item");
+                    $(".main-menu-item-"+category).addClass("active-main-menu-item");
+                    $('#mobile-selected').html(translations[locale][category]);
+                    filterCalendar(category);
+                }
+
+                <!-- accordion menu -->
+                var Accordion = function(el, multiple) {
+                    this.el = el || {};
+                    this.multiple = multiple || false;
+
+                    // Variables privadas
+                    var links = this.el.find('.link');
+                    // Evento
+                    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+                }
+
+                Accordion.prototype.dropdown = function(e) {
+                    var $el = e.data.el;
+                    $this = $(this);
+                    $next = $this.next();
+
+                    $next.slideToggle();
+                    $this.parent().toggleClass('open');
+
+                    if (!e.data.multiple) {
+                        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+                    };
+                }
+
+                var accordion = new Accordion($('#accordion'), false);
+
+                // menu behavior for mobile and desktop.
+                if (is_mobile) {
+                    $(".submenu .main-menu-item ").on("click", function () {
+                        let selectedOption = $(this).text();
+                        $('#mobile-selected').html(selectedOption);
+
+                        // toggle list back.
+                        $next = $('.link').next();
+                        $next.slideToggle();
+                        $('.link').parent().toggleClass('open');
+
+                        // leave selected item activated in the dropdown list.
+                        $(".main-menu-item").removeClass("active-main-menu-item");
+                        $(this).addClass("active-main-menu-item");
+
+                        filterCalendar($(this).find('.main-menu-item-text').attr('id'));
+
+                        selectedOption = $(this).find(".main-menu-item-text").attr('id');
+                        const url = new URL(window.location);
+                        url.searchParams.set('category', selectedOption.trim());
+                        window.history.pushState({}, '', url);
+                        // parent.location.hash = "?category=" + selectedOption;
+
+                        return false;
+                    });
+                } else {
+                    $(".main-menu-item").on("click", function () {
+                        let selectedOption = $(this).find(".main-menu-item-text").attr('id');
+                        $(".main-menu-item").removeClass("active-main-menu-item");
+                        $(this).addClass("active-main-menu-item");
+
+                        filterCalendar($(this).find('.main-menu-item-text').attr('id'));
+
+                        const url = new URL(window.location);
+                        url.searchParams.set('category', selectedOption.trim());
+                        window.history.pushState({}, '', url);
+
+                        // parent.location.hash = "?category=" + selectedOption.trim();
+
+                        return false;
+                    });
+                }
+
+                // init dates background
+                $('.calendar-day-container').each(function() {
+                    let cal_date = $(this).find('.day-date-nr').text();
+                    $(this).css('background-image', 'url(\'../img/' + cal_date.trim() + '.svg\')');
+
+                });
+
+                // set notification visibility
+                $("#bell").hide();
+
+                // calendar items links
+                $(".calendar-day-container").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                $(".calendar-day-container-wide").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                $('.calendar-day-container').on({
+                    mouseenter: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 400px");
+                        $(this).find(".day-event-part").css("transition", "all 0.4s");
+                        calendar_item_audio_click.play();
+                    },
+                    mouseleave: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 348px");
+                        $(this).find(".day-event-part").css("transition", "all 2s");
+                    }
+                });
+
+                $('.calendar-day-container-wide').on({
+                    mouseenter: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 300px");
+                        $(this).find(".day-special-right").css("flex", "0 1 800px");
+                        $(this).find(".day-event-part").css("transition", "all 0.3s");
+                        calendar_item_audio_click.play();
+                        // $(this).find(".day-special-right").css("transition", "all 0.4s");
+                    },
+                    mouseleave: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 348px");
+                        $(this).find(".day-special-right").css("flex", "0 1 632px");
+                        $(this).find(".day-event-part").css("transition", "all 1s");
+                        // $(this).find(".day-special-right").css("transition", "all 2s");
+                    }
+                });
+
+                // expo items links
+
+                $(".clickable-expo-item").on("click", function() {
+                    // window.location = $(this).attr("href"); //TODO: uncomment after content ready
+                    return false;
+                });
+
+                $(".clickable-expo-item").on({
+                    mouseenter: function() {
+                        $(this).fadeTo(100, 0.5, function (){
+                            $(this).removeClass("clickable-expo-item-hover");
+                            expo_item_audio_click.play();
+                        });
+                        $(this).fadeTo(300, 1);
+                    },
+                    mouseleave: function() {
+                        $(this).fadeTo(100, 0.5, function () {
+                            $(this).addClass("clickable-expo-item-hover");
+                        });
+                        $(this).fadeTo(300, 1.0);
+                    }
+                })
+
+                $(".clickable-expo-item").each(function () {
+                    // $(this).css('background-image', 'url(\'' + $(this).attr("bgimg") + '\')');
+                    $(this).css('--bg-image', 'url(\'' + $(this).attr("bgimg") + '\')');
+                });
+
+                // footer button links
+                $(".footer-button").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                // language links
+                $("#lang-en").on("click", function() {
+                    locale = "en";
+                    $("#lang-en").addClass("active");
+                    $("#lang-ro").removeClass("active");
+                    document
+                        .querySelectorAll("[data-i18n-key]")
+                        .forEach(translateElement);
+                    return false;
+                });
+
+                $("#lang-ro").on("click", function() {
+                    locale = "ro";
+                    $("#lang-en").removeClass("active");
+                    $("#lang-ro").addClass("active");
+                    document
+                        .querySelectorAll("[data-i18n-key]")
+                        .forEach(translateElement);
+                    return false;
+                });
+
+                getLocalStream();
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+<div id="logo" style="max-width: 200px; margin: auto; display: flex; justify-content: center; height:100%; height:100vh; ">
+    <img src="img/logo.svg">
+</div>
+
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

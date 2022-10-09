@@ -59,7 +59,7 @@
             var filterCalendar = function(id) {
                 console.log(id);
                 var delay = 250;
-                $(".performance, .artist-talks, .workshops").hide(delay, 'swing', function () {
+                $(".performance, .artist-talks, .workshops, .festival").hide(delay, 'swing', function () {
 
                     if ($(".performance:visible").length === 0 &&
                         $(".artist-talks:visible").length === 0 &&
@@ -69,6 +69,7 @@
                             $(".performance").show(delay, 'swing');
                             $(".artist-talks").show(delay, 'swing');
                             $(".workshops").show(delay, 'swing');
+                            $(".festival").show(delay, 'swing');
 
                         } else if (id === 'performance') {
                             refreshCalendarDateSpacings(".performance");
@@ -94,7 +95,7 @@
 
                 // translations
                 // The active locale
-                let locale = "en";
+                let locale = "ro";
 
                 // We can have as many locales here as we want,
                 // and use any locales we want. We have English
@@ -106,24 +107,47 @@
                         "start-date": "nov. 22",
                         "ends": "ends",
                         "end-date": "dec. 17",
-                        "open-info": "The exhibition is open every day from 10AM to 7PM",
+                        "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
                         "festival": "Festival",
                         "performance": "Performance",
-                        "artist-talks": "Artist Talks",
-                        "artist-talk": "Artist Talk",
-                        "workshops": "Workshops",
-                        "workshop": "Workshop",
+                        "artist-talks": "NOVA TALKS",
+                        "artist-talk": "NOVA TALK",
+                        "workshops": "EDU",
+                        "workshop": "EDU",
                         "nov": "nov",
                         "dec": "dec",
                         "installation": "installation",
-                        "sponsors": "Our sponsors",
+                        "interactive-installation": "multi-channel video installation",
+                        "video-installation-multi-channel": "multi-channel video installation",
+                        "video-installation": "video installation",
+                        "interactive-video-installation": "interactive video installation",
+                        "ar-installation": "interactive AR installation",
+                        "vr-installation": "interactive VR installation",
                         "prev-ed": "previous editions",
-                        "concept-text-1": "1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
-                            "                    \n" +
-                            "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
-                        "concept-text-2": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.\n" +
-                            "                    \n" +
-                            "                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.",
+                        "concept-text-1": "Created as a connecting experience, this year's exhibition literally and figuratively embraces you and creates a context where you discover different dimensions of intimacy. You can explore them in a profound or light way, depending on how open you are to the experience. \n" +
+                            "\n" +
+                            "We propose an immersive path, constantly moving and transforming, that responds to your presence in surprising ways.\n" +
+                            "\n" +
+                            "We start from 11 individual works and create connections between them so that the experience of the exhibition takes you on a journey of becoming, from one work to another, from you to them and vice versa, each element influencing the whole.\n" +
+                            "\n" +
+                            "We can't wait to see how you set this living space into motion!\n" +
+                            "\n" +
+                            "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology. \n",
+                        "expo-opening": "Exhibition opening",
+                        "expo-closing": "Exhibition closing",
+                        "festival": "Festival",
+                        "space-and-spatiality": "SPACE AND SPATIALITY IN ART INSTALLATIONS // Iulia Gherghescu",
+                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
+                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
+                        "sound-design": "SOUND DESIGN FOR IMAGINARY WORLDS // Ștefan Damian",
+                        "style-gan": "REAL-TIME INTERACTION WITH StyleGAN // Grigore Burloiu",
+                        "deep-learning": "USING DEEP LEARNING TO GENERATE DIALOGUE TEXT // Grigore Burloiu",
+                        "a-project": "A project by",
+                        "presented-by": "Presented by",
+                        "with-support-of": "With the support of",
+                        "sponsors": "Partners",
+                        "our-sponsors": "Our partners",
+                        "media-partners": "Our media partners",
                     },
 
                     // Arabic translations
@@ -132,20 +156,49 @@
                         "start-date": "22 noiembrie",
                         "ends": "se încheie pe",
                         "end-date": "17 decembrie",
-                        "open-info": "Expoziția este deschisă zilnic între 10:00 și 19:00",
+                        "open-info": "Expoziția este deschisă de marți până vineri 16:00 - 21:00 și sâmbătă 11:00 - 21:00",
                         "festival": "Festival",
                         "performance": "Performance",
-                        "artist-talks": "Artist Talks",
-                        "artist-talk": "Artist Talk",
-                        "workshops": "Ateliere",
-                        "workshop": "Atelier",
+                        "artist-talks": "NOVA TALKS",
+                        "artist-talk": "NOVA TALK",
+                        "workshops": "EDU",
+                        "workshop": "EDU",
                         "nov": "nov",
                         "dec": "dec",
                         "installation": "instalație",
-                        "sponsors": "Sponsorii noștri",
+                        "interactive-installation": "instalație interactivă",
+                        "video-installation-multi-channel": "instalație video multi-channel",
+                        "video-installation": "instalație video",
+                        "interactive-video-installation": "instalație video interactivă",
+                        "ar-installation": "instalație interactivă AR",
+                        "vr-installation": "instalație interactivă VR",
                         "prev-ed": "ediții anterioare",
-                        "concept-text-1": "RO RO RORORORORORORORORORO  RORORORORO RORO vRO",
-                        "concept-text-2": "RO RO RORORORORORORORORORO  RORORORORO RORO vRO",
+                        "concept-text-1": "Construită ca o experiență de conectare, expoziția de anul acesta te ia în brațe la propriu și la figurat și îți creează un context în care descoperi diferite dimensiuni ale intimității. Le poți explora mai profund sau mai domol, în funcție de deschiderea ta către acest proces. \n" +
+                            "\n" +
+                            "Îți propunem un traseu imersiv, în continuă mișcare și transformare, care răspunde la prezența ta în feluri surprinzătoare. \n" +
+                            "\n" +
+                            "Pornim de la 11 lucrări pilon și creăm legături între acestea astfel încât traseul expoziției să te poarte printr-o suită de deveniri, de la o lucrare la alta, de la tine la ele și viceversa, fiecare element influențând întregul. \n" +
+                            "\n" +
+                            "Abia așteptăm să vedem ritmurile specifice în care vei pune în mișcare acest spațiu viu!\n" +
+                            "\n" +
+                            "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie.\n" +
+                            "\n",
+                        "concept-text-2": "",
+                        "expo-opening": "Vernisaj expoziție",
+                        "expo-closing": "Finisaj expoziție",
+                        "festival": "Festival",
+                        "space-and-spatiality": "SPAȚIU ȘI SPAȚIALITATE ÎN CREAȚIA INSTALAȚIILOR ARTISTICE // Iulia Gherghescu",
+                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
+                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
+                        "sound-design": "SOUND DESIGN PENTRU LUMI IMAGINATE // Ștefan Damian",
+                        "style-gan": "INTERACȚIUNE CU StyleGAN ÎN TIMP REAL // Grigore Burloiu",
+                        "deep-learning": "FOLOSIREA DEEP LEARNING PENTRU GENERARE DE TEXT DIALOG // Grigore Burloiu",
+                        "a-project": "Un proiect de",
+                        "presented-by": "Prezentat de",
+                        "with-support-of": "Cu prijinul",
+                        "sponsors": "Parteneri",
+                        "our-sponsors": "Partenerii noștri",
+                        "media-partners": "Parteneri media",
                     },
                 };
 
@@ -273,23 +326,23 @@
                 }
 
                 // init dates background
-                $('.calendar-day-container').each(function() {
+                $('.calendar-day-container, .calendar-day-container-wide').each(function() {
                     let cal_date = $(this).find('.day-date-nr').text();
                     $(this).css('background-image', 'url(\'../img/' + cal_date.trim() + '.svg\')');
 
                 });
 
                 // set notification visibility
-                // $("#bell").hide();
+                $("#bell").hide();
 
                 // calendar items links
                 $(".calendar-day-container").on("click", function() {
-                    window.location = $(this).attr("href");
+                    // window.location = $(this).attr("href"); //TODO: uncomment when details ready.
                     return false;
                 });
 
                 $(".calendar-day-container-wide").on("click", function() {
-                    window.location = $(this).attr("href");
+                    // window.location = $(this).attr("href");  //TODO: uncomment when details ready.
                     return false;
                 });
 
@@ -321,10 +374,17 @@
                     }
                 });
 
+
+                // logo item click
+                $("#logo").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
                 // expo items links
 
                 $(".clickable-expo-item").on("click", function() {
-                    window.location = $(this).attr("href");
+                    // window.location = $(this).attr("href"); //TODO: uncomment after content ready
                     return false;
                 });
 
@@ -756,7 +816,7 @@
 
         <!-- HEADER -->
         <div class="content-container-row">
-            <div id="logo">
+            <div id="logo" href="https://novanova.ro/">
                 <img src="img/logo.svg">
             </div>
             <div id="logo-text">
@@ -773,9 +833,9 @@
                     </div>
                 </a>
                 <div id="languages">
-                    <a href="" id="lang-en" class="active">
+                    <a href="" id="lang-en">
                     </a>
-                    <a href="" id="lang-ro">
+                    <a href="" id="lang-ro" class="active">
                     </a>
                 </div>
             </div>
@@ -913,99 +973,41 @@
         <!-- CONTENT -->
 
         <div class="content-container-row calendar-container">
-            <div class="calendar-day-container performance" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            23
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="nov">
-                            AUG
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="performance">
-                            PERFORMANCE
-                        </div>
-                        <div class="day-event-name">
-                            Speak Sun
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            DESCHIS GASTROBAR
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-<!--            <div class="date-separator"></div>-->
-
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            26
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="nov">
-                            AUG
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshop">
-                            WORKSHOP
-                        </div>
-                        <div class="day-event-name">
-                            AI for arts
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            CINETIC
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--        </div>-->
-
-<!--        <div class="content-container-row calendar-container">-->
-            <div class="calendar-day-container-wide artist-talks" href="#">
+            <div class="calendar-day-container-wide performance" href="#">
                 <div class="day-special">
                     <div class="day-special-left">
                         <div class="day-date-part">
                             <div class="day-date-nr">
-                                26
+                                22
                             </div>
                             <div class="day-date-mon" data-i18n-key="nov">
-                                AUG
+                                NOV
                             </div>
                         </div>
                         <div class="day-event-part">
-                            <div class="small-pink-heading" data-i18n-key="artist-talk">
-                                ARTIST TALK
+                            <div class="small-pink-heading" data-i18n-key="performance">
+                                NOVA TALK
                             </div>
                             <div class="day-event-name">
-                                Interface Cultures, meeting the challenges of our global media society
+                                SEEING DOUBLE - BRIDGING DUALITIES WITH RELATIONAL INTELLIGENCE //
+                                SOUGWEN 愫君 CHUNG
                             </div>
                             <div class="small-not-so-pink-footer">
-                                18:00 - 21:00
+                                19:00 - 20:30
                             </div>
                             <div class="day-event-location">
-                                GOETHE INSTITUTE
+                                Teatrul Excelsior
                             </div>
                         </div>
                     </div>
 
-                    <div class="day-special-right" style="background-image: url('../img/girl.png');">
+                    <div title="Exquisite corpus 2019" class="day-special-right" style="background-image: url('../img/content/1.performance_exquisitecorpus(2019).jpg');">
                     </div>
                 </div>
             </div>
-<!--        </div>-->
 
-<!--        <div class="content-container-row calendar-container">-->
-            <div class="calendar-day-container workshops" href="#">
+            <div class="calendar-day-container festival" href="#">
                 <div class="day-simple">
                     <div class="day-date-part">
                         <div class="day-date-nr">
@@ -1016,75 +1018,17 @@
                         </div>
                     </div>
                     <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshop">
-                            WORKSHOP
+                        <div class="small-pink-heading" data-i18n-key="festival">
+                            FESTIVAL
                         </div>
-                        <div class="day-event-name">
-                            Speak Sun
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            DESCHIS GASTROBAR
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-<!--            <div class="date-separator"></div>-->
-
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            26
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="nov">
-                            AUG
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshop">
-                            WORKSHOP
-                        </div>
-                        <div class="day-event-name">
-                            AI for arts
+                        <div class="day-event-name" data-i18n-key="expo-opening">
+                            Vernisaj expoziție
                         </div>
                         <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
+                            17:00 - 21:30
                         </div>
                         <div class="day-event-location">
-                            CINETIC
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--        </div>-->
-
-<!--        <div class="content-container-row calendar-container">-->
-            <div class="calendar-day-container performance" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            23
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            AUG
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="performance">
-                            PERFORMANCE
-                        </div>
-                        <div class="day-event-name">
-                            Speak Sun
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            DESCHIS GASTROBAR
+                            Pavilion 32, Goethe-Institut
                         </div>
                     </div>
                 </div>
@@ -1098,16 +1042,77 @@
                         <div class="day-date-nr">
                             26
                         </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            AUG
+                        <div class="day-date-mon" data-i18n-key="nov">
+                            NOV
                         </div>
                     </div>
                     <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="artist-talk">
-                            ARTIST TALK
+                        <div class="small-pink-heading" data-i18n-key="artist-talks">
+                            NOVA TALKS
                         </div>
                         <div class="day-event-name">
-                            AI for arts
+
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            11:00 - 15:30
+                        </div>
+                        <div class="day-event-location">
+                            CINETIC
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--        </div>-->
+
+<!--        <div class="content-container-row calendar-container">-->
+<!--        </div>-->
+
+<!--        <div class="content-container-row calendar-container">-->
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            10
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshop">
+                            EDU
+                        </div>
+                        <div class="day-event-name" data-i18n-key="space-and-spatiality">
+                            SPAȚIU ȘI SPAȚIALITATE ÎN CREAȚIA INSTALAȚIILOR ARTISTICE // Iulia Gherghescu
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            12:00 - 14:30
+                        </div>
+                        <div class="day-event-location">
+                            CINETic
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="date-separator"></div>-->
+
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            13
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshop">
+                            NOVA EDU
+                        </div>
+                        <div class="day-event-name" data-i18n-key="intro-to-metaverse">
+                            INTRO TO METAVERSE: 360/VR Filmmaking
                         </div>
                         <div class="small-not-so-pink-footer">
                             18:00 - 21:00
@@ -1121,37 +1126,146 @@
 <!--        </div>-->
 
 <!--        <div class="content-container-row calendar-container">-->
-            <div class="calendar-day-container-wide performance" href="#">
-                <div class="day-special">
-                    <div class="day-special-left">
-                        <div class="day-date-part">
-                            <div class="day-date-nr">
-                                26
-                            </div>
-                            <div class="day-date-mon" data-i18n-key="dec">
-                                AUG
-                            </div>
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            15
                         </div>
-                        <div class="day-event-part">
-                            <div class="small-pink-heading" data-i18n-key="performance">
-                                PERFORMANCE
-                            </div>
-                            <div class="day-event-name">
-                                Interface Cultures, meeting the challenges of our global media society
-                            </div>
-                            <div class="small-not-so-pink-footer">
-                                18:00 - 21:00
-                            </div>
-                            <div class="day-event-location">
-                                GOETHE INSTITUTE
-                            </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
                         </div>
                     </div>
-
-                    <div class="day-special-right" style="background-image: url('../img/img2.png');">
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshops">
+                            NOVA EDU
+                        </div>
+                        <div class="day-event-name" data-i18n-key="intro-to-metaverse-2">
+                            INTRO TO METAVERSE: from real to digital objects
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            Cinetic
+                        </div>
                     </div>
                 </div>
             </div>
+
+<!--            <div class="date-separator"></div>-->
+
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            16
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshops">
+                            NOVA EDU
+                        </div>
+                        <div class="day-event-name" data-i18n-key="sound-design">
+                            SOUND DESIGN PENTRU LUMI IMAGINATE
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            18:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            CINETIC
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--        </div>-->
+
+<!--        <div class="content-container-row calendar-container">-->
+
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            17
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshops">
+                            NOVA EDU
+                        </div>
+                        <div class="day-event-name" data-i18n-key="style-gan">
+                            REAL-TIME INTERACTION WITH StyleGAN
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            12:00 - 16:00
+                        </div>
+                        <div class="day-event-location">
+                            CINETIC
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day-container workshops" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            17
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="workshops">
+                            NOVA EDU
+                        </div>
+                        <div class="day-event-name" data-i18n-key="deep-learning">
+                            REAL-TIME INTERACTION WITH StyleGAN
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            17:00- 19:00
+                        </div>
+                        <div class="day-event-location">
+                            CINETIC
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-day-container festival" href="#">
+                <div class="day-simple">
+                    <div class="day-date-part">
+                        <div class="day-date-nr">
+                            17
+                        </div>
+                        <div class="day-date-mon" data-i18n-key="dec">
+                            DEC
+                        </div>
+                    </div>
+                    <div class="day-event-part">
+                        <div class="small-pink-heading" data-i18n-key="festival">
+                            FESTIVAL
+                        </div>
+                        <div class="day-event-name" data-i18n-key="expo-closing">
+                            Finisaj expoziție
+                        </div>
+                        <div class="small-not-so-pink-footer">
+                            11:00 - 21:00
+                        </div>
+                        <div class="day-event-location">
+                            Pavilion 32, Goethe-Institut
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
@@ -1170,7 +1284,7 @@
         <div class="content-container-row calendar-container">
 
             <div class="expo-item concept-item">
-                <div class="small-pink-heading">
+                <div class="small-pink-heading" style="margin-bottom: 40px;">
                     CONCEPT
                 </div>
                 <div class="expo-static-text"  data-i18n-key="concept-text-1">
@@ -1180,46 +1294,24 @@
                 </div>
             </div>
 
-            <div class="date-separator"></div>
-
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img1.png">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Generative Chorus 2
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                Marine Theunissen
-                            </div>
-                            <div class="small-not-so-pink-footer-line">
-                                Raphael Dely (CA)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
+
+        <!-- EXPO CHUNK -->
+
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img1.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/nhm.jpg">
                 <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="installation">
+                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Generative Chorus 3
+                        New home of mind
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
                             <div class="small-not-so-pink-footer-line">
-                                Marine Theunissen
-                            </div>
-                            <div class="small-not-so-pink-footer-line">
-                                Raphael Dely (CA)
+                                MÓNICA RIKIĆ
                             </div>
                         </div>
                     </div>
@@ -1228,21 +1320,18 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img1.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/metamorphosis.png">
                 <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading" data-i18n-key="installation">
+                    <div class="small-pink-heading"  data-i18n-key="video-installation-multi-channel">
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Generative Chorus 4
+                        Metamorphosis
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
                             <div class="small-not-so-pink-footer-line">
-                                Marine Theunissen
-                            </div>
-                            <div class="small-not-so-pink-footer-line">
-                                Raphael Dely (CA)
+                                MYRIAM BLEAU
                             </div>
                         </div>
                     </div>
@@ -1251,22 +1340,26 @@
 
         </div>
 
+        <!-- ---- -->
+
+        <!-- EXPO CHUNK -->
+
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/img2.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/acquaalta.JPG">
                 <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="installation">
+                    <div class="small-pink-heading"  data-i18n-key="ar-installation">
                         INSTALLATION
                     </div>
                     <div class="expo-link-title">
-                        Generative Chorus
+                        Acqua Alta – Crossing the mirror
                     </div>
                     <div class="small-not-so-pink-footer">
                         <div class="small-not-so-pink-footer-wrapper">
                             <div class="small-not-so-pink-footer-line">
-                                Marine Theunissen
+                                ADRIEN M
                             </div>
                             <div class="small-not-so-pink-footer-line">
-                                Raphael Dely (CA)
+                                CLAIRE B
                             </div>
                         </div>
                     </div>
@@ -1275,42 +1368,331 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item concept-item">
-                <div class="small-pink-heading">
-                    CONCEPT
-                </div>
-                <div class="expo-static-text"  data-i18n-key="concept-text-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.
-                    <br/><br/>
-                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/wonderland.jpg">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="vr-installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        VR in Wonderland
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                MAŠA JAZBEC | VANESSA VOZZO
+                            </div>
+                            <div class="small-not-so-pink-footer-line">
+                                ALEKSANDRA MITIC
+                            </div>
+                            <div class="small-not-so-pink-footer-line">
+                                JÜRGEN ROPP
+                            </div>
+                            <div class="small-not-so-pink-footer-line">
+                                BÀLINT BUDAI | MARTÌN NADAL
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
 
+        <!-- ---- -->
+
+
+        <!-- EXPO CHUNK -->
+
         <div class="content-container-row calendar-container">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/intuition.jpg">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Intuition
+                        <br/><br/><br/><br/>
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                MARIUS JURCĂ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/rhiza.JPG">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        RHIZA
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                NOOR STENFERT KROESE
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ---- -->
+
+
+        <!-- EXPO CHUNK -->
+
+        <div class="content-container-row calendar-container">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/senrian.jpg">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        SenriAn
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                NOMI SASAKI OTANI
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/afterego.jpeg">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="interactive-video-installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        After Ego
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                RIZI
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ---- -->
+
+
+        <!-- EXPO CHUNK -->
+
+        <div class="content-container-row calendar-container">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/anima.jpeg">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Anima
+                        <br/><br/><br/><br/>
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                DENIS SIMION
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/wimp.png">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="video-installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Wind in my pages
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                ALEXANDRU CLAUDIU MAXIM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ---- -->
+
+        <!-- EXPO CHUNK -->
+
+        <div class="content-container-row calendar-container">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/e2e.jpg">
+                <div class="clickable-expo-item-container">
+                    <div class="small-pink-heading"  data-i18n-key="installation">
+                        INSTALLATION
+                    </div>
+                    <div class="expo-link-title">
+                        Ear to ear
+                        <br/><br/><br/><br/>
+                    </div>
+                    <div class="small-not-so-pink-footer">
+                        <div class="small-not-so-pink-footer-wrapper">
+                            <div class="small-not-so-pink-footer-line">
+                                ANAÏS LOSSOUARN
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date-separator"></div>
+
+            <div class="expo-item" style="opacity: 0">
+
+            </div>
+
+        </div>
+
+        <!-- ---- -->
+
+
+        <!-- PARTNERS -->
+
+        <div class="content-container-row sponsors-container">
             <div class="generic-header">
-                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="sponsors">Our sponsors</div>
+                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="our-sponsors">Our partners</div>
                 <div class="main-menu-arrow">
                     <img src="img/arrow.png"/>
                 </div>
             </div>
         </div>
 
+        <div class="partners-subtitles"  data-i18n-key="a-project">
+            A project by
+        </div>
+
         <div class="content-container-row">
             <div class="sponsor-container">
                 <div class="sponsor-item">
-                    <img src="img/sponsor/img.png">
+                    <img src="img/sponsor/continuu.png">
                 </div>
                 <div class="sponsor-item">
-                    <img src="img/sponsor/img_1.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/img_2.png">
+                    <img src="img/sponsor/ctrln.png">
                 </div>
             </div>
         </div>
 
+        <div class="partners-subtitles"  data-i18n-key="presented-by">
+            Presented by
+        </div>
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unicredit.png">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="partners-subtitles"  data-i18n-key="with-support-of">
+            With support of
+        </div>
+
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/iqos.png">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="partners-subtitles"  data-i18n-key="sponsors">
+            Partners
+        </div>
+
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/goethe.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/institiutfrancais.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/forumul.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/spaniola.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/ambasada.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/excelsior.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unatc.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/interfacecultures.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/kunst.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/cinetic.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unarte.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/novelmushrooms.png">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="partners-subtitles"  data-i18n-key="media-partners">
+            Media partners
+        </div>
+
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/alist.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/designist.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/iqads.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
 
         <div class="content-container-row" style="margin-bottom: 0px;">
             <div class="footer">
@@ -1320,13 +1702,18 @@
                     </div>
                     <div class="footer-buttons">
                         <div class="footer-button" href="#">
-                            2020 Edition
+                            1st Edition
                         </div>
                         <div class="footer-button" href="#">
-                            2021 Edition
+                            2nd Edition
                         </div>
                     </div>
                 </div>
+
+                <div class="footer-headings-vt" style="margin-bottom: 0px; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <img src="img/vt.png" style="width: 80px; opacity: 0.5;"/>
+                </div>
+
                 <div class="footer-headings" style="margin-bottom: 0px;">
                     <div class="small-pink-heading custom-footer-align">
                         CONTACT

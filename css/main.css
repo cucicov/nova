@@ -173,17 +173,14 @@ html, body {
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  flex: 1;
 }
 
 .sponsor-item {
-  margin: 50px;
+  margin: 20px;
   align-self: center;
   display: flex;
   justify-content: center;
-}
-
-.sponsor-item img {
-  width: 50%;
 }
 
 .content {
@@ -201,6 +198,14 @@ html, body {
   flex-wrap: wrap;
 }
 
+.content-container-row-details {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
 .video-wrapper{
   position: absolute;
   width: 100%;
@@ -216,6 +221,7 @@ html, body {
 
 #logo {
   margin-right: 25px;
+  cursor: pointer;
 }
 
 #logo img{
@@ -442,6 +448,10 @@ html, body {
   box-sizing: border-box;
 }
 
+.concept-item {
+  aspect-ratio: 2 / 1 ;
+}
+
 .expo-static-text {
   align-items: flex-end;
   font-family: Open Sans;
@@ -454,7 +464,7 @@ html, body {
   margin-top: auto;
 }
 
-.expo-link-title {
+.expo-link-title{
   font-family: Open Sans;
   font-size: 48px;
   font-weight: 300;
@@ -549,6 +559,8 @@ html, body {
   margin-left: 0px;
   margin-bottom:24px;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: left bottom;
 }
 
 .day-simple {
@@ -658,6 +670,7 @@ html, body {
   letter-spacing: 0.12em;
   text-align: left;
   color: rgba(173, 174, 203, 1);
+  text-transform: uppercase;
 }
 
 .date-separator {
@@ -707,6 +720,30 @@ html, body {
   flex-direction: row;
 }
 
+.partners-subtitles {
+  border-top: 1px solid #343453;
+  padding: 10px 0px;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-family: 'OpenSansCondensed';
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #49DADA;
+
+}
+
+.sponsors-container{
+  margin-bottom: 0px;
+}
+
 .footer {
   margin-top: 50px;
   border-top: 1px solid #70FBFB;
@@ -720,7 +757,7 @@ html, body {
   box-sizing: border-box;
 }
 
-.footer-headings {
+.footer-headings, .footer-headings-vt {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -759,6 +796,42 @@ html, body {
 
 .custom-footer-align {
   align-self: flex-end;
+}
+
+
+/* DETAILS --------------------------------------- */
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 45px;
+  flex: 1;
+}
+
+.details-content {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-author {
+  font-family: 'OpenSansCondensed';
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #FF95E7;
+  text-transform: uppercase;
+}
+
+.details-title{
+  font-family: 'Open Sans';
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 64px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color:#000;
 }
 
 /*
@@ -935,6 +1008,13 @@ textarea {
     margin-bottom: 0px;
   }
 
+  .content-container-row-details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    background-color: #fff;
+  }
+
   #panamea {
     position: relative;
     top: -550px;
@@ -943,6 +1023,7 @@ textarea {
 
   #logo {
     margin-right: 100px;
+
   }
 
   #logo img {
@@ -1062,7 +1143,42 @@ textarea {
   }
 
   #lang-ro {
-    border-radius: 0%;
+    /*border-radius: 0%;*/
+  }
+
+  .expo-link-title{
+    font-family: Open Sans;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 42px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  .footer-headings-vt {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    order: 2;
+  }
+
+  /* DETAILS --------------------------------------- */
+
+  .details-content {
+    margin: 20px;
+  }
+
+  .details-title{
+    font-family: 'Open Sans';
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .details-author{
+    font-size: 16px;
+    line-height: 28px;
   }
 
 }

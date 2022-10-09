@@ -1,0 +1,1031 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Nova</title>
+    <meta name="description" content=""> <!-- TODO: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content=""> <!-- TODO: -->
+    <meta property="og:type" content=""> <!-- TODO: -->
+    <meta property="og:url" content=""> <!-- TODO: -->
+    <meta property="og:image" content=""> <!-- TODO: -->
+
+<!--    <link rel="manifest" href="site.webmanifest">-->
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta name="theme-color" content="#fafafa">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        jQuery(function ($) {
+
+            <!-- mobile check -->
+            var is_mobile = true;
+
+            if( $('#isMobile').css('display')==='none') {
+                is_mobile = false;
+            }
+
+            var refreshCalendarDateSpacings = function(id) {
+                if(!is_mobile){
+                    $(".calendar-day-container").css("margin-left", "0px");
+                    $(".calendar-day-container-wide").css("margin-left", "0px");
+                    $(id+":odd").css("margin-left", "24px");
+
+                    // $("calendar-day-container-wide").css("margin-left", "0px");
+                    setTimeout(function () {
+                        if ($(".calendar-day-container:visible").length % 2 == 1) {
+                            console.log($(".calendar-day-container:visible").length);
+                            var rrand = Math.floor(Math.random() * 10);
+                            $(".calendar-day-container").last().css("margin-left", "0px");
+                            console.log($(".calendar-day-container").last());
+                            console.log(rrand);
+                        }
+                    }, 300);
+                }
+            }
+
+            refreshCalendarDateSpacings(".calendar-day-container");
+
+            var filterCalendar = function(id) {
+                console.log(id);
+                var delay = 250;
+                $(".performance, .artist-talks, .workshops, .festival").hide(delay, 'swing', function () {
+
+                    if ($(".performance:visible").length === 0 &&
+                        $(".artist-talks:visible").length === 0 &&
+                        $(".workshops:visible").length === 0) {
+                        if (id === 'festival') {
+                            refreshCalendarDateSpacings(".calendar-day-container");
+                            $(".performance").show(delay, 'swing');
+                            $(".artist-talks").show(delay, 'swing');
+                            $(".workshops").show(delay, 'swing');
+                            $(".festival").show(delay, 'swing');
+
+                        } else if (id === 'performance') {
+                            refreshCalendarDateSpacings(".performance");
+                            $(".performance").show(delay, 'swing');
+                        } else if (id === 'artist-talks') {
+                            refreshCalendarDateSpacings(".artist-talks");
+                            $(".artist-talks").show(delay, 'swing');
+                        } else if (id === 'workshops') {
+                            refreshCalendarDateSpacings(".workshops");
+                            $(".workshops").show(delay, 'swing');
+                        }
+
+                    }
+
+                });
+
+
+                // setTimeout(refreshCalendarDateSpacings(".artist-talks"), 2000);
+
+            }
+
+            $(function() {
+
+                // translations
+                // The active locale
+                let locale = "ro";
+
+                // We can have as many locales here as we want,
+                // and use any locales we want. We have English
+                // and Arabic as locales here as examples.
+                const translations = {
+                    // English translations
+                    "en": {
+                        "starts": "starts",
+                        "start-date": "nov. 22",
+                        "ends": "ends",
+                        "end-date": "dec. 17",
+                        "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
+                        "festival": "Festival",
+                        "performance": "Performance",
+                        "artist-talks": "NOVA TALKS",
+                        "artist-talk": "NOVA TALK",
+                        "workshops": "EDU",
+                        "workshop": "EDU",
+                        "nov": "nov",
+                        "dec": "dec",
+                        "installation": "installation",
+                        "interactive-installation": "multi-channel video installation",
+                        "video-installation-multi-channel": "multi-channel video installation",
+                        "video-installation": "video installation",
+                        "interactive-video-installation": "interactive video installation",
+                        "ar-installation": "interactive AR installation",
+                        "vr-installation": "interactive VR installation",
+                        "prev-ed": "previous editions",
+                        "concept-text-1": "Created as a connecting experience, this year's exhibition literally and figuratively embraces you and creates a context where you discover different dimensions of intimacy. You can explore them in a profound or light way, depending on how open you are to the experience. \n" +
+                            "\n" +
+                            "We propose an immersive path, constantly moving and transforming, that responds to your presence in surprising ways.\n" +
+                            "\n" +
+                            "We start from 11 individual works and create connections between them so that the experience of the exhibition takes you on a journey of becoming, from one work to another, from you to them and vice versa, each element influencing the whole.\n" +
+                            "\n" +
+                            "We can't wait to see how you set this living space into motion!\n" +
+                            "\n" +
+                            "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology. \n",
+                        "expo-opening": "Exhibition opening",
+                        "expo-closing": "Exhibition closing",
+                        "festival": "Festival",
+                        "space-and-spatiality": "SPACE AND SPATIALITY IN ART INSTALLATIONS // Iulia Gherghescu",
+                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
+                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
+                        "sound-design": "SOUND DESIGN FOR IMAGINARY WORLDS // Ștefan Damian",
+                        "style-gan": "REAL-TIME INTERACTION WITH StyleGAN // Grigore Burloiu",
+                        "deep-learning": "USING DEEP LEARNING TO GENERATE DIALOGUE TEXT // Grigore Burloiu",
+                        "a-project": "A project by",
+                        "presented-by": "Presented by",
+                        "with-support-of": "With the support of",
+                        "sponsors": "Partners",
+                        "our-sponsors": "Our partners",
+                        "media-partners": "Our media partners",
+                        "expo": "Expo",
+                    },
+
+                    // Arabic translations
+                    "ro": {
+                        "starts": "începe pe",
+                        "start-date": "22 noiembrie",
+                        "ends": "se încheie pe",
+                        "end-date": "17 decembrie",
+                        "open-info": "Expoziția este deschisă de marți până vineri 16:00 - 21:00 și sâmbătă 11:00 - 21:00",
+                        "festival": "Festival",
+                        "performance": "Performance",
+                        "artist-talks": "NOVA TALKS",
+                        "artist-talk": "NOVA TALK",
+                        "workshops": "EDU",
+                        "workshop": "EDU",
+                        "nov": "nov",
+                        "dec": "dec",
+                        "installation": "instalație",
+                        "interactive-installation": "instalație interactivă",
+                        "video-installation-multi-channel": "instalație video multi-channel",
+                        "video-installation": "instalație video",
+                        "interactive-video-installation": "instalație video interactivă",
+                        "ar-installation": "instalație interactivă AR",
+                        "vr-installation": "instalație interactivă VR",
+                        "prev-ed": "ediții anterioare",
+                        "concept-text-1": "Construită ca o experiență de conectare, expoziția de anul acesta te ia în brațe la propriu și la figurat și îți creează un context în care descoperi diferite dimensiuni ale intimității. Le poți explora mai profund sau mai domol, în funcție de deschiderea ta către acest proces. \n" +
+                            "\n" +
+                            "Îți propunem un traseu imersiv, în continuă mișcare și transformare, care răspunde la prezența ta în feluri surprinzătoare. \n" +
+                            "\n" +
+                            "Pornim de la 11 lucrări pilon și creăm legături între acestea astfel încât traseul expoziției să te poarte printr-o suită de deveniri, de la o lucrare la alta, de la tine la ele și viceversa, fiecare element influențând întregul. \n" +
+                            "\n" +
+                            "Abia așteptăm să vedem ritmurile specifice în care vei pune în mișcare acest spațiu viu!\n" +
+                            "\n" +
+                            "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie.\n" +
+                            "\n",
+                        "concept-text-2": "",
+                        "expo-opening": "Vernisaj expoziție",
+                        "expo-closing": "Finisaj expoziție",
+                        "festival": "Festival",
+                        "space-and-spatiality": "SPAȚIU ȘI SPAȚIALITATE ÎN CREAȚIA INSTALAȚIILOR ARTISTICE // Iulia Gherghescu",
+                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
+                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
+                        "sound-design": "SOUND DESIGN PENTRU LUMI IMAGINATE // Ștefan Damian",
+                        "style-gan": "INTERACȚIUNE CU StyleGAN ÎN TIMP REAL // Grigore Burloiu",
+                        "deep-learning": "FOLOSIREA DEEP LEARNING PENTRU GENERARE DE TEXT DIALOG // Grigore Burloiu",
+                        "a-project": "Un proiect de",
+                        "presented-by": "Prezentat de",
+                        "with-support-of": "Cu prijinul",
+                        "sponsors": "Parteneri",
+                        "our-sponsors": "Partenerii noștri",
+                        "media-partners": "Parteneri media",
+                        "expo": "Expo",
+                    },
+                };
+
+                // When the page content is ready...
+                document
+                    .querySelectorAll("[data-i18n-key]")
+                    .forEach(translateElement);
+
+                function translateElement(element) {
+                    const key = element.getAttribute("data-i18n-key");
+                    const translation = translations[locale][key];
+                    element.innerText = translation;
+                }
+
+                // ----- translations
+
+                function GetURLParameter(sParam){
+                    var sPageURL = window.location.search.substring(1);
+                    var sURLVariables = sPageURL.split('&');
+                    for (var i = 0; i < sURLVariables.length; i++)
+                    {
+                        var sParameterName = sURLVariables[i].split('=');
+                        if (sParameterName[0] == sParam)
+                        {
+                            return sParameterName[1];
+                        }
+                    }
+                }
+
+                function getLocalStream() {
+                    // navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
+                    //     window.localStream = stream; // A
+                    //     window.localAudio.srcObject = stream; // B
+                    //     window.localAudio.autoplay = true; // C
+                    // }).catch((err) => {
+                    //     console.error(`you got an error: ${err}`)
+                    // });
+                }
+
+
+                const expo_item_audio_click = new Audio("sound/softer-click.mp3" );
+                const calendar_item_audio_click = new Audio("sound/pull-plant.mp3" );
+
+                // init dates background
+                $('.calendar-day-container, .calendar-day-container-wide').each(function() {
+                    let cal_date = $(this).find('.day-date-nr').text();
+                    $(this).css('background-image', 'url(\'../img/' + cal_date.trim() + '.svg\')');
+
+                });
+
+                // set notification visibility
+                $("#bell").hide();
+
+                // calendar items links
+                $(".calendar-day-container").on("click", function() {
+                    // window.location = $(this).attr("href"); //TODO: uncomment when details ready.
+                    return false;
+                });
+
+                $(".calendar-day-container-wide").on("click", function() {
+                    // window.location = $(this).attr("href");  //TODO: uncomment when details ready.
+                    return false;
+                });
+
+                $('.calendar-day-container').on({
+                    mouseenter: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 400px");
+                        $(this).find(".day-event-part").css("transition", "all 0.4s");
+                        calendar_item_audio_click.play();
+                    },
+                    mouseleave: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 348px");
+                        $(this).find(".day-event-part").css("transition", "all 2s");
+                    }
+                });
+
+                $('.calendar-day-container-wide').on({
+                    mouseenter: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 300px");
+                        $(this).find(".day-special-right").css("flex", "0 1 800px");
+                        $(this).find(".day-event-part").css("transition", "all 0.3s");
+                        calendar_item_audio_click.play();
+                        // $(this).find(".day-special-right").css("transition", "all 0.4s");
+                    },
+                    mouseleave: function() {
+                        $(this).find(".day-event-part").css("flex", "0 1 348px");
+                        $(this).find(".day-special-right").css("flex", "0 1 632px");
+                        $(this).find(".day-event-part").css("transition", "all 1s");
+                        // $(this).find(".day-special-right").css("transition", "all 2s");
+                    }
+                });
+
+
+                // logo item click
+                $("#logo").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                // expo items links
+
+                $(".clickable-expo-item").on("click", function() {
+                    // window.location = $(this).attr("href"); //TODO: uncomment after content ready
+                    return false;
+                });
+
+                $(".clickable-expo-item").on({
+                    mouseenter: function() {
+                        $(this).fadeTo(100, 0.5, function (){
+                            $(this).removeClass("clickable-expo-item-hover");
+                            expo_item_audio_click.play();
+                        });
+                        $(this).fadeTo(300, 1);
+                    },
+                    mouseleave: function() {
+                        $(this).fadeTo(100, 0.5, function () {
+                            $(this).addClass("clickable-expo-item-hover");
+                        });
+                        $(this).fadeTo(300, 1.0);
+                    }
+                })
+
+                $(".clickable-expo-item").each(function () {
+                    // $(this).css('background-image', 'url(\'' + $(this).attr("bgimg") + '\')');
+                    $(this).css('--bg-image', 'url(\'' + $(this).attr("bgimg") + '\')');
+                });
+
+                // footer button links
+                $(".footer-button").on("click", function() {
+                    window.location = $(this).attr("href");
+                    return false;
+                });
+
+                // language links
+                $("#lang-en").on("click", function() {
+                    locale = "en";
+                    $("#lang-en").addClass("active");
+                    $("#lang-ro").removeClass("active");
+                    document
+                        .querySelectorAll("[data-i18n-key]")
+                        .forEach(translateElement);
+                    return false;
+                });
+
+                $("#lang-ro").on("click", function() {
+                    locale = "ro";
+                    $("#lang-en").removeClass("active");
+                    $("#lang-ro").addClass("active");
+                    document
+                        .querySelectorAll("[data-i18n-key]")
+                        .forEach(translateElement);
+                    return false;
+                });
+
+                getLocalStream();
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+<svg id="svgfilters" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter id="teal-white" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.03 1"/>
+                <feFuncG type="table" tableValues="0.57 1"/>
+                <feFuncB type="table" tableValues="0.49 1"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="teal-lightgreen" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.03 0.8"/>
+                <feFuncG type="table" tableValues="0.57 1"/>
+                <feFuncB type="table" tableValues="0.49 0.53"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="sepia" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.26 0.95"/>
+                <feFuncG type="table" tableValues="0.19 0.78"/>
+                <feFuncB type="table" tableValues="0.11 0.59"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="purple-sepia" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.43 0.97"/>
+                <feFuncG type="table" tableValues="0.06 0.88"/>
+                <feFuncB type="table" tableValues="0.37 0.79"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="cherry-icecream" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.84 1"/>
+                <feFuncG type="table" tableValues="0.05 0.94"/>
+                <feFuncB type="table" tableValues="0.37 0.61"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="blackCurrant-and-mint" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.75 0.53"/>
+                <feFuncG type="table" tableValues="0.25 0.97"/>
+                <feFuncB type="table" tableValues="0.64 0.77"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="sea" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.02 0.13 0.8"/>
+                <feFuncG type="table" tableValues="0.02 0.47 0.97"/>
+                <feFuncB type="table" tableValues="0.26 0.52 0.48"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="warm-sea" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.29 0.01 0.97"/>
+                <feFuncG type="table" tableValues="0.12 0.52 0.94"/>
+                <feFuncB type="table" tableValues="0.37 0.59 0.47"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="spring-grass" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0 0.38 0.92"/>
+                <feFuncG type="table" tableValues="0.5 0.8 1"/>
+                <feFuncB type="table" tableValues="0.5 0.56 0.74"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="red-sunset-with-purple" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.52 0.86 0.97"/>
+                <feFuncG type="table" tableValues="0 0.08 0.81"/>
+                <feFuncB type="table" tableValues="0.51 0.24 0.05"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="red-sunset" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.27 0.86 0.97"/>
+                <feFuncG type="table" tableValues="0.01 0.08 0.81"/>
+                <feFuncB type="table" tableValues="0.02 0.24 0.05"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="gold-sunset" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.27 0.86 1"/>
+                <feFuncG type="table" tableValues="0.01 0.31 0.95"/>
+                <feFuncB type="table" tableValues="0.02 0.02 0.02"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="dark-crimson-sepia" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.01 0.52 0.97"/>
+                <feFuncG type="table" tableValues="0 0.05 0.81"/>
+                <feFuncB type="table" tableValues="0.02 0.29 0.61"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="dark-blue-sepia" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.29 0.15 0.97"/>
+                <feFuncG type="table" tableValues="0.04 0.39 0.93"/>
+                <feFuncB type="table" tableValues="0.32 0.52 0.73"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="dark-green-sepia" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.25 0.39 0.96"/>
+                <feFuncG type="table" tableValues="0.16 0.52 0.97"/>
+                <feFuncB type="table" tableValues="0.06 0.39 0.78"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="x-rays" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.98 0.3 0.25"/>
+                <feFuncG type="table" tableValues="1 0.44 0.24"/>
+                <feFuncB type="table" tableValues="0.91 0.62 0.39"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="warm-x-rays" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.98 0.75 0.51"/>
+                <feFuncG type="table" tableValues="1 0.45 0.11"/>
+                <feFuncB type="table" tableValues="0.91 0.39 0.29"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="golden-x-rays" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.98 1 0.94"/>
+                <feFuncG type="table" tableValues="1 0.98 0.44"/>
+                <feFuncB type="table" tableValues="0.91 0.43 0.02"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="purple-warm" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.52 0.97 1"/>
+                <feFuncG type="table" tableValues="0 0.62 1"/>
+                <feFuncB type="table" tableValues="0.51 0.39 0.89"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="green-pink-acid" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="1 0.98 0.1"/>
+                <feFuncG type="table" tableValues="0.17 1 0.82"/>
+                <feFuncB type="table" tableValues="0.7 0.84 0.67"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="yellow-blue-acid" x="-10%" y="-10%" width="120%" height="120%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values=".33 .33 .33 0 0
+          .33 .33 .33 0 0
+          .33 .33 .33 0 0
+          0 0 0 1 0" in="SourceGraphic" result="colormatrix"/>
+            <feComponentTransfer in="colormatrix" result="componentTransfer">
+                <feFuncR type="table" tableValues="0.01 0.97 0.89"/>
+                <feFuncG type="table" tableValues="0.38 1 1"/>
+                <feFuncB type="table" tableValues="1 0.89 0.01"/>
+                <feFuncA type="table" tableValues="0 1"/>
+            </feComponentTransfer>
+            <feBlend mode="normal" in="componentTransfer" in2="SourceGraphic" result="blend"/>
+        </filter>
+        <filter id="noise" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence baseFrequency="0.01 0.4" result="NOISE" numOctaves="2" />
+            <feDisplacementMap in="SourceGraphic" in2="NOISE" scale="20" xChannelSelector="R" yChannelSelector="R"></feDisplacementMap>
+        </filter>
+        <filter id="squiggly-0">
+            <feTurbulence id="turbulence1" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+            <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+        </filter>
+        <filter id="squiggly-1">
+            <feTurbulence id="turbulence2" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+        </filter>
+        <filter id="squiggly-2">
+            <feTurbulence id="turbulence3" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+        </filter>
+        <filter id="squiggly-3">
+            <feTurbulence id="turbulence4" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+        </filter>
+        <filter id="squiggly-4">
+            <feTurbulence id="turbulence5" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+        </filter>
+        <filter id="posterize">
+            <feComponentTransfer>
+                <feFuncR type="discrete" tableValues="0 .5 1" />
+            </feComponentTransfer>
+        </filter>
+        <filter id="dancing" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+            <feMorphology operator="dilate" radius="4 4" in="SourceAlpha" result="morphology"/>
+            <feFlood flood-color="#30597E" flood-opacity="1" result="flood"/>
+            <feComposite in="flood" in2="morphology" operator="in" result="composite"/>
+            <feComposite in="composite" in2="SourceAlpha" operator="out" result="composite1"/>
+            <feTurbulence type="fractalNoise" baseFrequency="0.01 0.02" numOctaves="1" seed="0" stitchTiles="stitch" result="turbulence"/>
+            <feDisplacementMap in="composite1" in2="turbulence" scale="17" xChannelSelector="A" yChannelSelector="A" result="displacementMap"/>
+            <feMerge result="merge">
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="displacementMap"/>
+            </feMerge>
+        </filter>
+        <filter id="drops" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feTurbulence type="turbulence" baseFrequency="0.05 0.05" numOctaves="1" seed="3" stitchTiles="stitch" result="turbulence"/>
+            <feComposite in="turbulence" in2="SourceGraphic" operator="in" result="composite"/>
+            <feColorMatrix type="matrix" values="1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 25 -2" in="composite" result="colormatrix"/>
+            <feComposite in="SourceGraphic" in2="colormatrix" operator="in" result="composite1"/>
+            <feGaussianBlur stdDeviation="3 3" in="composite1" result="blur"/>
+            <feSpecularLighting surfaceScale="2" specularConstant="1" specularExponent="20" lighting-color="#fffffd" in="blur" result="specularLighting">
+                <feDistantLight azimuth="-90" elevation="150"/>
+            </feSpecularLighting>
+            <feSpecularLighting surfaceScale="2" specularConstant="1" specularExponent="20" lighting-color="#cae1fe" in="blur" result="specularLighting1">
+                <feDistantLight azimuth="90" elevation="150"/>
+            </feSpecularLighting>
+            <feSpecularLighting surfaceScale="7" specularConstant="1" specularExponent="35" lighting-color="#fcfeff" in="blur" result="specularLighting2">
+                <fePointLight x="150" y="50" z="300"/>
+            </feSpecularLighting>
+            <feComposite in="specularLighting" in2="composite1" operator="in" result="composite2"/>
+            <feComposite in="specularLighting2" in2="composite1" operator="in" result="composite3"/>
+            <feComposite in="specularLighting1" in2="composite1" operator="in" result="composite4"/>
+            <feBlend mode="multiply" in="composite4" in2="SourceGraphic" result="blend"/>
+            <feBlend in="composite2" in2="blend" result="blend1"/>
+            <feBlend in="composite3" in2="blend1" result="blend2"/>
+        </filter>
+        <filter id="grain">
+            <feTurbulence baseFrequency="0.60,0.90" result="colorNoise" />
+            <feColorMatrix in="colorNoise" type="matrix" values=".33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0"/>
+            <feComposite operator="in" in2="SourceGraphic" result="monoNoise"/>
+            <feBlend in="SourceGraphic" in2="monoNoise" mode="multiply" />
+        </filter>
+        <filter id="fluffy" x="0%" y="0%" width="100%" height="100%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" result="fluffyNoise" numOctaves="5" />
+            <feColorMatrix in="fluffyNoise" type="matrix" values=".33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0"/>
+            <feComposite operator="in" in2="SourceGraphic" result="monoFluffyNoise"/>
+            <feBlend in="SourceGraphic" in2="monoFluffyNoise" mode="screen" />
+        </filter>
+    </defs>
+</svg>
+
+<div class="video-wrapper">
+    <video playsinline autoplay muted loop id="panamea">
+        <source src="img/panamea.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div id="isMobile"></div>
+
+<div class = "wrapper">
+    <div class="content">
+
+        <!-- HEADER -->
+        <div class="content-container-row">
+            <div id="logo" href="https://novanova.ro/">
+                <img src="img/logo.svg">
+            </div>
+            <div id="logo-text">
+                <div id="logo-text-content">
+                    ART<br/>
+                    TECHNOLOGY<br/>
+                    NOW<br/>
+                </div>
+            </div>
+            <div class="main-menu-item-bell">
+                <a href="#" style="align-self: flex-end;">
+                    <div id="bell">
+                        <img src="img/bell.svg"/>
+                    </div>
+                </a>
+                <div id="languages">
+                    <a href="" id="lang-en">
+                    </a>
+                    <a href="" id="lang-ro" class="active">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-row">
+            <div id="program">
+                <div id="program-text">
+                    <span style="color: #FF95E7" data-i18n-key="starts">STARTS</span>
+                    <span style="color: #00001C" data-i18n-key="start-date">NOV. 22</span> <br/>
+                    <span style="color: #FF95E7" data-i18n-key="ends">ENDS</span>
+                    <span style="color: #00001C" data-i18n-key="end-date">DEC.17</span> <br/>
+                    <span style="color: #FF95E7">2022</span> <br/>
+                </div>
+                <div id="box1">
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container-row">
+            <div id="program-hours" data-i18n-key="open-info">
+                The exhibition is open every day from 10AM to 7PM
+            </div>
+        </div>
+
+        <div class="content-container-row">
+            <div id="box2">
+            </div>
+        </div>
+
+        <div class="content-container-row">
+
+            <!-- MENU MOBILE -->
+
+            <div id="menu-mobile">
+                <div class="active-main-menu-item main-menu-item-workshops">
+                    <div id="workshops" class="main-menu-item-text" data-i18n-key="expo">
+                        Expo
+                    </div>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- MENU DESKTOP -->
+
+            <div id="menu-desktop">
+                <div class="active-main-menu-item main-menu-item-workshops">
+                    <div id="workshops" class="main-menu-item-text" data-i18n-key="expo">Expo</div>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="content-container-row-details calendar-container">
+
+            <div class="details-header">
+                <img src="img/details/n.png">
+                <img src="img/details/o.png">
+            </div>
+
+            <div class="details-content">
+
+                <div class="details-author">
+                    Iulia Gherghescu
+                </div>
+
+                <div class="details-title">
+                    Spațiu și Spațialitate în creația instalațiilor artistice
+                </div>
+
+                <div class="details-image" bgimg="../img/content/nhm.jpg">
+                </div>
+
+            </div>
+
+            <div class="details-header">
+                <img src="img/details/v.png">
+                <img src="img/details/a.png">
+            </div>
+
+        </div>
+
+        <!-- PARTNERS -->
+
+        <div class="content-container-row sponsors-container">
+            <div class="generic-header">
+                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="our-sponsors">Our partners</div>
+                <div class="main-menu-arrow">
+                    <img src="img/arrow.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-subtitles"  data-i18n-key="a-project">
+            A project by
+        </div>
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/continuu.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/ctrln.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-subtitles"  data-i18n-key="presented-by">
+            Presented by
+        </div>
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unicredit.png">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="partners-subtitles"  data-i18n-key="with-support-of">
+            With support of
+        </div>
+
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/iqos.png">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="partners-subtitles"  data-i18n-key="sponsors">
+            Partners
+        </div>
+
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/goethe.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/institiutfrancais.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/forumul.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/spaniola.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/ambasada.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/excelsior.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unatc.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/interfacecultures.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/kunst.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/cinetic.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unarte.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/novelmushrooms.png">
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="partners-subtitles"  data-i18n-key="media-partners">
+            Media partners
+        </div>
+
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/alist.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/designist.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/iqads.png">
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="content-container-row" style="margin-bottom: 0px;">
+            <div class="footer">
+                <div class="footer-headings custom-footer-padding">
+                    <div class="small-pink-heading"  data-i18n-key="prev-ed">
+                        PREVIOUS EDITIONS
+                    </div>
+                    <div class="footer-buttons">
+                        <div class="footer-button" href="#">
+                            1st Edition
+                        </div>
+                        <div class="footer-button" href="#">
+                            2nd Edition
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-headings-vt" style="margin-bottom: 0px; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <img src="img/vt.png" style="width: 80px; opacity: 0.5;"/>
+                </div>
+
+                <div class="footer-headings" style="margin-bottom: 0px;">
+                    <div class="small-pink-heading custom-footer-align">
+                        CONTACT
+                    </div>
+                    <div class="footer-buttons custom-footer-align">
+                        <div class="footer-button" href="#"
+                             style="height: 24px;">
+                            <img src="img/fb.svg">
+                        </div>
+                        <div class="footer-button" href="#"
+                             style="height: 24px;">
+                            <img src="img/insta.svg">
+                        </div>
+                        <div class="footer-button" href="#"
+                             style="margin-right: 0px">
+                            contact@nova.ro
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Add your site or application content here -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
