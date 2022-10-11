@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Nova</title>
 
-<!--    <link rel="manifest" href="site.webmanifest">-->
+    <!--    <link rel="manifest" href="site.webmanifest">-->
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
@@ -456,102 +456,29 @@
             </div>
         </div>
 
-        <div class="content-container-row pad-top-130">
+        <div class="content-container-row">
 
             <!-- MENU MOBILE -->
 
             <div id="menu-mobile">
-                <ul id="accordion" class="accordion">
-                    <li>
-                        <div class="link active-main-menu-item" style="display: flex; flex-direction: row;">
-<!--                            <a href="#">-->
-                                <div id="mobile-selected" class="main-menu-item-text" data-i18n-key="festival">
-                                    Festival
-                                </div>
-
-<!--                            </a>-->
-                            <div class="main-menu-arrow">
-                                <img src="img/arrow.png"/>
-                            </div>
-
-                            <div id="filter-icon">
-                                <img src="img/filter.svg">
-                            </div>
-                        </div>
-                        <ul class="submenu">
-                            <li>
-                                <div class="main-menu-item">
-                                    <a href="">
-                                        <div id="festival" class="main-menu-item-text" data-i18n-key="festival">
-                                            Festival
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="main-menu-item main-menu-item-performance">
-                                    <a href="">
-                                        <div id="performance" class="main-menu-item-text" data-i18n-key="performance">
-                                            Performance
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="main-menu-item  main-menu-item-artist-talks">
-                                    <a href="">
-                                        <div id="artist-talks" class="main-menu-item-text" data-i18n-key="artist-talks">
-                                            Artist Talks
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="main-menu-item main-menu-item-workshops">
-                                    <a href="">
-                                        <div id="workshops" class="main-menu-item-text" data-i18n-key="workshops">
-                                            Workshops
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="active-main-menu-item main-menu-item-workshops">
+                    <div id="workshops" class="main-menu-item-text" data-i18n-key="workshop">
+                        heading
+                    </div>
+                    <div class="main-menu-arrow">
+                        <img src="img/arrow.png"/>
+                    </div>
+                </div>
             </div>
 
 
             <!-- MENU DESKTOP -->
 
             <div id="menu-desktop">
-                <div class="main-menu-item active-main-menu-item">
-                    <a href="">
-                        <div id="festival" class="main-menu-item-text" data-i18n-key="festival">Festival</div>
-                    </a>
-                    <div class="main-menu-arrow">
-                        <img src="img/arrow.png"/>
+                <div class="active-main-menu-item main-menu-item-workshops">
+                    <div id="workshops" class="main-menu-item-text" data-i18n-key="workshop">
+                        heading
                     </div>
-                </div>
-                <div class="main-menu-item main-menu-item-performance">
-                    <a href="">
-                        <div id="performance" class="main-menu-item-text" data-i18n-key="performance">Performance</div>
-                    </a>
-                    <div class="main-menu-arrow">
-                        <img src="img/arrow.png"/>
-                    </div>
-                </div>
-                <div class="main-menu-item  main-menu-item-artist-talks">
-                    <a href="">
-                        <div id="artist-talks" class="main-menu-item-text" data-i18n-key="artist-talks">Artist Talks</div>
-                    </a>
-                    <div class="main-menu-arrow">
-                        <img src="img/arrow.png"/>
-                    </div>
-                </div>
-                <div class="main-menu-item main-menu-item-workshops">
-                    <a href="">
-                        <div id="workshops" class="main-menu-item-text" data-i18n-key="workshops">Workshops</div>
-                    </a>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
                     </div>
@@ -562,621 +489,253 @@
 
         <!-- CONTENT -->
 
-        <div class="content-container-row calendar-container">
+        <div class="content-container-row-details calendar-container">
 
-            <div class="calendar-day-container-wide performance" href="seeing-double.html">
-                <div class="day-special">
-                    <div class="day-special-left">
-                        <div class="day-date-part">
-                            <div class="day-date-nr">
-                                22
-                            </div>
-                            <div class="day-date-mon" data-i18n-key="nov">
-                                NOV
-                            </div>
-                        </div>
-                        <div class="day-event-part">
-                            <div class="small-pink-heading">
-                                PERFORMANCE-LECTURE
-                            </div>
-                            <div class="day-event-name">
-                                Seeing double - bridging dualities with relational intelligence //
-                                SOUGWEN 愫君 CHUNG
-                            </div>
-                            <div class="small-not-so-pink-footer">
-                                19:00 - 20:30
-                            </div>
-                            <div class="day-event-location" data-i18n-key="excelsior">
-                                Teatrul Excelsior
-                            </div>
-                        </div>
-                    </div>
-
-                    <div title="Exquisite corpus 2019" class="day-special-right" style="background-image: url('../img/content/1.performance_exquisitecorpus(2019).jpg');">
-                    </div>
-                </div>
+            <div class="details-header">
+                <img src="img/details/n.png">
+                <img src="img/details/o.png">
             </div>
 
+            <div class="details-content">
 
-            <div class="calendar-day-container-wide artist-talks prevent-default-click" href="">
-                <div class="day-special">
-                    <div class="day-special-left">
-                        <div class="day-date-part">
-                            <div class="day-date-nr">
-                                23
-                            </div>
-                            <div class="day-date-mon" data-i18n-key="nov">
-                                NOV
-                            </div>
-                        </div>
-                        <div class="day-event-part">
-                            <div class="small-pink-heading" data-i18n-key="expo-opening">
-                                Vernisaj expoziție
-                            </div>
-                            <div class="day-event-name">
-                            </div>
-                            <div class="small-not-so-pink-footer">
-                                17:00 - 21:30
-                            </div>
-                            <div class="day-event-location">
-                                Pavilion 32, Goethe-Institut
-                            </div>
-                        </div>
-                    </div>
-
-                    <div title="Exquisite corpus 2019" class="day-special-right" style="background-image: url('../img/content/expo.png');">
-                    </div>
+                <div class="details-author">
+                    Marius Hodea
                 </div>
-            </div>
 
-<!--            <div class="date-separator"></div>-->
-
-            <div class="calendar-day-container-wide artist-talks" href="#">
-                <div class="day-special">
-                    <div class="day-special-left">
-                        <div class="day-date-part">
-                            <div class="day-date-nr">
-                                26
-                            </div>
-                            <div class="day-date-mon" data-i18n-key="nov">
-                                NOV
-                            </div>
-                        </div>
-                        <div class="day-event-part">
-                            <div class="small-pink-heading" data-i18n-key="nova-talks">
-                                NOVA TALKS
-                            </div>
-                            <div class="day-event-name">
-                            </div>
-                            <div class="small-not-so-pink-footer">
-                                11:00 - 15:30
-                            </div>
-                            <div class="day-event-location">
-                                Cinema Elvira Popescu
-                            </div>
-                        </div>
-                    </div>
-
-                    <div title="Exquisite corpus 2019" class="day-special-right" style="background-image: url('../img/content/artist-talks.png');">
-                    </div>
+                <div class="details-title" data-i18n-key="intro-to-metaverse-detail">
+                    metaverse-1
                 </div>
-            </div>
 
-<!--        </div>-->
+                <div class="details-text-wrapper">
+                    <div class="details-text-main">
 
-<!--        <div class="content-container-row calendar-container">-->
-<!--        </div>-->
-
-<!--        <div class="content-container-row calendar-container">-->
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            10
+                        <div data-i18n-key="text-main-metaverse-1">
                         </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
-                        </div>
+
                     </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshop">
-                            EDU
+
+                    <div class="details-text-info">
+                        <div class="details-text-info-header" data-i18n-key="where">
+                            UNDE
                         </div>
-                        <div class="day-event-name" data-i18n-key="space-and-spatiality">
-                            SPAȚIU ȘI SPAȚIALITATE ÎN CREAȚIA INSTALAȚIILOR ARTISTICE // Iulia Gherghescu
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            12:00 - 14:30
-                        </div>
-                        <div class="day-event-location">
+                        <div class="details-text-info-content" data-i18n-key="cinetic">
                             CINETic
                         </div>
-                    </div>
-                </div>
-            </div>
-
-<!--            <div class="date-separator"></div>-->
-
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            13
+                        <div class="details-text-info-header" data-i18n-key="when">
+                            when
                         </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshop">
-                            NOVA EDU
-                        </div>
-                        <div class="day-event-name" data-i18n-key="intro-to-metaverse">
-                            INTRO TO METAVERSE: 360/VR Filmmaking
-                        </div>
-                        <div class="small-not-so-pink-footer">
+                        <div class="details-text-info-content">
+                            13/Dec/2022
+                            <br/>
                             18:00 - 21:00
                         </div>
-                        <div class="day-event-location">
-                            CINETIC
+                        <div class="details-text-info-header" data-i18n-key="available-places">
+                            places
+                        </div>
+                        <div class="details-text-info-content">
+                            10
                         </div>
                     </div>
                 </div>
-            </div>
-<!--        </div>-->
 
-<!--        <div class="content-container-row calendar-container">-->
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            15
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
+                <div class="details-text-separator"></div>
+
+                <div class="details-text-wrapper-author">
+                    <div class="details-text-main">
+
+                        <div data-i18n-key="text-main-author-metaverse-1">
                         </div>
                     </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshops">
-                            NOVA EDU
-                        </div>
-                        <div class="day-event-name" data-i18n-key="intro-to-metaverse-2">
-                            INTRO TO METAVERSE: from real to digital objects
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            Cinetic
-                        </div>
+
+                    <div class="details-text-info">
+                        <img src="/img/details/edu/marius_hodea.jpg" class="details-content-image-author">
                     </div>
                 </div>
+
             </div>
 
-<!--            <div class="date-separator"></div>-->
-
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            16
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshops">
-                            NOVA EDU
-                        </div>
-                        <div class="day-event-name" data-i18n-key="sound-design">
-                            SOUND DESIGN PENTRU LUMI IMAGINATE
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            18:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            CINETIC
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!--        </div>-->
-
-<!--        <div class="content-container-row calendar-container">-->
-
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            17
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshops">
-                            NOVA EDU
-                        </div>
-                        <div class="day-event-name" data-i18n-key="style-gan">
-                            REAL-TIME INTERACTION WITH StyleGAN
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            12:00 - 16:00
-                        </div>
-                        <div class="day-event-location">
-                            CINETIC
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="calendar-day-container workshops" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            17
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="workshops">
-                            NOVA EDU
-                        </div>
-                        <div class="day-event-name" data-i18n-key="deep-learning">
-                            REAL-TIME INTERACTION WITH StyleGAN
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            17:00- 19:00
-                        </div>
-                        <div class="day-event-location">
-                            CINETIC
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="calendar-day-container festival prevent-default-click" href="#">
-                <div class="day-simple">
-                    <div class="day-date-part">
-                        <div class="day-date-nr">
-                            17
-                        </div>
-                        <div class="day-date-mon" data-i18n-key="dec">
-                            DEC
-                        </div>
-                    </div>
-                    <div class="day-event-part">
-                        <div class="small-pink-heading" data-i18n-key="expo">
-                            FESTIVAL
-                        </div>
-                        <div class="day-event-name" data-i18n-key="expo-closing">
-                            Finisaj expoziție
-                        </div>
-                        <div class="small-not-so-pink-footer">
-                            11:00 - 21:00
-                        </div>
-                        <div class="day-event-location">
-                            Pavilion 32, Goethe-Institut
-                        </div>
-                    </div>
-                </div>
+            <div class="details-header">
+                <img src="img/details/v.png">
+                <img src="img/details/a.png">
             </div>
 
         </div>
 
 
-        <!-- EXPO -->
+        <!-- PARTNERS -->
 
-        <div class="content-container-row calendar-container">
-            <div class="generic-header">
-                <div id="expo" class="main-menu-item-text">Expo</div>
-                <div class="main-menu-arrow">
-                    <img src="img/arrow.png"/>
+        <div class="content-container-row sponsors-container" style="margin-top: 86px">
+            <!--            <div class="generic-header">-->
+            <!--                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="our-sponsors">Our partners</div>-->
+            <!--                <div class="main-menu-arrow">-->
+            <!--                    <img src="img/arrow.png"/>-->
+            <!--                </div>-->
+            <!--            </div>-->
+        </div>
+
+        <div class="partners-subtitles"  data-i18n-key="a-project">
+            A project by
+        </div>
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/continuu.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/ctrln.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="partners-subtitles"  data-i18n-key="presented-by">
+            Presented by
+        </div>
+
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/unicredit.png">
                 </div>
             </div>
         </div>
 
 
-        <div class="content-container-row calendar-container">
-
-            <div class="expo-item concept-item">
-                <div class="small-pink-heading" style="margin-bottom: 40px;">
-                    CONCEPT
-                </div>
-                <div class="expo-static-text"  data-i18n-key="concept-text-1">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ut dapibus magna. Quisque eget tortor tellus. In ullamcorper, velit ac ullamcorper fermentum, tellus nisi porttitor quam, vel accumsan leo augue sit amet enim.
-                    <br/><br/>
-                    Mauris congue sed leo et tristique. Aliquam ut vestibulum ex, at malesuada leo.
-                </div>
-            </div>
-
+        <div class="partners-subtitles"  data-i18n-key="with-support-of">
+            With support of
         </div>
 
 
-        <!-- EXPO CHUNK -->
-
-        <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="new-home-of-mind.html" bgimg="../img/content/nhm.jpg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        New Home of Mind
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                MÓNICA RIKIĆ
-                            </div>
-                        </div>
-                    </div>
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/iqos.png">
                 </div>
             </div>
-
-            <div class="date-separator"></div>
-
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="metamorphosis.html" bgimg="../img/content/metamorphosis.png">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="video-installation-multi-channel">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Metamorphosis
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                MYRIAM BLEAU
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <!-- ---- -->
 
-        <!-- EXPO CHUNK -->
-
-        <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="acqua-alta.html" bgimg="../img/content/acquaalta.JPG">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="ar-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Acqua Alta – Crossing the Mirror
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                ADRIEN M & CLAIRE B
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="date-separator"></div>
-
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="vr-in-wonderland.html" bgimg="../img/content/wonderland.jpg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="vr-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        VR in Wonderland
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                MAŠA JAZBEC | VANESSA VOZZO
-                            </div>
-                            <div class="small-not-so-pink-footer-line">
-                                ALEKSANDRA MITIC
-                            </div>
-                            <div class="small-not-so-pink-footer-line">
-                                JÜRGEN ROPP
-                            </div>
-                            <div class="small-not-so-pink-footer-line">
-                                BÀLINT BUDAI | MARTÌN NADAL
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="partners-subtitles"  data-i18n-key="sponsors">
+            Partners
         </div>
 
-        <!-- ---- -->
 
-
-        <!-- EXPO CHUNK -->
-
-        <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="intuition.html" bgimg="../img/content/intuition.jpg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Intuition
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                MARIUS JURCA
-                            </div>
-                        </div>
-                    </div>
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/goethe.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/institiutfrancais.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/forumul.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/spaniola.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/ambasada.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/excelsior.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/interfacecultures.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/kunst.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/unatc.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/cinetic.png">
+                </div>
+                <div class="sponsor-item-crowded">
+                    <img src="img/sponsor/unarte.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/novelmushrooms.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/wolff.png">
                 </div>
             </div>
-
-            <div class="date-separator"></div>
-
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="rhiza.html" bgimg="../img/content/rhiza.JPG">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="interactive-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Rhiza
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                NOOR STENFERT KROESE
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <!-- ---- -->
 
 
-        <!-- EXPO CHUNK -->
-
-        <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="senrian.html" bgimg="../img/content/senrian.jpg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="interactive-installation-peep">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        SenriAn
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                NOMI SASAKI OTANI
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="date-separator"></div>
-
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="after-ego.html" bgimg="../img/content/afterego.jpeg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="interactive-video-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        After Ego
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                RIZI
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="partners-subtitles"  data-i18n-key="media-partners">
+            Media partners
         </div>
 
-        <!-- ---- -->
 
-
-        <!-- EXPO CHUNK -->
-
-        <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="anima.html" bgimg="../img/content/anima.jpeg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Anima
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                DENIS SIMION
-                            </div>
-                        </div>
-                    </div>
+        <div class="content-container-row">
+            <div class="sponsor-container">
+                <div class="sponsor-item">
+                    <img src="img/sponsor/alist.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/designist.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/iqads.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/feeder.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/igloo.png">
                 </div>
             </div>
-
-            <div class="date-separator"></div>
-
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="wind-in-my-pages.html" bgimg="../img/content/wimp.png">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="video-installation">
-                        INSTALLATION
-                    </div>
-                    <div class="expo-link-title">
-                        Wind in My Pages
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                ALEXANDRU CLAUDIU MAXIM
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
 
-        <!-- ---- -->
+        <!-- FOOTER -->
 
-        <!-- EXPO CHUNK -->
-
-        <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="ear-to-ear.html" bgimg="../img/content/e2e.jpg">
-                <div class="clickable-expo-item-container">
-                    <div class="small-pink-heading"  data-i18n-key="installation">
-                        INSTALLATION
+        <div class="content-container-row" style="margin-bottom: 0px;">
+            <div class="footer">
+                <div class="footer-headings custom-footer-padding">
+                    <div class="small-pink-heading"  data-i18n-key="prev-ed">
+                        PREVIOUS EDITIONS
                     </div>
-                    <div class="expo-link-title">
-                        Ear to Ear
-                        <br/><br/>
-                    </div>
-                    <div class="small-not-so-pink-footer">
-                        <div class="small-not-so-pink-footer-wrapper">
-                            <div class="small-not-so-pink-footer-line">
-                                ANAÏS LOSSOUARN
-                            </div>
+                    <div class="footer-buttons">
+                        <div class="footer-button" href="#">
+                            1st Edition
+                        </div>
+                        <div class="footer-button" href="#">
+                            2nd Edition
                         </div>
                     </div>
                 </div>
+
+                <div class="footer-headings-vt" style="margin-bottom: 0px; align-items: center; justify-content: center; margin-bottom: 20px;">
+                    <img src="img/vt.png" style="width: 80px; opacity: 0.5;"/>
+                </div>
+
+                <div class="footer-headings" style="margin-bottom: 0px;">
+                    <div class="small-pink-heading custom-footer-align">
+                        CONTACT
+                    </div>
+                    <div class="footer-buttons custom-footer-align">
+                        <div class="footer-button" href="#"
+                             style="height: 24px;">
+                            <img src="img/fb.svg">
+                        </div>
+                        <div class="footer-button" href="#"
+                             style="height: 24px;">
+                            <img src="img/insta.svg">
+                        </div>
+                        <div class="footer-button" href="#"
+                             style="margin-right: 0px">
+                            contact@nova.ro
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-
-            <div class="date-separator"></div>
-
-            <div class="expo-item" style="opacity: 0">
-
-            </div>
-
         </div>
-
-        <!-- ---- -->
-
-        <div id="footer-module"></div>
 
     </div>
 
