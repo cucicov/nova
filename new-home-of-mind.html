@@ -18,398 +18,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script>
-        jQuery(function ($) {
-
-            <!-- mobile check -->
-            var is_mobile = true;
-
-            if( $('#isMobile').css('display')==='none') {
-                is_mobile = false;
-            }
-
-            function getCookie(cname) {
-                let name = cname + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(';');
-                for(let i = 0; i <ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-
-            var refreshCalendarDateSpacings = function(id) {
-                if(!is_mobile){
-                    $(".calendar-day-container").css("margin-left", "0px");
-                    $(".calendar-day-container-wide").css("margin-left", "0px");
-                    $(id+":odd").css("margin-left", "24px");
-
-                    // $("calendar-day-container-wide").css("margin-left", "0px");
-                    setTimeout(function () {
-                        if ($(".calendar-day-container:visible").length % 2 == 1) {
-                            console.log($(".calendar-day-container:visible").length);
-                            var rrand = Math.floor(Math.random() * 10);
-                            $(".calendar-day-container").last().css("margin-left", "0px");
-                            console.log($(".calendar-day-container").last());
-                            console.log(rrand);
-                        }
-                    }, 300);
-                }
-            }
-
-            refreshCalendarDateSpacings(".calendar-day-container");
-
-            var filterCalendar = function(id) {
-                console.log(id);
-                var delay = 250;
-                $(".performance, .artist-talks, .workshops, .festival").hide(delay, 'swing', function () {
-
-                    if ($(".performance:visible").length === 0 &&
-                        $(".artist-talks:visible").length === 0 &&
-                        $(".workshops:visible").length === 0) {
-                        if (id === 'festival') {
-                            refreshCalendarDateSpacings(".calendar-day-container");
-                            $(".performance").show(delay, 'swing');
-                            $(".artist-talks").show(delay, 'swing');
-                            $(".workshops").show(delay, 'swing');
-                            $(".festival").show(delay, 'swing');
-
-                        } else if (id === 'performance') {
-                            refreshCalendarDateSpacings(".performance");
-                            $(".performance").show(delay, 'swing');
-                        } else if (id === 'artist-talks') {
-                            refreshCalendarDateSpacings(".artist-talks");
-                            $(".artist-talks").show(delay, 'swing');
-                        } else if (id === 'workshops') {
-                            refreshCalendarDateSpacings(".workshops");
-                            $(".workshops").show(delay, 'swing');
-                        }
-
-                    }
-
-                });
-
-
-                // setTimeout(refreshCalendarDateSpacings(".artist-talks"), 2000);
-
-            }
-
-            if(getCookie("lang").length == 0){
-                document.cookie = "lang=ro";
-            }
-
-            $(function() {
-
-                // translations
-                // The active locale
-                let locale = getCookie("lang");
-                if(locale === "ro") {
-                    $("#lang-en").removeClass("active");
-                    $("#lang-ro").addClass("active");
-                } else {
-                    $("#lang-ro").removeClass("active");
-                    $("#lang-en").addClass("active");
-                }
-
-                // We can have as many locales here as we want,
-                // and use any locales we want. We have English
-                // and Arabic as locales here as examples.
-                const translations = {
-                    // English translations
-                    "en": {
-                        "starts": "starts",
-                        "start-date": "november 22",
-                        "ends": "ends",
-                        "end-date": "december 17",
-                        "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
-                        "festival": "Festival",
-                        "performance": "Performance",
-                        "artist-talks": "NOVA TALKS",
-                        "artist-talk": "NOVA TALK",
-                        "workshops": "EDU",
-                        "workshop": "EDU",
-                        "nov": "nov",
-                        "dec": "dec",
-                        "installation": "installation",
-                        "interactive-installation": "interactive installation",
-                        "video-installation-multi-channel": "multi-channel video installation",
-                        "video-installation": "video installation",
-                        "interactive-video-installation": "interactive video installation",
-                        "ar-installation": "interactive AR installation",
-                        "vr-installation": "interactive VR installation",
-                        "prev-ed": "previous editions",
-                        "concept-text-1": "Created as a connecting experience, this year's exhibition literally and figuratively embraces you and creates a context where you discover different dimensions of intimacy. You can explore them in a profound or light way, depending on how open you are to the experience. \n" +
-                            "\n" +
-                            "We propose an immersive path, constantly moving and transforming, that responds to your presence in surprising ways.\n" +
-                            "\n" +
-                            "We start from 11 individual works and create connections between them so that the experience of the exhibition takes you on a journey of becoming, from one work to another, from you to them and vice versa, each element influencing the whole.\n" +
-                            "\n" +
-                            "We can't wait to see how you set this living space into motion!\n" +
-                            "\n" +
-                            "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology. \n",
-                        "expo-opening": "Exhibition opening",
-                        "expo-closing": "Exhibition closing",
-                        "festival": "Festival",
-                        "space-and-spatiality": "SPACE AND SPATIALITY IN ART INSTALLATIONS // Iulia Gherghescu",
-                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
-                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
-                        "sound-design": "SOUND DESIGN FOR IMAGINARY WORLDS // Ștefan Damian",
-                        "style-gan": "REAL-TIME INTERACTION WITH StyleGAN // Grigore Burloiu",
-                        "deep-learning": "USING DEEP LEARNING TO GENERATE DIALOGUE TEXT // Grigore Burloiu",
-                        "a-project": "A project by",
-                        "presented-by": "Presented by",
-                        "with-support-of": "With the support of",
-                        "sponsors": "Partners",
-                        "our-sponsors": "Our partners",
-                        "media-partners": "Our media partners",
-                        "expo": "Expo",
-                        "text-main-headline": "",
-                        "text-main": "Imagine the following situation: a self-conscious robot has an existential crisis, after having its life purpose removed from its code. Together with those who interact with the installation, he tries to find his reason for being, through an artificial spiritual interface presented as a divine robot."+
-                            "<br/><br/>" +
-                            "In this edition of NOVA, the artist Mónica Rikić presents an adaptation of her work to the exhibition space in the festival, specifically created for this presentation in Romania.",
-                        "text-main-author": "<b>Mónica Rikić</b> is a Spanish artist whose practice is focused on creative coding, robotics, electronics and non-digital objects used to create interactive projects often framed as experimental games."+
-                            "<br/><br/>" +
-                            "The Artist’s interest lies in the social impact of technology and explores, through art, a reimagination of the coexistence between humans and machines."+
-                            "<br/><br/>" +
-                            "Mónica has a Bachelor in Fine Arts and graduated from 2 master studies: Digital Arts (UPF) and Contemporary Philosophy (UOC). Currently, Phd Student at Network and Information Technologies doctoral program (UOC)."+
-                            "<br/><br/>" +
-                            "Her projects have been presented in several relevant contexts around the world (Ars Electronica, Creative Tech Week New York, Robotronica Australia, FILE Brazilia, Centre de Cultura Contemporània de Barcelona, Arts Santa Mónica) and awarded, among others, by the Catalan National Culture and Arts Council, Japan Media Arts Festival, AMAZE Berlin, Margaret Guthman Musical Instrument Competition in Atlanta.",
-                        "when": "when",
-                        "where": "where",
-                        "excelsior": "Excelsior Theatre (Str. Academiei 28)",
-                    },
-
-                    // Arabic translations
-                    "ro": {
-                        "starts": "începe pe",
-                        "start-date": "22 noiembrie",
-                        "ends": "se încheie pe",
-                        "end-date": "17 decembrie",
-                        "open-info": "Expoziția este deschisă de marți până vineri 16:00 - 21:00 și sâmbătă 11:00 - 21:00",
-                        "festival": "Festival",
-                        "performance": "Performance",
-                        "artist-talks": "NOVA TALKS",
-                        "artist-talk": "NOVA TALK",
-                        "workshops": "EDU",
-                        "workshop": "EDU",
-                        "nov": "nov",
-                        "dec": "dec",
-                        "installation": "instalație",
-                        "interactive-installation": "instalație interactivă",
-                        "video-installation-multi-channel": "instalație video multi-channel",
-                        "video-installation": "instalație video",
-                        "interactive-video-installation": "instalație video interactivă",
-                        "ar-installation": "instalație interactivă AR",
-                        "vr-installation": "instalație interactivă VR",
-                        "prev-ed": "ediții anterioare",
-                        "concept-text-1": "Construită ca o experiență de conectare, expoziția de anul acesta te ia în brațe la propriu și la figurat și îți creează un context în care descoperi diferite dimensiuni ale intimității. Le poți explora mai profund sau mai domol, în funcție de deschiderea ta către acest proces. \n" +
-                            "\n" +
-                            "Îți propunem un traseu imersiv, în continuă mișcare și transformare, care răspunde la prezența ta în feluri surprinzătoare. \n" +
-                            "\n" +
-                            "Pornim de la 11 lucrări pilon și creăm legături între acestea astfel încât traseul expoziției să te poarte printr-o suită de deveniri, de la o lucrare la alta, de la tine la ele și viceversa, fiecare element influențând întregul. \n" +
-                            "\n" +
-                            "Abia așteptăm să vedem ritmurile specifice în care vei pune în mișcare acest spațiu viu!\n" +
-                            "\n" +
-                            "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie.\n" +
-                            "\n",
-                        "concept-text-2": "",
-                        "expo-opening": "Vernisaj expoziție",
-                        "expo-closing": "Finisaj expoziție",
-                        "festival": "Festival",
-                        "space-and-spatiality": "SPAȚIU ȘI SPAȚIALITATE ÎN CREAȚIA INSTALAȚIILOR ARTISTICE // Iulia Gherghescu",
-                        "intro-to-metaverse": "INTRO TO METAVERSE: 360/VR Filmmaking // Marius Hodea",
-                        "intro-to-metaverse-2": "INTRO TO METAVERSE: from real to digital objects // Marius Hodea",
-                        "sound-design": "SOUND DESIGN PENTRU LUMI IMAGINATE // Ștefan Damian",
-                        "style-gan": "INTERACȚIUNE CU StyleGAN ÎN TIMP REAL // Grigore Burloiu",
-                        "deep-learning": "FOLOSIREA DEEP LEARNING PENTRU GENERARE DE TEXT DIALOG // Grigore Burloiu",
-                        "a-project": "Un proiect de",
-                        "presented-by": "Prezentat de",
-                        "with-support-of": "Cu prijinul",
-                        "sponsors": "Parteneri",
-                        "our-sponsors": "Partenerii noștri",
-                        "media-partners": "Parteneri media",
-                        "expo": "Expo",
-                        "text-main-headline": "",
-                        "text-main": "Imaginează-ți următoarea situație: un robot conștient de sine are o criză existențială, după ce i-a fost îndepărtat din cod motivul de a trăi. Împreună cu cei care interacționează cu instalația, el încearcă să-și regăsească rațiunea de a fi, într-o căutare care aduce în discuție spiritualitatea în lumea inteligenței artificiale." +
-                            "<br/><br/>" +
-                            "În cadrul ediției NOVA din acest an, artista Mónica Rikić prezintă o adaptare a lucrării sale la spațiul expozițional din festival, specific creată pentru această prezentare în România.",
-                        "text-main-author": "<b>Mónica Rikić</b> este o artistă de origine spaniolă a cărei practică este concentrată în jurul programării creative, roboticii, electronicii și a obiectelor non-digitale, folosite pentru a crea proiecte interactive adesea considerate jocuri experimentale." +
-                            "<br/><br/>" +
-                            "Interesul artistei merge în direcția impactului social al tehnologiei și al reimaginării relației om-mașină prin artă." +
-                            "<br/><br/>" +
-                            "Mónica este licențiată în Arte Plastice și a absolvit două masterate: Arte Digitale (UPF) și Filosofie Contemporană (UOC). Doctorand în programul doctoral Rețele și Tehnologii Informaționale (UOC)." +
-                            "<br/><br/>" +
-                            "Proiectele sale au fost prezentate în numeroase contexte relevante în jurul lumii (Ars Electronica, Creative Tech Week New York, Robotronica Australia, FILE Brazilia, Centre de Cultura Contemporània de Barcelona, Arts Santa Mónica) și premiate, printre altele, de Consiliul Național de Cultură și Arte al Cataloniei, Japan Media Arts Festival, AMAZE Berlin, Margaret Guthman Musical Instrument Competition în Atlanta.",
-                        "when": "când",
-                        "where": "unde",
-                        "excelsior": "Teatrul Excelsior (Str. Academiei 28)",
-                    },
-                };
-
-                // When the page content is ready...
-                document
-                    .querySelectorAll("[data-i18n-key]")
-                    .forEach(translateElement);
-
-                function translateElement(element) {
-                    const key = element.getAttribute("data-i18n-key");
-                    const translation = translations[locale][key];
-                    element.innerHTML = translation;
-                }
-
-                // ----- translations
-
-                function GetURLParameter(sParam){
-                    var sPageURL = window.location.search.substring(1);
-                    var sURLVariables = sPageURL.split('&');
-                    for (var i = 0; i < sURLVariables.length; i++)
-                    {
-                        var sParameterName = sURLVariables[i].split('=');
-                        if (sParameterName[0] == sParam)
-                        {
-                            return sParameterName[1];
-                        }
-                    }
-                }
-
-                function getLocalStream() {
-                    // navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
-                    //     window.localStream = stream; // A
-                    //     window.localAudio.srcObject = stream; // B
-                    //     window.localAudio.autoplay = true; // C
-                    // }).catch((err) => {
-                    //     console.error(`you got an error: ${err}`)
-                    // });
-                }
-
-
-                const expo_item_audio_click = new Audio("sound/softer-click.mp3" );
-                const calendar_item_audio_click = new Audio("sound/pull-plant.mp3" );
-
-                // init dates background
-                $('.calendar-day-container, .calendar-day-container-wide').each(function() {
-                    let cal_date = $(this).find('.day-date-nr').text();
-                    $(this).css('background-image', 'url(\'../img/' + cal_date.trim() + '.svg\')');
-
-                });
-
-                // set notification visibility
-                $("#bell").hide();
-
-                // calendar items links
-                $(".calendar-day-container").on("click", function() {
-                    // window.location = $(this).attr("href"); //TODO: uncomment when details ready.
-                    return false;
-                });
-
-                $(".calendar-day-container-wide").on("click", function() {
-                    // window.location = $(this).attr("href");  //TODO: uncomment when details ready.
-                    return false;
-                });
-
-                $('.calendar-day-container').on({
-                    mouseenter: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 400px");
-                        $(this).find(".day-event-part").css("transition", "all 0.4s");
-                        calendar_item_audio_click.play();
-                    },
-                    mouseleave: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 348px");
-                        $(this).find(".day-event-part").css("transition", "all 2s");
-                    }
-                });
-
-                $('.calendar-day-container-wide').on({
-                    mouseenter: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 300px");
-                        $(this).find(".day-special-right").css("flex", "0 1 800px");
-                        $(this).find(".day-event-part").css("transition", "all 0.3s");
-                        calendar_item_audio_click.play();
-                        // $(this).find(".day-special-right").css("transition", "all 0.4s");
-                    },
-                    mouseleave: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 348px");
-                        $(this).find(".day-special-right").css("flex", "0 1 632px");
-                        $(this).find(".day-event-part").css("transition", "all 1s");
-                        // $(this).find(".day-special-right").css("transition", "all 2s");
-                    }
-                });
-
-
-                // logo item click
-                $("#logo").on("click", function() {
-                    window.location = $(this).attr("href");
-                    return false;
-                });
-
-                // expo items links
-
-                $(".clickable-expo-item").on("click", function() {
-                    // window.location = $(this).attr("href"); //TODO: uncomment after content ready
-                    return false;
-                });
-
-                $(".clickable-expo-item").on({
-                    mouseenter: function() {
-                        $(this).fadeTo(100, 0.5, function (){
-                            $(this).removeClass("clickable-expo-item-hover");
-                            expo_item_audio_click.play();
-                        });
-                        $(this).fadeTo(300, 1);
-                    },
-                    mouseleave: function() {
-                        $(this).fadeTo(100, 0.5, function () {
-                            $(this).addClass("clickable-expo-item-hover");
-                        });
-                        $(this).fadeTo(300, 1.0);
-                    }
-                })
-
-                $(".details-image").each(function () {
-                    // $(this).css('background-image', 'url(\'' + $(this).attr("bgimg") + '\')');
-                    $(this).css('--bg-image', 'url(\'' + $(this).attr("bgimg") + '\')');
-                });
-
-                // footer button links
-                $(".footer-button").on("click", function() {
-                    window.location = $(this).attr("href");
-                    return false;
-                });
-
-                // language links
-                $("#lang-en").on("click", function() {
-                    locale = "en";
-                    $("#lang-en").addClass("active");
-                    $("#lang-ro").removeClass("active");
-                    document
-                        .querySelectorAll("[data-i18n-key]")
-                        .forEach(translateElement);
-                    document.cookie = "lang=en";
-                    return false;
-                });
-
-                $("#lang-ro").on("click", function() {
-                    locale = "ro";
-                    $("#lang-en").removeClass("active");
-                    $("#lang-ro").addClass("active");
-                    document
-                        .querySelectorAll("[data-i18n-key]")
-                        .forEach(translateElement);
-                    document.cookie = "lang=ro";
-                    return false;
-                });
-
-                getLocalStream();
-            });
-
-        });
-
+    <script src="js/nova.js">
     </script>
 
     <meta charset="utf-8">
@@ -418,8 +27,8 @@
     <meta property="og:title" content="NOVA" />
     <meta property="og:description" content="Art Technology Now" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nova.beautifulneon.tech" />
-    <meta property="og:image" content="https://nova.beautifulneon.tech/img/ogg.png" />
+    <meta property="og:url" content="https://novanova.ro" />
+    <meta property="og:image" content="https://novanova.ro/img/ogg.png" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -853,7 +462,7 @@
 
             <div id="menu-mobile">
                 <div class="active-main-menu-item main-menu-item-workshops">
-                    <div id="workshops" class="main-menu-item-text" data-i18n-key="interactive-installation">
+                    <div id="workshops" class="main-menu-item-text" data-i18n-key="expo">
                         heading
                     </div>
                     <div class="main-menu-arrow">
@@ -867,7 +476,7 @@
 
             <div id="menu-desktop">
                 <div class="active-main-menu-item main-menu-item-workshops">
-                    <div id="workshops" class="main-menu-item-text" data-i18n-key="interactive-installation">
+                    <div id="workshops" class="main-menu-item-text" data-i18n-key="expo">
                         heading
                     </div>
                     <div class="main-menu-arrow">
@@ -903,19 +512,15 @@
                 <div class="details-text-wrapper">
                     <div class="details-text-main">
 
-                        <div data-i18n-key="text-main-headline" style="font-style: italic;">
-                        </div>
-
-                        <div data-i18n-key="text-main">
+                        <div data-i18n-key="text-main-new-home-of-mind">
                         </div>
 
                         <img src="/img/details/new-home-of-mind/1.jpg" class="details-content-image">
                         <img src="/img/details/new-home-of-mind/2.jpeg" class="details-content-image">
+                        <video playsinline muted loop controls class="details-content-image">
+                            <source src="/img/details/new-home-of-mind/nhm_rodo.mp4" type="video/mp4">
+                        </video>
 
-
-                        <div class="details-text-separator"></div>
-                        <div data-i18n-key="text-main-author">
-                        </div>
                     </div>
 
                     <div class="details-text-info">
@@ -923,13 +528,27 @@
                             UNDE
                         </div>
                         <div class="details-text-info-content">
-                            Goethe Insitut
+                            Goethe Institut
                         </div>
                         <div class="details-text-info-header">
                         </div>
                         <div class="details-text-info-content">
-                            <a href="https://monicarikic.com/new-home-of-mind/">mai mult</a>
+                            <a href="https://monicarikic.com/new-home-of-mind/">monicarikic.com</a>
                         </div>
+                    </div>
+                </div>
+
+                <div class="details-text-separator"></div>
+
+                <div class="details-text-wrapper-author">
+                    <div class="details-text-main">
+
+                        <div data-i18n-key="text-main-author-new-home-of-mind">
+                        </div>
+                    </div>
+
+                    <div class="details-text-info">
+                        <img src="/img/details/new-home-of-mind/monica_sm.jpg" class="details-content-image-author">
                     </div>
                 </div>
 
@@ -1038,6 +657,9 @@
                 </div>
                 <div class="sponsor-item">
                     <img src="img/sponsor/novelmushrooms.png">
+                </div>
+                <div class="sponsor-item">
+                    <img src="img/sponsor/wolff.png">
                 </div>
             </div>
         </div>

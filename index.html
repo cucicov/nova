@@ -4,13 +4,6 @@
 <head>
     <meta charset="utf-8">
     <title>Nova</title>
-    <meta name="description" content=""> <!-- TODO: -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content=""> <!-- TODO: -->
-    <meta property="og:type" content=""> <!-- TODO: -->
-    <meta property="og:url" content=""> <!-- TODO: -->
-    <meta property="og:image" content=""> <!-- TODO: -->
 
 <!--    <link rel="manifest" href="site.webmanifest">-->
     <link rel="apple-touch-icon" href="icon.png">
@@ -25,457 +18,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <script>
-        jQuery(function ($) {
-
-            <!-- mobile check -->
-            var is_mobile = true;
-
-            if( $('#isMobile').css('display')==='none') {
-                is_mobile = false;
-            }
-
-            function getCookie(cname) {
-                let name = cname + "=";
-                let decodedCookie = decodeURIComponent(document.cookie);
-                let ca = decodedCookie.split(';');
-                for(let i = 0; i <ca.length; i++) {
-                    let c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
-                }
-                return "";
-            }
-
-            var refreshCalendarDateSpacings = function(id) {
-                if(!is_mobile){
-                    $(".calendar-day-container").css("margin-left", "0px");
-                    $(".calendar-day-container-wide").css("margin-left", "0px");
-                    $(id+":odd").css("margin-left", "24px");
-
-                    // $("calendar-day-container-wide").css("margin-left", "0px");
-                    setTimeout(function () {
-                        if ($(".calendar-day-container:visible").length % 2 == 1) {
-                            // console.log($(".calendar-day-container:visible").length);
-                            var rrand = Math.floor(Math.random() * 10);
-                            $(".calendar-day-container").last().css("margin-left", "0px");
-                            // console.log($(".calendar-day-container").last());
-                            // console.log(rrand);
-                        }
-                    }, 300);
-                }
-            }
-
-            refreshCalendarDateSpacings(".calendar-day-container");
-
-            var filterCalendar = function(id) {
-                // console.log(id);
-                var delay = 250;
-                $(".performance, .artist-talks, .workshops, .festival").hide(delay, 'swing', function () {
-
-                    if ($(".performance:visible").length === 0 &&
-                        $(".artist-talks:visible").length === 0 &&
-                        $(".workshops:visible").length === 0) {
-                        if (id === 'festival') {
-                            refreshCalendarDateSpacings(".calendar-day-container");
-                            $(".performance").show(delay, 'swing');
-                            $(".artist-talks").show(delay, 'swing');
-                            $(".workshops").show(delay, 'swing');
-                            $(".festival").show(delay, 'swing');
-
-                        } else if (id === 'performance') {
-                            refreshCalendarDateSpacings(".performance");
-                            $(".performance").show(delay, 'swing');
-                        } else if (id === 'artist-talks') {
-                            refreshCalendarDateSpacings(".artist-talks");
-                            $(".artist-talks").show(delay, 'swing');
-                        } else if (id === 'workshops') {
-                            refreshCalendarDateSpacings(".workshops");
-                            $(".workshops").show(delay, 'swing');
-                        }
-
-                    }
-
-                });
-
-
-                // setTimeout(refreshCalendarDateSpacings(".artist-talks"), 2000);
-
-            }
-
-            if(getCookie("lang").length == 0){
-                document.cookie = "lang=ro";
-            }
-
-            $(function() {
-
-                // translations
-                // The active locale
-                let locale = getCookie("lang");
-                if(locale === "ro") {
-                    $("#lang-en").removeClass("active");
-                    $("#lang-ro").addClass("active");
-                } else {
-                    $("#lang-ro").removeClass("active");
-                    $("#lang-en").addClass("active");
-                }
-
-                // We can have as many locales here as we want,
-                // and use any locales we want. We have English
-                // and Arabic as locales here as examples.
-                const translations = {
-                    // English translations
-                    "en": {
-                        "starts": "starts",
-                        "start-date": "november 22",
-                        "ends": "ends",
-                        "end-date": "december 17",
-                        "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
-                        "festival": "Festival",
-                        "expo": "Expo",
-                        "performance": "Performance",
-                        "artist-talks": "Talks",
-                        "nova-talks": "Nova talks",
-                        "artist-talk": "Talk",
-                        "workshops": "Edu",
-                        "workshop": "Edu",
-                        "nov": "nov",
-                        "dec": "dec",
-                        "installation": "installation",
-                        "interactive-installation": "multi-channel video installation",
-                        "interactive-installation-peep": "interactive installation peep media",
-                        "video-installation-multi-channel": "multi-channel video installation",
-                        "video-installation": "video installation",
-                        "interactive-video-installation": "interactive video installation",
-                        "ar-installation": "interactive AR installation",
-                        "vr-installation": "interactive VR installation",
-                        "prev-ed": "previous editions",
-                        "concept-text-1": "Created as a connecting experience, this year's exhibition literally and figuratively embraces you and creates a context where you discover different dimensions of intimacy. You can explore them in a profound or light way, depending on how open you are to the experience. \n" +
-                            "\n" +
-                            "We propose an immersive path, constantly moving and transforming, that responds to your presence in surprising ways.\n" +
-                            "\n" +
-                            "We start from 11 individual works and create connections between them so that the experience of the exhibition takes you on a journey of becoming, from one work to another, from you to them and vice versa, each element influencing the whole.\n" +
-                            "\n" +
-                            "We can't wait to see how you set this living space into motion!\n" +
-                            "\n" +
-                            "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology. \n",
-                        "expo-opening": "Exhibition opening",
-                        "expo-closing": "Exhibition closing",
-                        "festival": "Festival",
-                        "space-and-spatiality": "Space and spatiality in art installations // IULIA GHERGHESCU",
-                        "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
-                        "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
-                        "sound-design": "Sound design for imaginary worlds // ȘTEFAN DAMIAN",
-                        "style-gan": "Real-time interaction with StyleGAN // GRIGORE BURLOIU",
-                        "deep-learning": "Using Deep Learning to generate dialogue text // GRIGORE BURLOIU",
-                        "a-project": "A project by",
-                        "presented-by": "Presented by",
-                        "with-support-of": "With the support of",
-                        "sponsors": "Partners",
-                        "our-sponsors": "Our partners",
-                        "media-partners": "Our media partners",
-                    },
-
-                    // Arabic translations
-                    "ro": {
-                        "starts": "începe pe",
-                        "start-date": "22 noiembrie",
-                        "ends": "se încheie pe",
-                        "end-date": "17 decembrie",
-                        "open-info": "Expoziția este deschisă de marți până vineri 16:00 - 21:00 și sâmbătă 11:00 - 21:00",
-                        "festival": "Festival",
-                        "expo": "Expo",
-                        "performance": "Performance",
-                        "artist-talks": "Talks",
-                        "nova-talks": "Nova talks",
-                        "artist-talk": "Talk",
-                        "workshops": "Edu",
-                        "workshop": "Edu",
-                        "nov": "nov",
-                        "dec": "dec",
-                        "installation": "instalație",
-                        "interactive-installation": "instalație interactivă",
-                        "interactive-installation-peep": " instalație interactivă peep media",
-                        "video-installation-multi-channel": "instalație video multi-channel",
-                        "video-installation": "instalație video",
-                        "interactive-video-installation": "instalație video interactivă",
-                        "ar-installation": "instalație interactivă AR",
-                        "vr-installation": "instalație interactivă VR",
-                        "prev-ed": "ediții anterioare",
-                        "concept-text-1": "Construită ca o experiență de conectare, expoziția de anul acesta te ia în brațe la propriu și la figurat și îți creează un context în care descoperi diferite dimensiuni ale intimității. Le poți explora mai profund sau mai domol, în funcție de deschiderea ta către acest proces. \n" +
-                            "\n" +
-                            "Îți propunem un traseu imersiv, în continuă mișcare și transformare, care răspunde la prezența ta în feluri surprinzătoare. \n" +
-                            "\n" +
-                            "Pornim de la 11 lucrări pilon și creăm legături între acestea astfel încât traseul expoziției să te poarte printr-o suită de deveniri, de la o lucrare la alta, de la tine la ele și viceversa, fiecare element influențând întregul. \n" +
-                            "\n" +
-                            "Abia așteptăm să vedem ritmurile specifice în care vei pune în mișcare acest spațiu viu!\n" +
-                            "\n" +
-                            "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie.\n" +
-                            "\n",
-                        "concept-text-2": "",
-                        "expo-opening": "Vernisaj expoziție",
-                        "expo-closing": "Finisaj expoziție",
-                        "festival": "Festival",
-                        "space-and-spatiality": "Spațiu și spațialitate în creația instalațiilor artistice // IULIA GHERGHESCU",
-                        "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
-                        "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
-                        "sound-design": "Sound design pentru lumi imaginate // ȘTEFAN DAMIAN",
-                        "style-gan": "Interacțiune cu StyleGAN în timp real // GRIGORE BURLOIU",
-                        "deep-learning": "Folosirea Deep Learning pentru generare de text dialog // GRIGORE BURLOIU",
-                        "a-project": "Un proiect de",
-                        "presented-by": "Prezentat de",
-                        "with-support-of": "Cu sprijinul",
-                        "sponsors": "Parteneri",
-                        "our-sponsors": "Partenerii noștri",
-                        "media-partners": "Parteneri media",
-                    },
-                };
-
-                // When the page content is ready...
-                document
-                    .querySelectorAll("[data-i18n-key]")
-                    .forEach(translateElement);
-
-                function translateElement(element) {
-                    const key = element.getAttribute("data-i18n-key");
-                    const translation = translations[locale][key];
-                    element.innerText = translation;
-                }
-
-                // ----- translations
-
-                function GetURLParameter(sParam){
-                    var sPageURL = window.location.search.substring(1);
-                    var sURLVariables = sPageURL.split('&');
-                    for (var i = 0; i < sURLVariables.length; i++)
-                    {
-                        var sParameterName = sURLVariables[i].split('=');
-                        if (sParameterName[0] == sParam)
-                        {
-                            return sParameterName[1];
-                        }
-                    }
-                }
-
-                function getLocalStream() {
-                    // navigator.mediaDevices.getUserMedia({video: true, audio: false}).then((stream) => {
-                    //     window.localStream = stream; // A
-                    //     window.localAudio.srcObject = stream; // B
-                    //     window.localAudio.autoplay = true; // C
-                    // }).catch((err) => {
-                    //     console.error(`you got an error: ${err}`)
-                    // });
-                }
-
-
-                const expo_item_audio_click = new Audio("sound/softer-click.mp3" );
-                const calendar_item_audio_click = new Audio("sound/pull-plant.mp3" );
-
-                <!-- random default inits -->
-                $('#accordion a').click(function($e) {
-                    $e.preventDefault();
-                });
-
-                // load category from url
-                let category = GetURLParameter('category');
-                if (category !== undefined && $(".main-menu-item-"+category).length > 0) {
-                    $(".main-menu-item").removeClass("active-main-menu-item");
-                    $(".main-menu-item-"+category).addClass("active-main-menu-item");
-                    $('#mobile-selected').html(translations[locale][category]);
-                    filterCalendar(category);
-                }
-
-                <!-- accordion menu -->
-                var Accordion = function(el, multiple) {
-                    this.el = el || {};
-                    this.multiple = multiple || false;
-
-                    // Variables privadas
-                    var links = this.el.find('.link');
-                    // Evento
-                    links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-                }
-
-                Accordion.prototype.dropdown = function(e) {
-                    var $el = e.data.el;
-                    $this = $(this);
-                    $next = $this.next();
-
-                    $next.slideToggle();
-                    $this.parent().toggleClass('open');
-
-                    if (!e.data.multiple) {
-                        $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-                    };
-                }
-
-                var accordion = new Accordion($('#accordion'), false);
-
-                // menu behavior for mobile and desktop.
-                if (is_mobile) {
-                    $(".submenu .main-menu-item ").on("click", function () {
-                        let selectedOption = $(this).text();
-                        $('#mobile-selected').html(selectedOption);
-
-                        // toggle list back.
-                        $next = $('.link').next();
-                        $next.slideToggle();
-                        $('.link').parent().toggleClass('open');
-
-                        // leave selected item activated in the dropdown list.
-                        $(".main-menu-item").removeClass("active-main-menu-item");
-                        $(this).addClass("active-main-menu-item");
-
-                        filterCalendar($(this).find('.main-menu-item-text').attr('id'));
-
-                        selectedOption = $(this).find(".main-menu-item-text").attr('id');
-                        const url = new URL(window.location);
-                        url.searchParams.set('category', selectedOption.trim());
-                        window.history.pushState({}, '', url);
-                        // parent.location.hash = "?category=" + selectedOption;
-
-                        return false;
-                    });
-                } else {
-                    $(".main-menu-item").on("click", function () {
-                        let selectedOption = $(this).find(".main-menu-item-text").attr('id');
-                        $(".main-menu-item").removeClass("active-main-menu-item");
-                        $(this).addClass("active-main-menu-item");
-
-                        filterCalendar($(this).find('.main-menu-item-text').attr('id'));
-
-                        const url = new URL(window.location);
-                        url.searchParams.set('category', selectedOption.trim());
-                        window.history.pushState({}, '', url);
-
-                        // parent.location.hash = "?category=" + selectedOption.trim();
-
-                        return false;
-                    });
-                }
-
-                // init dates background
-                $('.calendar-day-container, .calendar-day-container-wide').each(function() {
-                    let cal_date = $(this).find('.day-date-nr').text();
-                    $(this).css('background-image', 'url(\'../img/' + cal_date.trim() + '.svg\')');
-
-                });
-
-                // set notification visibility
-                $("#bell").hide();
-
-                // calendar items links
-                $(".calendar-day-container").on("click", function() {
-                    // window.location = $(this).attr("href"); //TODO: uncomment when details ready.
-                    return false;
-                });
-
-                $(".calendar-day-container-wide").on("click", function() {
-                    window.location = $(this).attr("href");
-                    return false;
-                });
-
-                $('.calendar-day-container, .calendar-day-container-wide-plain').on({
-                    mouseenter: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 400px");
-                        $(this).find(".day-event-part").css("transition", "all 0.4s");
-                        calendar_item_audio_click.play();
-                    },
-                    mouseleave: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 348px");
-                        $(this).find(".day-event-part").css("transition", "all 2s");
-                    }
-                });
-
-                $('.calendar-day-container-wide').on({
-                    mouseenter: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 300px");
-                        $(this).find(".day-special-right").css("flex", "0 1 800px");
-                        $(this).find(".day-event-part").css("transition", "all 0.3s");
-                        calendar_item_audio_click.play();
-                        // $(this).find(".day-special-right").css("transition", "all 0.4s");
-                    },
-                    mouseleave: function() {
-                        $(this).find(".day-event-part").css("flex", "0 1 348px");
-                        $(this).find(".day-special-right").css("flex", "0 1 632px");
-                        $(this).find(".day-event-part").css("transition", "all 1s");
-                        // $(this).find(".day-special-right").css("transition", "all 2s");
-                    }
-                });
-
-
-                // logo item click
-                $("#logo").on("click", function() {
-                    window.location = $(this).attr("href");
-                    return false;
-                });
-
-                // expo items links
-
-                $(".clickable-expo-item").on("click", function() {
-                    // window.location = $(this).attr("href"); //TODO: uncomment after content ready
-                    return false;
-                });
-
-                $(".clickable-expo-item").on({
-                    mouseenter: function() {
-                        $(this).fadeTo(100, 0.5, function (){
-                            $(this).removeClass("clickable-expo-item-hover");
-                            expo_item_audio_click.play();
-                        });
-                        $(this).fadeTo(300, 1);
-                    },
-                    mouseleave: function() {
-                        $(this).fadeTo(100, 0.5, function () {
-                            $(this).addClass("clickable-expo-item-hover");
-                        });
-                        $(this).fadeTo(300, 1.0);
-                    }
-                })
-
-                $(".clickable-expo-item").each(function () {
-                    // $(this).css('background-image', 'url(\'' + $(this).attr("bgimg") + '\')');
-                    $(this).css('--bg-image', 'url(\'' + $(this).attr("bgimg") + '\')');
-                });
-
-                // footer button links
-                $(".footer-button").on("click", function() {
-                    window.location = $(this).attr("href");
-                    return false;
-                });
-
-                // language links
-                $("#lang-en").on("click", function() {
-                    locale = "en";
-                    $("#lang-en").addClass("active");
-                    $("#lang-ro").removeClass("active");
-                    document
-                        .querySelectorAll("[data-i18n-key]")
-                        .forEach(translateElement);
-                    document.cookie = "lang=en";
-                    return false;
-                });
-
-                $("#lang-ro").on("click", function() {
-                    locale = "ro";
-                    $("#lang-en").removeClass("active");
-                    $("#lang-ro").addClass("active");
-                    document
-                        .querySelectorAll("[data-i18n-key]")
-                        .forEach(translateElement);
-                    document.cookie = "lang=ro";
-                    return false;
-                });
-
-                getLocalStream();
-            });
-
-        });
-
+    <script src="js/nova.js">
     </script>
 
     <meta charset="utf-8">
@@ -484,8 +27,8 @@
     <meta property="og:title" content="NOVA" />
     <meta property="og:description" content="Art Technology Now" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nova.beautifulneon.tech" />
-    <meta property="og:image" content="https://nova.beautifulneon.tech/img/ogg.png" />
+    <meta property="og:url" content="https://novanova.ro" />
+    <meta property="og:image" content="https://novanova.ro/img/ogg.png" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -1043,7 +586,7 @@
                             <div class="small-not-so-pink-footer">
                                 19:00 - 20:30
                             </div>
-                            <div class="day-event-location">
+                            <div class="day-event-location" data-i18n-key="excelsior">
                                 Teatrul Excelsior
                             </div>
                         </div>
@@ -1357,7 +900,7 @@
         <!-- EXPO CHUNK -->
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/nhm.jpg">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="new-home-of-mind.html" bgimg="../img/content/nhm.jpg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="interactive-installation">
                         INSTALLATION
@@ -1378,7 +921,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/metamorphosis.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="metamorphosis.html" bgimg="../img/content/metamorphosis.png">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="video-installation-multi-channel">
                         INSTALLATION
@@ -1404,7 +947,7 @@
         <!-- EXPO CHUNK -->
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/acquaalta.JPG">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="acqua-alta.html" bgimg="../img/content/acquaalta.JPG">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="ar-installation">
                         INSTALLATION
@@ -1425,7 +968,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/wonderland.jpg">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="vr-in-wonderland.html" bgimg="../img/content/wonderland.jpg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="vr-installation">
                         INSTALLATION
@@ -1461,7 +1004,7 @@
         <!-- EXPO CHUNK -->
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/intuition.jpg">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="intuition.html" bgimg="../img/content/intuition.jpg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="interactive-installation">
                         INSTALLATION
@@ -1482,7 +1025,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/rhiza.JPG">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="rhiza.html" bgimg="../img/content/rhiza.JPG">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="interactive-installation">
                         INSTALLATION
@@ -1509,7 +1052,7 @@
         <!-- EXPO CHUNK -->
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/senrian.jpg">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="senrian.html" bgimg="../img/content/senrian.jpg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="interactive-installation-peep">
                         INSTALLATION
@@ -1530,7 +1073,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/afterego.jpeg">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="after-ego.html" bgimg="../img/content/afterego.jpeg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="interactive-video-installation">
                         INSTALLATION
@@ -1557,7 +1100,7 @@
         <!-- EXPO CHUNK -->
 
         <div class="content-container-row calendar-container">
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/anima.jpeg">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="anima.html" bgimg="../img/content/anima.jpeg">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="installation">
                         INSTALLATION
@@ -1578,7 +1121,7 @@
 
             <div class="date-separator"></div>
 
-            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="#" bgimg="../img/content/wimp.png">
+            <div class="expo-item clickable-expo-item clickable-expo-item-hover" href="wind-in-my-pages.html" bgimg="../img/content/wimp.png">
                 <div class="clickable-expo-item-container">
                     <div class="small-pink-heading"  data-i18n-key="video-installation">
                         INSTALLATION
@@ -1633,178 +1176,7 @@
 
         <!-- ---- -->
 
-
-        <!-- PARTNERS -->
-
-        <div class="content-container-row sponsors-container" style="margin-top: 86px">
-<!--            <div class="generic-header">-->
-<!--                <div id="sponsors" class="main-menu-item-text"  data-i18n-key="our-sponsors">Our partners</div>-->
-<!--                <div class="main-menu-arrow">-->
-<!--                    <img src="img/arrow.png"/>-->
-<!--                </div>-->
-<!--            </div>-->
-        </div>
-
-        <div class="partners-subtitles"  data-i18n-key="a-project">
-            A project by
-        </div>
-
-        <div class="content-container-row">
-            <div class="sponsor-container">
-                <div class="sponsor-item">
-                    <img src="img/sponsor/continuu.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/ctrln.png">
-                </div>
-            </div>
-        </div>
-
-        <div class="partners-subtitles"  data-i18n-key="presented-by">
-            Presented by
-        </div>
-
-        <div class="content-container-row">
-            <div class="sponsor-container">
-                <div class="sponsor-item">
-                    <img src="img/sponsor/unicredit.png">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="partners-subtitles"  data-i18n-key="with-support-of">
-            With support of
-        </div>
-
-
-        <div class="content-container-row">
-            <div class="sponsor-container">
-                <div class="sponsor-item">
-                    <img src="img/sponsor/iqos.png">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="partners-subtitles"  data-i18n-key="sponsors">
-            Partners
-        </div>
-
-
-        <div class="content-container-row">
-            <div class="sponsor-container">
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/goethe.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/institiutfrancais.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/forumul.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/spaniola.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/ambasada.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/excelsior.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/interfacecultures.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/kunst.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/unatc.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/cinetic.png">
-                </div>
-                <div class="sponsor-item-crowded">
-                    <img src="img/sponsor/unarte.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/novelmushrooms.png">
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="partners-subtitles"  data-i18n-key="media-partners">
-            Media partners
-        </div>
-
-
-        <div class="content-container-row">
-            <div class="sponsor-container">
-                <div class="sponsor-item">
-                    <img src="img/sponsor/alist.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/designist.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/iqads.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/feeder.png">
-                </div>
-                <div class="sponsor-item">
-                    <img src="img/sponsor/igloo.png">
-                </div>
-            </div>
-        </div>
-
-        <!-- FOOTER -->
-
-        <div class="content-container-row" style="margin-bottom: 0px;">
-            <div class="footer">
-                <div class="footer-headings custom-footer-padding">
-                    <div class="small-pink-heading"  data-i18n-key="prev-ed">
-                        PREVIOUS EDITIONS
-                    </div>
-                    <div class="footer-buttons">
-                        <div class="footer-button" href="#">
-                            1st Edition
-                        </div>
-                        <div class="footer-button" href="#">
-                            2nd Edition
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-headings-vt" style="margin-bottom: 0px; align-items: center; justify-content: center; margin-bottom: 20px;">
-                    <img src="img/vt.png" style="width: 80px; opacity: 0.5;"/>
-                </div>
-
-                <div class="footer-headings" style="margin-bottom: 0px;">
-                    <div class="small-pink-heading custom-footer-align">
-                        CONTACT
-                    </div>
-                    <div class="footer-buttons custom-footer-align">
-                        <div class="footer-button" href="#"
-                             style="height: 24px;">
-                            <img src="img/fb.svg">
-                        </div>
-                        <div class="footer-button" href="#"
-                             style="height: 24px;">
-                            <img src="img/insta.svg">
-                        </div>
-                        <div class="footer-button" href="#"
-                             style="margin-right: 0px">
-                            contact@nova.ro
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <div id="footer-module"></div>
 
     </div>
 

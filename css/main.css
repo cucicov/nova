@@ -878,6 +878,11 @@ html, body {
   margin-top: 48px;
 }
 
+.details-text-wrapper-author {
+  color: #000;
+  display: flex;
+}
+
 .details-text-main {
   flex-grow: 3;
   font-family: 'Open Sans';
@@ -927,6 +932,12 @@ html, body {
   max-width: 100%;
   max-height: 100%;
   margin-top: 24px;
+}
+
+.details-content-image-author{
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 20px;
 }
 
 .details-credits{
@@ -1318,6 +1329,10 @@ textarea {
     flex-direction: column;
     flex-direction: column-reverse;
     margin-top: 24px;
+  }
+
+  .details-text-wrapper-author {
+    flex-direction: column-reverse;
   }
 
   .details-text-info{
