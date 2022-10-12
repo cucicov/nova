@@ -146,6 +146,10 @@ a {
    Base styles: opinionated defaults
    ========================================================================== */
 
+h2{
+  line-height: 36px;
+}
+
 #isMobile {
   display: none;
 }
