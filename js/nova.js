@@ -404,6 +404,12 @@ jQuery(function ($) {
                     "She holds a BA from the Ecole supérieure d’Art d’Aix-en-Provence and is currently engaged in a masters degree with a specialization in \"Real time Art\".\n" +
                     "<br/><br/>\n" +
                     "<a href=\"http://anaislossouarn.journoportfolio.com\">anaislossouarn.journoportfolio.com</a>",
+                "program-full": "NOV 23 - DEC 17<br/>\n" +
+                    "TUESDAY - FRIDAY 16:00 - 21:00<br/>\n" +
+                    "SATURDAY: 11:00 - 21:00",
+                "edition-2018": "2018 Edition",
+                "edition-2021": "2021 Edition",
+
 
             },
 
@@ -725,6 +731,11 @@ jQuery(function ($) {
                     "Este licențiată la Ecole Supérieure d’Art d’Aix-en-Provence și este în prezent studentă la un masterat cu specializare în „Artă în timp real”.\n" +
                     "<br/><br/>\n" +
                     "<a href=\"http://anaislossouarn.journoportfolio.com\">anaislossouarn.journoportfolio.com</a>",
+                "program-full": "23 NOV - 17 DEC<br/>\n" +
+                    "MARȚI - VINERI 16:00 - 21:00<br/>\n" +
+                    "SÂMBĂTĂ: 11:00 - 21:00",
+                "edition-2018": "Ediția 2018",
+                "edition-2021": "Ediția 2021",
 
             },
         };
@@ -905,7 +916,6 @@ jQuery(function ($) {
                 // $(this).find(".day-special-right").css("transition", "all 2s");
             }
         });
-
 
         // logo item click
         $("#logo").on("click", function() {

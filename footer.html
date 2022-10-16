@@ -1,3 +1,17 @@
+
+<script>
+    // footer items click
+    $(".footer-button").on("click", function() {
+        window.open($(this).attr("href"), "_blank")
+        return false;
+    });
+    // $(".footer-button-mail").on("click", function() {
+    //     window.location.href = $(this).attr("href");
+    //     return false;
+    // });
+</script>
+
+
 <!-- PARTNERS -->
 
 <div class="content-container-row sponsors-container" style="margin-top: 86px">
@@ -10,7 +24,7 @@
 </div>
 
 <div class="partners-subtitles"  data-i18n-key="a-project">
-    A project by
+    Un proiect de
 </div>
 
 <div class="content-container-row">
@@ -25,7 +39,7 @@
 </div>
 
 <div class="partners-subtitles"  data-i18n-key="presented-by">
-    Presented by
+    Prezentat de
 </div>
 
 <div class="content-container-row">
@@ -38,7 +52,7 @@
 
 
 <div class="partners-subtitles"  data-i18n-key="with-support-of">
-    With support of
+    Cu sprijinul
 </div>
 
 
@@ -52,7 +66,7 @@
 
 
 <div class="partners-subtitles"  data-i18n-key="sponsors">
-    Partners
+    Parteneri
 </div>
 
 
@@ -103,7 +117,7 @@
 
 
 <div class="partners-subtitles"  data-i18n-key="media-partners">
-    Media partners
+    Parteneri media
 </div>
 
 
@@ -124,6 +138,9 @@
         <div class="sponsor-item">
             <img src="img/sponsor/igloo.png">
         </div>
+        <div class="sponsor-item">
+            <img src="img/sponsor/zile.png">
+        </div>
     </div>
 </div>
 
@@ -133,14 +150,14 @@
     <div class="footer">
         <div class="footer-headings custom-footer-padding">
             <div class="small-pink-heading"  data-i18n-key="prev-ed">
-                PREVIOUS EDITIONS
+                ediții anterioare
             </div>
             <div class="footer-buttons">
-                <div class="footer-button" href="#">
-                    1st Edition
+                <div class="footer-button" href="prev-editions/edition2018.pdf" data-i18n-key="edition-2018">
+                    Ediția 2018
                 </div>
-                <div class="footer-button" href="#">
-                    2nd Edition
+                <div class="footer-button" href="prev-editions/edition2021.pdf" data-i18n-key="edition-2021">
+                    Ediția 2021
                 </div>
             </div>
         </div>
@@ -154,17 +171,17 @@
                 CONTACT
             </div>
             <div class="footer-buttons custom-footer-align">
-                <div class="footer-button" href="#"
+                <div class="footer-button" href="https://www.facebook.com/novafestivalromania"
                      style="height: 24px;">
                     <img src="img/fb.svg">
                 </div>
-                <div class="footer-button" href="#"
+                <div class="footer-button" href="https://www.instagram.com/nova.festival/"
                      style="height: 24px;">
                     <img src="img/insta.svg">
                 </div>
-                <div class="footer-button" href="#"
+                <div class="footer-button" href="mailto:contact@novanova.ro"
                      style="margin-right: 0px">
-                    contact@nova.ro
+                    contact@novanova.ro
                 </div>
 
             </div>
