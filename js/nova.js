@@ -118,6 +118,9 @@ jQuery(function ($) {
                 "workshop": "Edu",
                 "nov": "nov",
                 "dec": "dec",
+                "buy-tickets-pass": "buy festival pass",
+                "buy-tickets-expo": "buy expo pass",
+                "buy-tickets": "buy ticket",
                 "installation": "installation",
                 "interactive-installation": "multi-channel video installation",
                 "interactive-installation-peep": "interactive installation peep media",
@@ -397,6 +400,9 @@ jQuery(function ($) {
                 "workshop": "Edu",
                 "nov": "nov",
                 "dec": "dec",
+                "buy-tickets-pass": "cumpără festival pass",
+                "buy-tickets-expo": "cumpără expo pass",
+                "buy-tickets": "cumpără bilet",
                 "installation": "instalație",
                 "interactive-installation": "instalație interactivă",
                 "interactive-installation-peep": " instalație interactivă peep media",
@@ -538,7 +544,7 @@ jQuery(function ($) {
                 "text-main-author-wonderland": "Membrii echipei proiectului de cercetare: <a href=\"http://masajazbec.si/bio/\">Maša Jazbec</a>, <a href=\"https://www.vanessav.net/bio/\">Vanessa Vozzo</a>, <a href=\"https://juergenropp.at/about/\">Jürgen Ropp</a>, <a href=\"https://www.instagram.com/balintbudaibalint/\">Bàlint Budai</a>, <a href=\"http://martinnadal.eu/about/\">Martìn Nadal</a>. ",
                 "text-main-intuition": "Un cer de posibilități e totodată un cosmos de alegeri. Cum ne definim prin alegerile noastre? Există un tipar ascuns? <br/><br/>\n" +
                     "Intuition este un proiect despre decizii și comportament condus de inconștient, ce explorează prezența în sine și caută noi metode de autocunoaștere.<br/><br/>\n" +
-                    "Experiența generală a utilizatorului se bazează pe un schimb de interacțiuni intime cu o interfață digitală, unde fluxul mental ale artistului este reprezentat prin numere și sunete. Instalația îți dă posibilitatea să creezi individual, sau în colaborare cu ceilalți, propriile tale constelații audio-vizuale de gânduri și emoții, pornind de la acest proces profund personal al artistului. <br/><br/>\n" +
+                    "Experiența generală a utilizatorului se bazează pe un schimb de interacțiuni intime cu o interfață digitală, unde fluxul mental al artistului este reprezentat prin numere și sunete. Instalația îți dă posibilitatea să creezi individual, sau în colaborare cu ceilalți, propriile tale constelații audio-vizuale de gânduri și emoții, pornind de la acest proces profund personal al artistului. <br/><br/>\n" +
                     "\n" +
                     "Concept, design & grafică: Marius Jurca<br/>\n" +
                     "Programare interactivitate: Grigore Burloiu",
@@ -624,7 +630,7 @@ jQuery(function ($) {
                     "În prezent, conduce Laboratorul de Robotică Creativă din Trbovlje, Slovenia, în cadrul McRUK și Katapult.\n" +
                     "<br/><br/>\n" +
                     "<a href=\"http://masajazbec.si\">http://masajazbec.si</a>",
-                "text-main-nova-talks-costin": "<h2>COSTIN DAMASARU // Cum poate facilita neurotehologia comunicarea intimă dintre sinele conștient și cel subconștient?</h2><br/><br/>" +
+                "text-main-nova-talks-costin": "<h2>COSTIN DĂMĂȘARU // Cum poate facilita neurotehologia comunicarea intimă dintre sinele conștient și cel subconștient?</h2><br/><br/>" +
                     "Într-o lume în care fluxul de informații este din ce în ce mai mare, iar attention span-ul devine mai mic decât al unui peștișor auriu, cum ar putea, în mod paradoxal, să ne ajute tehnologia să ne utilizăm mai inteligent resursele interioare?<br/><br/>\n" +
                     "Intimitatea la nivelul dialogului interior devine în acest moment al evoluției noastre un factor cheie, însă cum putem facilita de fapt acest proces interior?<br/><br/>\n" +
                     "Antrenamentul neuronal realizat cu ajutorul tehnologiei Brain Mapping și Brain Computer Interface devine o soluție tot mai accesată în ceea ce privește îmbunătățirea și crearea contextelor favorabile unui dialog interior intim între sinele conștient și cel subconștient.",
@@ -650,7 +656,7 @@ jQuery(function ($) {
                     "<br/><br/><a href=\"http://nomisasaki.com\">nomisasaki.com</a>",
                 "text-main-nova-talks-noor": "<h2>NOOR STENFERT KROESE // Locuri de întâlnire pentru oameni și entități non-umane</h2>\n" +
                     "<br/><br/>\n" +
-                    "Dintr-o perspectivă critică post-umană, lucrările artistei new media și scenografei Noor Stenfert Kroese evoluează în jurul relației dintre oameni și non-oameni. În cadrul prezentării sale, ea va vorbi despre lucrarea ei – RHIZA - și despre cercetarea continuă privind colaborarea cu ciuperci și alte entități non-umane. \n" +
+                    "Dintr-o perspectivă critică post-umană, lucrările artistei new media și scenografei Noor Stenfert Kroese evoluează în jurul relației dintre uman și non-uman. În cadrul prezentării sale, ea va vorbi despre lucrarea ei – RHIZA - și despre cercetarea continuă privind colaborarea cu ciuperci și alte entități non-umane. \n" +
                     "O meditație asupra relației profunde dintre oameni și mediul înconjurător, RHIZA este o instalație interactivă transdisciplinară, la granița dintre biologie, natură și tehnologie. Inclusă în expoziția de anul acesta de la NOVA, această instalație vie este inspirată de dinamica rețelei de conexiuni fungice, cunoscută drept wood wide web, prin care plantele dialoghează constant. Pentru a ilustra conexiunea dintre oameni și mediul vegetal, instalația facilitează accesarea acestui dialog subtil, prin apelarea la propriile noastre rădăcini: tălpile. Un discurs despre importanța creării unei punți între uman și non-uman, pentru a stabili o conexiune nemijlocită.",
                 "text-main-author-nova-talks-noor": "<b>Noor Stenfert Kroese</b> este o artistă interdisciplinară de origine olandeză. În prezent își finalizează studiul masteral la Universitatea de Artă și Design din Linz, departamentul Interface Cultures, unde dezvoltă activitatea studioului său de creație prin colaborări inedite. <br/><br/>\n" +
                     "Noor lucrează în diverse medii, cum ar fi arta biologică, teatrul și arta new media. Creațiile sale urmăresc conectarea și integrarea publicului în operă. Interacțiunea între oameni și entități non-umane este un subiect central în munca sa. Instrumentele pe care artista le folosește, dar și maniera sa de lucru arată un interes pentru împletirea perspectivelor noi cu cele vechi și astfel, lucrările artistei nu oferă un răspuns, ci caută mai degrabă spațiul pentru a pune întrebări și a experimenta. Dintr-o perspectivă postumană, ea explorează posibilitățile de a ocupă un loc conștient în rețeaua în mișcare și incontrolabilă din care facem parte.\n" +
@@ -892,8 +898,13 @@ jQuery(function ($) {
         });
 
         // footer button links
-        $(".footer-button").on("click", function() {
+        $(".div-button").on("click", function() {
             window.location = $(this).attr("href");
+            return false;
+        });
+
+        $(".div-button-new-tab").on("click", function() {
+            window.open($(this).attr("href"),'_blank');
             return false;
         });
 

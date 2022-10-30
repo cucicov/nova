@@ -139,7 +139,8 @@ a {
 
 #menu-mobile {
   display: none;
-  margin-bottom: 24px;
+  margin-bottom: 14px;
+  margin-top: 100px;
 }
 
 /* ==========================================================================
@@ -355,6 +356,88 @@ html, body {
   margin-left: 140px;
 }
 
+
+.buy-tickets-small {
+  padding: 5px;
+  text-transform: uppercase;
+  background: #FF95E7;
+  color: rgba(0, 0, 28, 1);
+  border-radius: 4px;
+  /*margin-left: 25px;*/
+  display: flex;
+  align-items: center;
+
+  font-family: OpenSansCondensed;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  justify-content: center;
+  width: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.buy-tickets {
+  padding: 10px;
+  text-transform: uppercase;
+  background: #FF95E7;
+  color: rgba(0, 0, 28, 1);
+  border-radius: 4px;
+  /*margin-left: 25px;*/
+  display: flex;
+  align-items: center;
+
+  font-family: OpenSansCondensed;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  justify-content: center;
+  width: 300px;
+  margin-left: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.buy-tickets-disabled {
+  cursor: pointer;
+  padding: 10px;
+  text-transform: uppercase;
+  /*background: #FF95E7;*/
+  color: #FF95E7;
+  border-radius: 4px;
+  border: 1px solid #FF95E7;
+  /*margin-left: 25px;*/
+  display: flex;
+  align-items: center;
+
+  font-family: OpenSansCondensed;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  justify-content: center;
+  width: 300px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container-details-event {
+  display: flex;
+  flex: 1 1;
+  align-items: flex-end;
+}
+
+.tickets-mobile {
+  display:none;
+}
+
+.tickets-desktop{
+  display: flex;
+}
+
 #box1 {
   box-sizing: border-box;
 
@@ -445,7 +528,6 @@ html, body {
 .generic-header {
   display: flex;
   align-items: flex-end;
-  margin-top: 60px;
   margin-bottom: 24px;
 }
 
@@ -555,8 +637,8 @@ html, body {
   max-height:100%;
 }
 
-.pad-top-130 {
-  margin-top: 130px;
+.pad-top-header-spacing {
+  margin-top: 100px;
 }
 
 .calendar-container {
@@ -1153,7 +1235,7 @@ textarea {
     min-width:0px;
   }
 
-  .pad-top-130 {
+  .pad-top-header-spacing {
     margin-top: 80px;
   }
 
@@ -1355,6 +1437,28 @@ textarea {
 
   }
 
+  .buy-tickets{
+    margin-left: 0;
+    width: auto;
+  }
+
+  .buy-tickets-disabled{
+    margin-left: 0;
+    width: auto;
+  }
+
+  .tickets-mobile {
+    display:flex;
+  }
+
+  .tickets-desktop{
+    display: none;
+  }
+
+  .generic-header {
+    margin-bottom: 0px;
+    margin-top: 80px;
+  }
 }
 
 /* media queries for screens smaller that max container width 1440px */

@@ -1,7 +1,7 @@
 
 <script>
     // footer items click
-    $(".footer-button").on("click", function() {
+    $(".div-button").on("click", function() {
         window.open($(this).attr("href"), "_blank")
         return false;
     });
@@ -162,17 +162,19 @@
                 ediții anterioare
             </div>
             <div class="footer-buttons">
-                <div class="footer-button" href="prev-editions/edition2018.pdf" data-i18n-key="edition-2018">
+                <div class="footer-button div-button" href="prev-editions/edition2018.pdf" data-i18n-key="edition-2018">
                     Ediția 2018
                 </div>
-                <div class="footer-button" href="prev-editions/edition2021.pdf" data-i18n-key="edition-2021">
+                <div class="footer-button div-button" href="prev-editions/edition2021.pdf" data-i18n-key="edition-2021">
                     Ediția 2021
                 </div>
             </div>
         </div>
 
-        <div class="footer-headings-vt" style="margin-bottom: 0px; align-items: center; justify-content: center; margin-bottom: 20px;">
-            <img src="img/vt.png" style="width: 80px; opacity: 0.5;"/>
+        <div class="footer-headings-vt"
+             style="cursor:pointer; margin-bottom: 0px; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <img src="img/vt.png" style="width: 80px; opacity: 0.5;" class="div-button"
+                 href="https://verytheory.com"/>
         </div>
 
         <div class="footer-headings" style="margin-bottom: 0px;">
@@ -180,15 +182,15 @@
                 CONTACT
             </div>
             <div class="footer-buttons custom-footer-align">
-                <div class="footer-button" href="https://www.facebook.com/novafestivalromania"
+                <div class="footer-button div-button" href="https://www.facebook.com/novafestivalromania"
                      style="height: 24px;">
                     <img src="img/fb.svg">
                 </div>
-                <div class="footer-button" href="https://www.instagram.com/nova.festival/"
+                <div class="footer-button div-button" href="https://www.instagram.com/nova.festival/"
                      style="height: 24px;">
                     <img src="img/insta.svg">
                 </div>
-                <div class="footer-button" href="mailto:contact@novanova.ro"
+                <div class="footer-button div-button" href="mailto:contact@novanova.ro"
                      style="margin-right: 0px">
                     contact@novanova.ro
                 </div>
