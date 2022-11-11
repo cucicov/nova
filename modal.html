@@ -1,0 +1,134 @@
+<script>
+    // Helper function to place modal window as the first child of the #page node. DOM must be loaded.
+    function swap () {
+        var body = document.body;
+        var m = document.getElementById('modal_window');
+        body.insertBefore(m, body.firstChild);
+    }
+    swap();
+
+    // list out the vars
+    var mOverlay = getId('modal_window'),
+        mClose = getId('modal_close'),
+        modal = getId('modal_holder'),
+        modalOpen = false,
+        i;
+
+
+    // Let's cut down on what we need to type to get an ID
+    function getId ( id ) {
+        return document.getElementById(id);
+    }
+
+
+    // Let's open the modal
+    function modalShow () {
+        // lastFocus = document.activeElement;
+        mOverlay.setAttribute('aria-hidden', 'false');
+        modalOpen = true;
+        modal.setAttribute('tabindex', '0');
+        modal.focus();
+    }
+
+
+    // binds to both the button click and the escape key to close the modal window
+    // but only if modalOpen is set to true
+    function modalClose ( event ) {
+        if (( !event.keyCode || event.keyCode === 27 ) ) {
+            mOverlay.setAttribute('aria-hidden', 'true');
+            modal.setAttribute('tabindex', '-1');
+            modalOpen = false;
+            // lastFocus.focus();
+            document.cookie = "modal-display=false";
+        }
+    }
+
+
+    // Restrict focus to the modal window when it's open. Tabbing will just loop through the whole modal.
+    // Shift + Tab will allow backup to the top of the modal, and then stop.
+    function focusRestrict ( event ) {
+        if ( modalOpen && !modal.contains( event.target ) ) {
+            event.stopPropagation();
+            modal.focus();
+        }
+    }
+
+
+    // Close modal window by clicking on the overlay
+    mOverlay.addEventListener('click', function( e ) {
+        if (e.target == modal.parentNode) {
+            modalClose( e );
+        }
+    }, false);
+
+
+    // open modal by btn click/hit
+    // mOpen.addEventListener('click', );
+    $('#bell').on("click", function() {
+        modalShow();
+    });
+
+    $('#details-open-call').on('click', function(){
+        mOverlay.setAttribute('aria-hidden', 'true');
+        modal.setAttribute('tabindex', '-1');
+        modalOpen = false;
+        document.cookie = "modal-display=false";
+    });
+
+    // close modal by btn click/hit
+    mClose.addEventListener('click', modalClose);
+
+    // close modal by keydown, but only if modal is open
+    document.addEventListener('keydown', modalClose);
+
+    // restrict tab focus on elements only inside modal window
+    // Seems like a heavy-handed approach and a problem for DOM elements added later.
+    var allNodes = document.querySelectorAll("*");
+    for (i = 0; i < allNodes.length; i++) {
+        allNodes.item(i).addEventListener('focus', focusRestrict);
+    }
+
+
+    // COOKIES
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    if(getCookie("modal-display").length != 0){
+        let modalCookie = getCookie("modal-display");
+        if(modalCookie === "false") {
+            mOverlay.setAttribute('aria-hidden', 'true');
+            modal.setAttribute('tabindex', '-1');
+            modalOpen = false;
+        }
+    }
+
+</script>
+
+
+<div class="modal-overlay" id="modal_window" aria-hidden="false" role="dialog" aria-labelledby="modal_title">
+    <div class="modal-content" id="modal_holder" role="document">
+        <!-- content start -->
+        <h1>Festivalul NOVA și UniCredit Bank lansează programul de burse NOVA GROW</h1>
+        <p>
+            <img src="img/open-call.jpeg" style="width: 100%; height: 100%; object-fit: cover; overflow: hidden;">
+            NOVA GROW se adresează tinerilor artiști pasionați de rolul noilor tehnologii în procesul creativ actual și are ca obiectiv oferirea unei burse de dezvoltare unui artist la început de drum.
+            <br/><br/>
+            <a href="open-call.html" id="details-open-call" onclick="MyFunction();">mai multe detalii</a>
+        </p>
+        <!-- content end -->
+        <button class="btn-close" id="modal_close" type="button" aria-label="close">&times;</button>
+    </div>
+</div> <!-- end .modal-overlay -->
