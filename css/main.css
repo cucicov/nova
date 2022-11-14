@@ -1231,7 +1231,7 @@ textarea {
 .modal-overlay[aria-hidden="false"] {
   opacity: 1;
   visibility: visible;
-  z-index: 2;
+  z-index: 999;
 }
 
 /*
@@ -1245,6 +1245,7 @@ textarea {
   overflow-x: hidden;
   padding: 1.5em;
   position: relative;
+  z-index: 999;
 //transform: scale(.8); // This sets the size to 80%, which is set to 100% below...
 //transition: transform .3s;
   width: 100%;
@@ -1274,13 +1275,13 @@ textarea {
   font-family: arial;
 //font-size: 2em;
 //font-weight: 800;
-  font-size:1.2em;
+  font-size:2.5em;
   line-height: 1;
   padding: 0;
   position: absolute;
   right: .25em;
   top: .25em;
-  z-index: 2;
+  z-index: 999;
 }
 
 .btn-close:hover {
@@ -1370,7 +1371,7 @@ textarea {
   .main-menu-item-bell {
     order: -1;
     flex-direction: row;
-    z-index: 9999;
+    z-index: 99;
   }
 
   #logo{

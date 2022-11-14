@@ -121,7 +121,8 @@ jQuery(function ($) {
                 "dec": "dec",
                 "buy-tickets-pass": "buy festival pass",
                 "buy-tickets-expo": "buy expo pass",
-                "buy-tickets": "buy ticket",
+                "buy-tickets": "buy ticket in the hall",
+                "buy-tickets-online": "buy ticket live stream",
                 "installation": "installation",
                 "interactive-installation": "multi-channel video installation",
                 "interactive-installation-peep": "interactive installation peep media",
@@ -321,7 +322,7 @@ jQuery(function ($) {
                 "text-main-author-nova-talks-panel-1": "PANEL I",
                 "text-main-author-nova-talks-panel-2": "PANEL II",
                 "text-main-nova-talks-masa": "<h2>MAŠA JAZBEC// LECTURE - PERFORMANCE: What kind of future do you envision with robots? </h2><br/><br/>" +
-                    "Part of the team that developed the VR in Wonderland installation, included in this year's exhibition  at NOVA, and the creator of the humanoid robot Eva, Maša will open this section of the festival with a lecture-performance structured in two parts. In the first part, she will talk about exploring the implications of human-robot interaction research. The artist considers that the study of robotics cannot evolve without an in-depth knowledge of human nature. This is why her research is interdisciplinary, moving rapidly from engineering and social science to cognitive science, neuroscience, ethics and even art. In this presentation, Maša will approach Android Science and how the development of human-like robots can contribute to cognitive research.\n" +
+                    "Part of the team that developed the <a href='otherlands.html'>Otherlands</a> installation, included in this year's exhibition  at NOVA, and the creator of the humanoid robot Eva, Maša will open this section of the festival with a lecture-performance structured in two parts. In the first part, she will talk about exploring the implications of human-robot interaction research. The artist considers that the study of robotics cannot evolve without an in-depth knowledge of human nature. This is why her research is interdisciplinary, moving rapidly from engineering and social science to cognitive science, neuroscience, ethics and even art. In this presentation, Maša will approach Android Science and how the development of human-like robots can contribute to cognitive research.\n" +
                     " <br/><br/>\n" +
                     "In the second part of the presentation, Maša will give a participatory demonstration, through which she will show her interaction with the humanoid robot Eva, which is operated with the power of the mind through a BCI (brain-computer interfaces) system. Capable of reading minds, Eva illustrates perfectly the direct communication between humans and machines, with the help of neuroimaging technologies. As interest in BCI has grown, new applications of it have emerged outside of the medical field for healthy users. One of these is the integration of BCI with other interactive technologies like Eva. In these configurations, users control a humanoid robotic body and navigate through physical space with the power of their own brain activity.\n" +
                     " <br/><br/>\n" +
@@ -403,7 +404,8 @@ jQuery(function ($) {
                 "dec": "dec",
                 "buy-tickets-pass": "cumpără festival pass",
                 "buy-tickets-expo": "cumpără expo pass",
-                "buy-tickets": "cumpără bilet",
+                "buy-tickets": "cumpără bilet în sală",
+                "buy-tickets-online": "cumpără bilet live stream",
                 "installation": "instalație",
                 "interactive-installation": "instalație interactivă",
                 "interactive-installation-peep": " instalație interactivă peep media",
