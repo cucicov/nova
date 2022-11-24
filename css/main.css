@@ -133,6 +133,14 @@ a {
   transition: all 0.25s ease;
 }
 
+.details-image-desktop {
+  display: flex;
+}
+
+.details-image-mobile{
+  display: none;
+}
+
 #menu-desktop {
   display: flex;
 }
@@ -1399,6 +1407,14 @@ textarea {
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
+  }
+
+  .details-image-desktop {
+    display: none;
+  }
+
+  .details-image-mobile{
+    display: flex;
   }
 
   #menu-desktop {
