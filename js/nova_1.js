@@ -295,7 +295,7 @@ jQuery(function ($) {
                     "<ul>\n" +
                     "<li>PANEL I: 11:00 – 13:00 </li>\n" +
                     "<li>COFFEE BREAK: 13:00 – 13:30 </li>\n" +
-                    "<li>PANEL II: 13:30 – 15:30</li>\n" +
+                    "<li>PANEL II: 13:30 – 15:00</li>\n" +
                     "</ul>\n" +
                     "</b>",
                 "text-main-nova-talks": "<br/><br/>Through this event, NOVA proposes a marathon of inspiration and creates the context for fascinating discussions about the importance of new technologies in the creative process and in exploring human cognitive potential.\n" +
