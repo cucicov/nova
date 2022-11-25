@@ -586,7 +586,7 @@ jQuery(function ($) {
                     "<ul>\n" +
                     "<li>PANELUL I: 11:00 – 13:00 </li>\n" +
                     "<li>COFFEE BREAK: 13:00 – 13:30 </li>\n" +
-                    "<li>PANELUL AL II-LEA: 13:30 – 15:30 </li>\n" +
+                    "<li>PANELUL AL II-LEA: 13:30 – 15:00 </li>\n" +
                     "</ul>\n" +
                     "</b>",
                 "text-main-nova-talks": "<br/><br/>Prin acest eveniment, NOVA propune un maraton al inspirației și creează contextul unor discuții fascinante despre importanța noilor tehnologii în procesul creativ și în explorarea potențialul cognitiv uman. \n" +
