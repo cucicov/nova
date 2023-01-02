@@ -2,7 +2,7 @@ jQuery(function ($) {
 
     $(function(){
         $("#footer-module").load("footer.html");
-        $("#modal-dialog-popup").load("modal.html");
+        // $("#modal-dialog-popup").load("modal.html");
     });
 
     <!-- mobile check -->
@@ -800,7 +800,7 @@ jQuery(function ($) {
         });
 
         // set notification visibility
-        // $("#bell").hide();
+        $("#bell").hide();
 
         // calendar items links
         $(".calendar-day-container").on("click", function() {
