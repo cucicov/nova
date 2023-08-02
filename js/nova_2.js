@@ -52,17 +52,19 @@ jQuery(function ($) {
     var filterCalendar = function(id) {
         // console.log(id);
         var delay = 250;
-        $(".performance, .artist-talks, .workshops, .festival").hide(delay, 'swing', function () {
+        $(".performance, .artist-talks, .workshops, .festival, .nova-grow").hide(delay, 'swing', function () {
 
             if ($(".performance:visible").length === 0 &&
                 $(".artist-talks:visible").length === 0 &&
-                $(".workshops:visible").length === 0) {
+                $(".workshops:visible").length === 0 &&
+                $(".nova-grow:visible").length === 0) {
                 if (id === 'festival') {
                     refreshCalendarDateSpacings(".calendar-day-container");
                     $(".performance").show(delay, 'swing');
                     $(".artist-talks").show(delay, 'swing');
                     $(".workshops").show(delay, 'swing');
                     $(".festival").show(delay, 'swing');
+                    $(".nova-grow").show(delay, 'swing');
 
                 } else if (id === 'performance') {
                     refreshCalendarDateSpacings(".performance");
@@ -73,6 +75,9 @@ jQuery(function ($) {
                 } else if (id === 'workshops') {
                     refreshCalendarDateSpacings(".workshops");
                     $(".workshops").show(delay, 'swing');
+                } else if (id === 'nova-grow') {
+                    refreshCalendarDateSpacings(".nova-grow");
+                    $(".nova-grow").show(delay, 'swing');
                 }
 
             }
@@ -105,13 +110,21 @@ jQuery(function ($) {
             // English translations
             "en": {
                 "starts": "starts",
-                "start-date": "november 22",
+                "start-date": "september 16",
                 "ends": "ends",
-                "end-date": "december 17",
+                "end-date": "september 30",
                 "open-info": "The exhibition is open Tuesday to Friday 16:00 - 21:00 and on Saturday 11:00 - 21:00",
                 "festival": "Festival",
                 "expo": "Expo",
-                "performance": "Performance",
+                "performance": "Immersive Experience",
+                "performances": "Immersive Experiences",
+                "immersive-performative-installation": "immersive performative installation",
+                "immersive-interactive-installation": "immersive interactive installation",
+                "open-till-23": "open for exploration until 23.09",
+                "open-till-23-16_22": "open for exploration until 23.09 16:00 - 22:00",
+                "open-till-28-14_22": "open for exploration until 28.09 14:00 - 22:00",
+                "open-till-28-16_22": "open for exploration until 28.09 16:00 - 22:00",
+                "nova-grow": "NOVA Grow",
                 "artist-talks": "Talks",
                 "nova-talks": "Nova Talks",
                 "artist-talk": "Talk",
@@ -119,6 +132,7 @@ jQuery(function ($) {
                 "workshop": "Edu",
                 "nov": "nov",
                 "dec": "dec",
+                "sep": "sep",
                 "buy-tickets-pass": "buy festival pass",
                 "buy-tickets-expo": "buy expo pass",
                 "buy-tickets": "buy ticket in the hall",
@@ -142,11 +156,20 @@ jQuery(function ($) {
                     "We can't wait to see how you set this living space into motion!\n" +
                     "<br/><br/>" +
                     "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology. \n",
-                "expo-opening": "Exhibition opening",
+                "expo-opening": "Opening event",
+                "drawing-exercises-2": "Drawing exercises, performative research setting part of Digital Sensemaking (DIGI-SENSE) // Claudia Schnugg, Daniela Brill ",
                 "expo-closing": "Exhibition closing",
-                "festival": "Festival",
                 "space-and-spatiality": "Space and spatiality in art installations // IULIA GHERGHESCU",
                 "space-and-spatiality-detail": "Space and spatiality in art installations",
+                "have-you-seen": "Have you seen my body? <br/><i>a seascape</i>",
+                "tammy-lovin": "Tammy Lovin, Centre for the Unknown Lisbon - Patricia Correia & Julia Salaroli, Vicente Matallana, Florian Ruiz, Monica Cure, Claudia Schnugg",
+                "walk-a-rhythm": "Walk <br/> <i>a rhythm</i>",
+                "roly-poly": "rolypoly~, an adaptive and generative drum machine designed for real-time performance // Grigore Burloiu",
+                "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
+                "sonic-explorations": "Sonic Explorations // Denis Flueraru",
+                "protocols-applied-to-production": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;} // Vicente Matallana",
+                "aio-opening": "Opening AIO all in one",
+                "an-error-has": "an error has occurred. <br/> The aesthetic appeal of imperfection and glitches in visual images // M Kardinal",
                 "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
                 "intro-to-metaverse-detail": "Intro to Metaverse: 360/VR Filmmaking",
                 "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
@@ -181,6 +204,11 @@ jQuery(function ($) {
                 "when": "when",
                 "where": "where",
                 "excelsior": "Excelsior Theatre",
+                "areal": "AREAL Space for choreographic development",
+                "cndb": "National Center for Dance Bucharest",
+                "unteatru": "Unteatru",
+                "elvire-popesco": "Cinema Elvire Popesco",
+                "galateca": "Galateca Gallery",
                 "text-main-new-home-of-mind": "Imagine the following situation: a self-conscious robot has an existential crisis, after having its life purpose removed from its code. Together with those who interact with the installation, he tries to find his reason for being, through an artificial spiritual interface presented as a divine robot."+
                     "<br/><br/>" +
                     "In this edition of NOVA, the artist Mónica Rikić presents an adaptation of her work to the exhibition space in the festival, specifically created for this presentation in Romania.",
@@ -371,20 +399,27 @@ jQuery(function ($) {
                     "SATURDAY: 11:00 - 21:00",
                 "edition-2018": "2018 Edition",
                 "edition-2021": "2021 Edition",
-
-
+                "edition-2022": "2022 Edition",
             },
 
             // Arabic translations
             "ro": {
                 "starts": "începe pe",
-                "start-date": "22 noiembrie",
+                "start-date": "16 septembrie",
                 "ends": "se încheie pe",
-                "end-date": "17 decembrie",
+                "end-date": "30 septembrie",
                 "open-info": "Expoziția este deschisă de marți până vineri 16:00 - 21:00 și sâmbătă 11:00 - 21:00",
                 "festival": "Festival",
                 "expo": "Expo",
-                "performance": "Performance",
+                "performances": "Experiențe imersive",
+                "performance": "Experiență imersivă",
+                "immersive-performative-installation": "instalație imersivă performativă",
+                "immersive-interactive-installation": "instalație imersivă interactivă",
+                "open-till-23": "deschis pentru explorare până în 23.09",
+                "open-till-23-16_22": "deschis pentru explorare până în 23.09 16:00 - 22:00",
+                "open-till-28-14_22": "deschis pentru explorare până în 28.09 14:00 - 22:00",
+                "open-till-28-16_22": "deschis pentru explorare până în 28.09 16:00 - 22:00",
+                "nova-grow": "NOVA Grow",
                 "artist-talks": "Talks",
                 "nova-talks": "Nova talks",
                 "artist-talk": "Talk",
@@ -392,6 +427,7 @@ jQuery(function ($) {
                 "workshop": "Edu",
                 "nov": "nov",
                 "dec": "dec",
+                "sep": "sep",
                 "buy-tickets-pass": "cumpără festival pass",
                 "buy-tickets-expo": "cumpără expo pass",
                 "buy-tickets": "cumpără bilet în sală",
@@ -416,10 +452,20 @@ jQuery(function ($) {
                     "<br/><br/>" +
                     "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie.\n" +
                     "<br/><br/>",
-                "expo-opening": "Vernisaj expoziție",
+                "expo-opening": "Opening event",
+                "drawing-exercises-2": "Drawing exercises, performative research setting part of Digital Sensemaking (DIGI-SENSE) // Claudia Schnugg, Daniela Brill ",
                 "expo-closing": "Finisaj expoziție",
                 "space-and-spatiality": "Spațiu și spațialitate în creația instalațiilor artistice // IULIA GHERGHESCU",
                 "space-and-spatiality-detail": "Spațiu și spațialitate în creația instalațiilor artistice",
+                "have-you-seen": "Have you seen my body? <br/><i>a seascape</i>",
+                "tammy-lovin": "Tammy Lovin, Centre for the Unknown Lisbon - Patricia Correia & Julia Salaroli, Vicente Matallana, Florian Ruiz, Monica Cure, Claudia Schnugg",
+                "walk-a-rhythm": "Walk <br/> <i>a rhythm</i>",
+                "roly-poly": "rolypoly~, an adaptive and generative drum machine designed for real-time performance // Grigore Burloiu",
+                "protocols-applied-to-production": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;} // Vicente Matallana",
+                "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
+                "sonic-explorations": "Sonic Explorations // Denis Flueraru",
+                "aio-opening": "Vernisaj AIO all in one",
+                "an-error-has": "an error has occurred. <br/> The aesthetic appeal of imperfection and glitches in visual images// M Kardinal",
                 "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
                 "intro-to-metaverse-detail": "Intro to Metaverse: 360/VR Filmmaking",
                 "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
@@ -430,7 +476,7 @@ jQuery(function ($) {
                 "style-gan-detail": "Interacțiune cu StyleGAN în timp real",
                 "deep-learning": "Folosirea Deep Learning pentru generare de text dialog // GRIGORE BURLOIU",
                 "deep-learning-detail": "Folosirea Deep Learning pentru generare de text dialog",
-                "a-project": "Un proiect de",
+                "a-project": "Un proiect al",
                 "presented-by": "Prezentat de",
                 "with-support-of": "Cu sprijinul",
                 "sponsors": "Parteneri",
@@ -454,6 +500,11 @@ jQuery(function ($) {
                 "when": "când",
                 "where": "unde",
                 "excelsior": "Teatrul Excelsior",
+                "areal": "AREAL Spațiu pentru dezvoltare coregrafică",
+                "cndb": "Centrul Național al Dansului București",
+                "unteatru": "Unteatru",
+                "elvire-popesco": "Cinema Elvire Popesco",
+                "galateca": "Galateca Gallery",
                 "text-main-headline-new-home-of-mind": "",
                 "text-main-new-home-of-mind": "Imaginează-ți următoarea situație: un robot conștient de sine are o criză existențială, după ce i-a fost îndepărtat din cod motivul de a trăi. Împreună cu cei care interacționează cu instalația, el încearcă să-și regăsească rațiunea de a fi, într-o căutare care aduce în discuție spiritualitatea în lumea inteligenței artificiale." +
                     "<br/><br/>" +
@@ -660,7 +711,7 @@ jQuery(function ($) {
                     "SÂMBĂTĂ: 11:00 - 21:00",
                 "edition-2018": "Ediția 2018",
                 "edition-2021": "Ediția 2021",
-
+                "edition-2022": "Ediția 2022",
             },
         };
 

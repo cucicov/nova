@@ -166,7 +166,7 @@ h2{
 html, body {
   font-size: 1em;
   line-height: 1.4;
-  background: #00001C;
+  background: #000000;
   margin: 0;
   font-family: 'Open Sans', serif;
   color: #FFFFFF;
@@ -175,7 +175,7 @@ html, body {
 .wrapper {
   max-width: 1440px;
   margin: auto;
-  background-image: url('../img/footer-bg.svg');
+  /*background-image: url('../img/footer-bg.svg');*/ <!-- TODO: uncomment in final version -->
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: contain;
@@ -237,8 +237,8 @@ html, body {
 
 #panamea {
   position: relative;
-  top: -550px;
-  right: -550px;
+  top: -50px;
+  right: -900px;
 }
 
 #logo {
@@ -294,7 +294,7 @@ html, body {
   width: 38px;
   background-image: url('../img/en.svg');
   display: flex;
-  background-color: #70FBFB;
+  background-color: #FF95E7;
   border-radius: 50% 0% 0% 50%;
 }
 
@@ -307,7 +307,7 @@ html, body {
   width: 38px;
   background-image: url('../img/ro.svg');
   display: flex;
-  background-color: #70FBFB;
+  background-color: #FF95E7;
   border-radius: 0% 50% 50% 0%;
 }
 
@@ -322,7 +322,7 @@ html, body {
 
 
 #program {
-  min-width: 224px;
+  min-width: 235px;
   height: 100px;
   background: #70FBFB;
   border-radius: 2px;
@@ -755,9 +755,9 @@ html, body {
 
 .day-event-name {
   font-family: 'Open Sans';
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 22px;
   letter-spacing: -0.02em;
   text-align: left;
   margin-top: 6px;
@@ -1351,8 +1351,8 @@ textarea {
 
   #panamea {
     position: relative;
-    top: -550px;
-    left: -200px;
+    top: -20px;
+    left: -90px;
   }
 
   #logo {
@@ -1623,8 +1623,8 @@ textarea {
 
   #panamea {
     position: relative;
-    top: -550px;
-    left: 160px;
+    top: -50px;
+    left: 400px;
   }
 }
 
