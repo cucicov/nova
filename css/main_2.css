@@ -143,6 +143,7 @@ a {
 
 #menu-desktop {
   display: flex;
+  margin-top: 200px;
 }
 
 #menu-mobile {
@@ -237,8 +238,8 @@ html, body {
 
 #panamea {
   position: relative;
-  top: -50px;
-  right: -900px;
+  top: 0px;
+  right: -43%;
 }
 
 #logo {
@@ -797,6 +798,7 @@ html, body {
   text-align: left;
   color: rgba(173, 174, 203, 1);
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 .date-separator {
@@ -1420,6 +1422,7 @@ textarea {
 
   #menu-desktop {
     display: none;
+    margin-top: 200px;
   }
 
   #menu-mobile {
@@ -1623,8 +1626,8 @@ textarea {
 
   #panamea {
     position: relative;
-    top: -50px;
-    left: 400px;
+    top: 0px;
+    left: 35%;
   }
 }
 

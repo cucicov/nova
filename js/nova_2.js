@@ -157,6 +157,7 @@ jQuery(function ($) {
                     "<br/><br/>" +
                     "The experience of the exhibition is built within a creative lab held in the months leading up to the festival. This year, 22 artists from 13 countries are involved in this process. They benefit from the support of several specialists in psychology, neuroscience and anthropology. \n",
                 "expo-opening": "Opening event",
+                "performative-installation": "performative installation/research setting",
                 "drawing-exercises-2": "Drawing exercises, performative research setting part of Digital Sensemaking (DIGI-SENSE) // Claudia Schnugg, Daniela Brill ",
                 "expo-closing": "Exhibition closing",
                 "space-and-spatiality": "Space and spatiality in art installations // IULIA GHERGHESCU",
@@ -453,6 +454,7 @@ jQuery(function ($) {
                     "Experiența expoziției este construită în cadrul unui laborator creativ desfășurat în lunile premergătoare festivalului. Anul acesta sunt implicați 22 de artiști din 13 țări în acest proces. Aceștia beneficiază de sprijinul câtorva specialiști în psihologie, neuroștiință și antropologie.\n" +
                     "<br/><br/>",
                 "expo-opening": "Opening event",
+                "performative-installation": "performative installation/research setting",
                 "drawing-exercises-2": "Drawing exercises, performative research setting part of Digital Sensemaking (DIGI-SENSE) // Claudia Schnugg, Daniela Brill ",
                 "expo-closing": "Finisaj expoziție",
                 "space-and-spatiality": "Spațiu și spațialitate în creația instalațiilor artistice // IULIA GHERGHESCU",
