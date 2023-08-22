@@ -402,18 +402,13 @@
     </defs>
 </svg>
 
-<div class="video-wrapper">
-    <video playsinline autoplay muted loop id="panamea">
-        <source src="img/panamea.mp4" type="video/mp4">
-    </video>
-</div>
+<div id="header-video"></div>
 
 <div id="isMobile"></div>
 
 <div class = "wrapper">
     <div class="content">
 
-        <!-- HEADER -->
         <div class="content-container-row">
             <div id="logo" href="/">
                 <img src="img/logo.svg">
@@ -426,7 +421,7 @@
                 </div>
             </div>
             <div class="main-menu-item-bell">
-                <a href="#" style="align-self: flex-end;">
+                <a href="#" id="bell-wrapper">
                     <div id="bell">
                         <img src="img/bell.svg"/>
                     </div>
@@ -447,23 +442,40 @@
                     <span style="color: #00001C" data-i18n-key="start-date">NOV. 22</span> <br/>
                     <span style="color: #FF95E7" data-i18n-key="ends">ENDS</span>
                     <span style="color: #00001C" data-i18n-key="end-date">DEC.17</span> <br/>
-                    <span style="color: #FF95E7">2022</span> <br/>
+                    <span style="color: #FF95E7">2023</span> <br/>
                 </div>
                 <div id="box1">
                 </div>
             </div>
         </div>
 
-        <div class="content-container-row">
-            <div id="program-hours" data-i18n-key="open-info">
-                The exhibition is open every day from 10AM to 7PM
-            </div>
-        </div>
+        <!--        <div class="content-container-row">-->
+        <!--            <div id="program-hours" data-i18n-key="open-info">-->
+        <!--                The exhibition is open every day from 10AM to 7PM-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <div class="content-container-row">
             <div id="box2">
             </div>
         </div>
+
+        <!--        <div class="content-container-row pad-top-header-spacing tickets-desktop"-->
+        <!--             style="margin-bottom: 0px; justify-content: flex-end; flex-direction: column">-->
+        <!--            <div class="buy-tickets div-button-new-tab" href="https://eventbook.ro/other/bilete-festival-pass-nova">-->
+        <!--                <img src="img/ticket.svg" style="margin-right:10px"/>-->
+        <!--                <div  data-i18n-key="buy-tickets-pass">-->
+        <!--                    BUY FESTIVAL PASS-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--            <div class="buy-tickets-disabled div-button-new-tab" href="https://eventbook.ro/other/bilete-nova-expo">-->
+        <!--                <img src="img/ticket-pink.svg" style="margin-right:10px"/>-->
+        <!--                <div  data-i18n-key="buy-tickets-expo">-->
+        <!--                    BUY EXPO PASS-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <div class="content-container-row">
 
@@ -523,8 +535,8 @@
                         <div data-i18n-key="text-main-nova-talks-program">
                         </div>
 
-                        <div data-i18n-key="text-main-nova-talks">
-                        </div>
+<!--                        <div data-i18n-key="text-main-nova-talks">-->
+<!--                        </div>-->
 
                     </div>
 
@@ -539,16 +551,16 @@
                             when
                         </div>
                         <div class="details-text-info-content">
-                            26/NOV/2022
+                            23/SEP/2022
                         </div>
-                        <div class="details-text-info-content">
-                            <div class="buy-tickets div-button-new-tab" href="https://eventbook.ro/other/bilete-nova-talks">
-                                <img src="img/ticket.svg" style="margin-right:10px"/>
-                                <div  data-i18n-key="buy-tickets">
-                                    BUY FESTIVAL PASS
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="details-text-info-content">-->
+<!--                            <div class="buy-tickets div-button-new-tab" href="https://eventbook.ro/other/bilete-nova-talks">-->
+<!--                                <img src="img/ticket.svg" style="margin-right:10px"/>-->
+<!--                                <div  data-i18n-key="buy-tickets">-->
+<!--                                    BUY FESTIVAL PASS-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </div>
 
@@ -559,22 +571,28 @@
                 <div class="details-text-wrapper-author">
                     <div class="details-text-main">
 
-                        <div data-i18n-key="text-main-nova-talks-masa">
+                        <div data-i18n-key="text-main-nova-digi-sense">
                         </div>
+
+                        <img src="/img/artist-talks/digi-sense-research.jpg" class="details-content-image">
 
                         <div class="details-text-separator"></div>
 
-                        <div data-i18n-key="text-main-author-nova-talks-masa">
+                        <div data-i18n-key="text-main-author-nova-talks-digi-sense">
                         </div>
 
                     </div>
 
                     <div class="details-text-info">
-                        <img src="/img/artist-talks/masa1.jpg" class="details-content-image-author">
-                        <div class="details-text-info-header" data-i18n-key="text-main-author-nova-talks-panel-1">
+                        <img src="/img/artist-talks/claudiaSchnugg.jpg" class="details-content-image-author">
+                        <img src="/img/artist-talks/DanielaBrill.jpg" class="details-content-image-author">
+                        <div class="details-text-info-header">
+                            Claudia Schnugg & Daniela Brill (AT)
+                        </div>
+                        <div class="details-text-info-content" data-i18n-key="text-main-author-nova-talks-panel-1">
                             panel 1
                         </div>
-                        <div class="details-text-info-content">
+                        <div class="details-text-info-content-last">
                             11:00 – 12:00
                         </div>
                     </div>
@@ -588,23 +606,26 @@
                 <div class="details-text-wrapper-author">
                     <div class="details-text-main">
 
-                        <div data-i18n-key="text-main-nova-talks-costin">
+                        <div data-i18n-key="text-main-nova-talks-new-art">
                         </div>
 
                         <div class="details-text-separator"></div>
 
-                        <div data-i18n-key="text-main-author-nova-talks-costin">
+                        <div data-i18n-key="text-main-author-nova-talks-new-art">
                         </div>
 
                     </div>
 
                     <div class="details-text-info">
-                        <img src="/img/artist-talks/01_Veruvis_Costin_Damasaru.JPG" class="details-content-image-author">
-                        <div class="details-text-info-header" data-i18n-key="text-main-author-nova-talks-panel-1">
+                        <img src="/img/artist-talks/vicente.jpg" class="details-content-image-author">
+                        <div class="details-text-info-header">
+                            Vicente Matallana (ES)
+                        </div>
+                        <div class="details-text-info-content" data-i18n-key="text-main-author-nova-talks-panel-1">
                             panel 1
                         </div>
-                        <div class="details-text-info-content">
-                            12:00 – 13:00
+                        <div class="details-text-info-content-last">
+                            12:40 - 13:15
                         </div>
                     </div>
                 </div>
@@ -620,7 +641,7 @@
                             COFFEE BREAK
                         </div>
                         <div class="details-text-info-content" style="margin-bottom: 0px;">
-                            13:00 – 13:30
+                            13:15 - 13:45
                         </div>
                     </div>
 
@@ -635,23 +656,28 @@
                 <div class="details-text-wrapper-author">
                     <div class="details-text-main">
 
-                        <div data-i18n-key="text-main-nova-talks-monika">
+                        <div data-i18n-key="text-main-nova-talks-beyond-the-screen">
                         </div>
+
+                        <img src="/img/artist-talks/tammy_sample.png" class="details-content-image">
 
                         <div class="details-text-separator"></div>
 
-                        <div data-i18n-key="text-main-author-nova-talks-monika">
+                        <div data-i18n-key="text-main-author-nova-talks-beyond-the-screen">
                         </div>
 
                     </div>
 
                     <div class="details-text-info">
-                        <img src="/img/artist-talks/monica_sm.jpg" class="details-content-image-author">
-                        <div class="details-text-info-header" data-i18n-key="text-main-author-nova-talks-panel-2">
+                        <img src="/img/artist-talks/tammy.png" class="details-content-image-author">
+                        <div class="details-text-info-header">
+                            Tammy Lovin (RO)
+                        </div>
+                        <div class="details-text-info-content" data-i18n-key="text-main-author-nova-talks-panel-2">
                             panel 2
                         </div>
-                        <div class="details-text-info-content">
-                            13:30 – 14:00
+                        <div class="details-text-info-content-last">
+                            13:45 - 14:20
                         </div>
                     </div>
                 </div>
@@ -663,84 +689,31 @@
                 <div class="details-text-wrapper-author">
                     <div class="details-text-main">
 
-                        <div data-i18n-key="text-main-nova-talks-nomi">
+                        <div data-i18n-key="text-main-nova-talks-white-contamination">
                         </div>
+
+                        <img src="/img/artist-talks/Florian_Ruiz.jpg" class="details-content-image">
 
                         <div class="details-text-separator"></div>
 
-                        <div data-i18n-key="text-main-author-nova-talks-nomi">
+                        <div data-i18n-key="text-main-author-nova-talks-white-contamination">
                         </div>
 
                     </div>
 
                     <div class="details-text-info">
-                        <img src="/img/artist-talks/nomisasaki.jpg" class="details-content-image-author">
-                        <div class="details-text-info-header" data-i18n-key="text-main-author-nova-talks-panel-2">
+
+                        <div class="details-text-info-header">
+                            Florian Ruiz (FR)
+                        </div>
+                        <div class="details-text-info-content" data-i18n-key="text-main-author-nova-talks-panel-2">
                             panel 2
                         </div>
                         <div class="details-text-info-content">
-                            14:00 – 14:30
+                            14:30 - 15:00
                         </div>
                     </div>
                 </div>
-                <!-- ---- -->
-
-<!--                &lt;!&ndash; CHUNK &ndash;&gt;-->
-<!--                <div class="details-text-separator"></div>-->
-
-<!--                <div class="details-text-wrapper-author">-->
-<!--                    <div class="details-text-main">-->
-
-<!--                        <div data-i18n-key="text-main-nova-talks-noor">-->
-<!--                        </div>-->
-
-<!--                        <div class="details-text-separator"></div>-->
-
-<!--                        <div data-i18n-key="text-main-author-nova-talks-noor">-->
-<!--                        </div>-->
-
-<!--                    </div>-->
-
-<!--                    <div class="details-text-info">-->
-<!--                        <img src="/img/artist-talks/noor.jpg" class="details-content-image-author">-->
-<!--                        <div class="details-text-info-header" data-i18n-key="text-main-author-nova-talks-panel-2">-->
-<!--                            panel 2-->
-<!--                        </div>-->
-<!--                        <div class="details-text-info-content">-->
-<!--                            14:30 – 15:00-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <!-- ---- -->
-
-
-                <!-- CHUNK -->
-                <div class="details-text-separator"></div>
-
-                <div class="details-text-wrapper-author">
-                    <div class="details-text-main">
-
-                        <div data-i18n-key="text-main-nova-talks-anais">
-                        </div>
-
-                        <div class="details-text-separator"></div>
-
-                        <div data-i18n-key="text-main-author-nova-talks-anais">
-                        </div>
-
-                    </div>
-
-                    <div class="details-text-info">
-                        <img src="/img/artist-talks/Anais.jpeg" class="details-content-image-author">
-                        <div class="details-text-info-header" data-i18n-key="text-main-author-nova-talks-panel-2">
-                            panel 2
-                        </div>
-                        <div class="details-text-info-content">
-                            14:30 – 15:00
-                        </div>
-                    </div>
-                </div>
-                <!-- ---- -->
 
             </div>
 

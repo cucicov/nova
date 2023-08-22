@@ -242,6 +242,11 @@ html, body {
   right: -43%;
 }
 
+.embedded-video{
+  width: 100%;
+  height: 950px;
+}
+
 #logo {
   margin-right: 25px;
   cursor: pointer;
@@ -942,6 +947,10 @@ html, body {
   flex-direction: column;
 }
 
+.details-content ul{
+  list-style-type: initial;
+}
+
 .details-author {
   font-family: 'OpenSansCondensed';
   font-size: 20px;
@@ -965,8 +974,9 @@ html, body {
 .details-image {
   position: relative;
   background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
+  /*background-size: contain;*/
+  /*background-repeat: no-repeat;*/
   background-image: var(--bg-image);
   width: 100%;
   height: 300px;
@@ -1014,6 +1024,16 @@ html, body {
 }
 
 .details-text-info-content {
+  padding-top: 12px;
+  font-family: 'OpenSansCondensed';
+  font-size: 12px;
+  line-height: 17px;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.details-text-info-content-last {
   padding-top: 12px;
   padding-bottom: 40px;
   font-family: 'OpenSansCondensed';
@@ -1357,6 +1377,11 @@ textarea {
     left: -90px;
   }
 
+  .embedded-video{
+    width: 100%;
+    height: 450px;
+  }
+
   #logo {
     margin-right: 100px;
 
@@ -1552,6 +1577,10 @@ textarea {
 
   .details-content {
     margin: 20px;
+  }
+
+  .details-content ul{
+    list-style-type: initial;
   }
 
   .details-title{

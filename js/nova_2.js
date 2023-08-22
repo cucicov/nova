@@ -2,6 +2,7 @@ jQuery(function ($) {
 
     $(function(){
         $("#footer-module").load("footer.html");
+        $("#header-video").load("header-video.html");
         // $("#modal-dialog-popup").load("modal.html");
     });
 
@@ -118,12 +119,12 @@ jQuery(function ($) {
                 "expo": "Expo",
                 "performance": "Immersive Experience",
                 "performances": "Immersive Experiences",
-                "immersive-performative-installation": "immersive performative installation",
-                "immersive-interactive-installation": "immersive interactive installation",
+                "immersive-performative-installation": "Immersive performative installation",
+                "immersive-interactive-installation": "Immersive interactive installation",
                 "open-till-23": "open for exploration until 23.09",
-                "open-till-23-16_22": "open for exploration until 23.09 16:00 - 22:00",
-                "open-till-28-14_22": "open for exploration until 28.09 14:00 - 22:00",
-                "open-till-28-16_22": "open for exploration until 28.09 16:00 - 22:00",
+                "open-till-23-16_22": "16:00 - 22:00",
+                "open-till-28-14_22": "12:00 - 20:00",
+                "open-till-28-16_22": "16:00 - 22:00",
                 "nova-grow": "NOVA Grow",
                 "artist-talks": "Talks",
                 "nova-talks": "Nova Talks",
@@ -163,13 +164,13 @@ jQuery(function ($) {
                 "space-and-spatiality": "Space and spatiality in art installations // IULIA GHERGHESCU",
                 "space-and-spatiality-detail": "Space and spatiality in art installations",
                 "have-you-seen": "Have you seen my body? <br/><i>a seascape</i>",
-                "tammy-lovin": "Tammy Lovin, Centre for the Unknown Lisbon - Patricia Correia & Julia Salaroli, Vicente Matallana, Florian Ruiz, Monica Cure, Claudia Schnugg",
+                "tammy-lovin": "Claudia Schnugg (AT), Daniela Brill (AT), Vicente Matallana (ES), Tammy Lovin (RO), Florian Ruiz (FR)",
                 "walk-a-rhythm": "Walk <br/> <i>a rhythm</i>",
                 "roly-poly": "rolypoly~, an adaptive and generative drum machine designed for real-time performance // Grigore Burloiu",
                 "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
                 "sonic-explorations": "Sonic Explorations // Denis Flueraru",
                 "protocols-applied-to-production": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;} // Vicente Matallana",
-                "aio-opening": "Opening AIO all in one",
+                "aio-opening": "AIO all in one",
                 "an-error-has": "an error has occurred. <br/> The aesthetic appeal of imperfection and glitches in visual images // M Kardinal",
                 "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
                 "intro-to-metaverse-detail": "Intro to Metaverse: 360/VR Filmmaking",
@@ -202,14 +203,144 @@ jQuery(function ($) {
                     "A former research fellow at MIT’s Media Lab, Chung is considered a pioneer in the field of human-machine collaboration. Chung was selected as the Woman of the Year in Monaco for achievement in the Arts & Sciences and received the Lumen Prize for Art in Technology. Chung's work explores the mark-made-by-hand and the mark-made-by-machine as an approach to understanding the dynamics of humans and systems. \n" +
                     "<br/><br/>" +
                     "This speculative critical practice spans performance, installation, and drawings. They  have been featured in numerous exhibitions at museums and galleries around the world such as the Espoo Museum of Modern Art, Espoo; Vancouver Art Gallery, Vancouver; Art Basel, Miami; National Art Center, Tokyo; NTT InterCommunication Center [ICC], Tokyo, Japan; ArtScience Museum, Singapore; MIT Media Lab, Cambridge; The Drawing Center, New York; The New Museum, New York; Museum of Contemporary Art, Geneva; Mana Contemporary, New York, Tribeca Film Festival, New York; The Hospital Club, London; Mutek Festival, Montreal & Mexico City; Sonar Festival, Barcelona. \n",
+                "text-main-drawing-exercises": "Drawing Exercises is a participatory performance piece by Antoni Rayzhekov for the DIGI-Sense project, a performative installation in which the audience become the performers. A series of drawings are performed by two participants together, who have to find out the movements, velocities, and strategies to carry them out. " +
+                    "<br/><br/>"+
+                    "The experience takes the participants through a sensemaking process in which they will develop different strategies and methods to draw, with their bodies, the figure they imagine with the given task." +
+                    "<br/><br/>" +
+                    "Sets of sensors on the bodies of the participants digitize the information produced by their bodies: their movements, their orientation, and even their heart rate and stress levels. This combined digital information produces a digital twin of their combined actions – a line to draw their envisioned outcomes." +
+                    "<br/><br/>" +
+                    "The DIGI-Sense project is funded as a Seed Project at the Linz Institute of Technology, which is realized at the Institute of Communications Engineering, part of the Linz Business School at the Johannes Kepler University Linz. ",
+                "text-main-author-drawing-exercises": "<b>Antoni Rayzhekov</b> is an interdisciplinary artist working in the field of music, theatre and digital arts. He has a master degree in theatre directing and bachelor in drama acting at the National Academy for Theatre and Film Arts in Sofia. He studied jazz improvisation at the Vienna Konservatorium and computer programming at LearningTree  in London and was an IT consultant for the United Nations Office, Vienna. He is a co-founder of the Vienna-based New Media label THIS.PLAY[2013], focused on interactive technologies and art, and a associate lecturer since 2012 in the Media and Digital Technologies (Interactive Media / Experimental Media) at the University for Applied Science (St. Pölten, Austria) and since 2016, a guest lecturer at the National Academy of Art (Digital Arts MA program / 'Performative Media') - Sofia, Bulgaria. " +
+                    "<br/><br/>" +
+                    "<b>Claudia Schnugg</b> is Principal Investigator of the Digital Sensemaking (DIGI-SENSE) project at the Johannes Kepler University Linz, which is realized at the Communications Engineering Institute. She holds a PhD in social and economic sciences with an additional focus on cultural sciences. Her research focuses on art, aesthetics and artistic initiatives in interdisciplinary and social settings, such as change processes, digitalization and knowledge management, and explores implications and organization of art-science collaboration. As curator and consultant she is working internationally with industrial, scientific and artistic organizations to realize art-sci-tech projects. " +
+                    "<br/><br/>" +
+                    "<b>Daniela Brill</b> has a Master’s degree in Art & Science from the University of Applied ArtsVienna.  Daniela works in collaboration with scientific institutions and networks such as Art at CMS at CERN, the ORIGIN network of high energy physics, and with artistic institutions such as the ArtSci Center + Lab UCLA. Brill is the creator and co-organizer of Suratómica, a collaborative network of Art and Science based in Bogotá, Colombia. Daniela’s artistic and theoretical work focuses on the idea of in-disciplinarity and the wish to eliminate certain frontiers and boundaries aiming to find a space of queerness at many levels for creative processes and for the formation of new knowledge, researching mainly the areas of aesthetics and complexity. ",
+                "text-main-aio-1": "Developed by Present Continuous Association, in collaboration with the Research Center for Neuro Performance Enhancement Veruvis, AIO is an immersive interactive installation that creatively illustrates anxiety and the ways in which it manifests in our body, translating relevant neural research data into sound and image. " +
+                    "<br/><br/>" +
+                    "The music in AIO is partly formed by converting EEG signals into musical notes. The video portraits humanize the experience and become a channel for your emotion, expressing through mimics, gestures and movement, various degrees of anxiety. " +
+                    "<br/><br/>" +
+                    "<b>Artistic direction:</b> Emilia Păunescu" +
+                    "<br/>"+
+                    "<b>Sound design:</b>: Bogdan Moroșanu" +
+                    "<br/>"+
+                    "<b>Image:</b> Florin Constantin" +
+                    "<br/>"+
+                    "<b>Coding of interactive interface:</b> Dragoș Iulian Matei" +
+                    "<br/>"+
+                    "<b>Distribution:</b> Ada Galeș, Alexandra Bălășoiu, Cătălin Diaconu, Cezar Grumăzescu, Denis Bolborea, Denisa Diaconescu, Dragoș Iulian Matei, Ema Alexandrescu, Florin Constantin, Oana Pușcatu, Simona Dabija",
+                "text-main-aio-2": "<i>\"I started from the idea that we are all resonance chambers one for the other and I imagined this unconventional choir that sings your anxiety and helps you process it. <br/><br/>" +
+                    "In the space of the installation you drop this weight from your shoulders and let it wash out through sound and the bodies of the people that form the choir. You see your anxiety moving other arms, other faces, going under other peoples skin. <br/><br/> " +
+                    "AIO - all in one - is a common body, with many dimensions. It has both the overwhelming side of anxiety, that feels like \"everything piling up altogether at once\", but also the bright side, where we learn, one through the other, that we are whole.\"<br/> <br/><b>Emilia Păunescu</b></i>",
+                "text-main-aio-3": "On AIO’s screens you discover a total of 55 videoportraits, accompanied by 5 sound compositions rendered in Quadrophonic format. All these paired with a certain degree of intensity of anxiety." +
+                    "<br/><br/> " +
+                    "The work is interactive and allows the visitors to modulate the sound and image in the space through a simple digital interface. Explore the space, select on the interface the level of anxiety you consider describes how you are feeling and your choice is expressed in the installation through a sound and video composition. ",
+                "text-main-have-you-seen": "An immersive 15-minute experience that will take you deep in the oceans to find yourself in new, unexpected ways. Just like the other installation developed within NOVA lab, it’s purpose is to offer, for two visitors in turn, the feeling of being present in more than one place at the same time. " +
+                    "<br/><br/> " +
+                    "6 photo artists joined forces with 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, to create this interactive installation." +
+                    "<br/><br/> " +
+                    "Before you enter the installation we record your voice and photograph you in various postures. These digital imprints of your body are integrated in real time in the audio-visual setting of the installation." +
+                    "<br/><br/> " +
+                    "The stage is yours now. You are in the waves. It’s never something certain, is it? A performer guides you through this experience on stage." +
+                    "<br/><br/> " +
+                    "<b>Art direction and texts:</b> Emilia Păunescu" +
+                    "<br/>" +
+                    "<b>Photo artists:</b> Felicia Simion (RO), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
+                    "<br/>" +
+                    "<b>Performers:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
+                    "<br/>" +
+                    "<b>Graphics:</b> Ana Cârlan (RO)" +
+                    "<br/>" +
+                    "<b>Creative coders:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
+                    "<br/>" +
+                    "<b>Psychology, communication & neuroscience professionals:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
+                    "<br/><br/> " +
+                    "Access based on ticket and time slot reservation. ",
+                "text-main-walk": "Developed within NOVA lab, with the collaboration of 7 photo artists, 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, Walk is an interactive installation that invites you to a simple game. " +
+                    "<br/><br/> " +
+                    "A performer meets you on stage and, together, you build a rhythm of your own, a personal walk, by moving in reaction to the images on the screens that surround you. " +
+                    "<br/><br/> " +
+                    "Your digital body, captured at the entrance in the installation, is integrated in some of the images on stage. This way you “inhabit” these new spaces, while your physical body is engaged in creating, with the performer, various ways to get closer and farther to these images, to react to them through movement. This generates a specific walk, with a certain musicality." +
+                    "<br/><br/> " +
+                    "Walk is a sort of open movement dialogue with everything that surrounds you. A playful way to get to know yourself." +
+                    "<br/><br/> " +
+                    "<b>Art direction:</b> Emilia Păunescu" +
+                    "<br/>" +
+                    "<b>Photo artists:</b> Felicia Simion (RO), Florian Ruiz (FR), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
+                    "<br/>" +
+                    "<b>Performers:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
+                    "<br/>" +
+                    "<b>Graphics:</b> Ana Cârlan (RO)" +
+                    "<br/>" +
+                    "<b>Creative coders:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
+                    "<br/>" +
+                    "<b>Psychology, communication & neuroscience professionals:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
+                    "<br/><br/> " +
+                    "Access based on ticket and time slot reservation. ",
+                "text-main-error": "Experiența te poartă în lumea tehnicilor video analog și a electronicelor modificate, explorând allura imperfectului și glitch-urilor în mediile vizuale, în special în autoportrete. Vom analiza diferite fațete ale imaginilor în mișcare folosindu-ne de circuite disfuncționale pentru a scoate la lumină modul în care acestea pot modela un gest. " +
+                    "<br/><br/> " +
+                    "Scopul este să celebrăm imperfecțiunea, ca o declarație puternică la polul opus față de hyper-realitatea și goana după portretul perfect care domină cultura vizuală curentă." +
+                    "<br/><br/> " +
+                    "Prin exerciții aplicate și demonstrații, vom descoperi fascinația tehnologiei vintage și abilitățile sale speciale să evoce emoția prin defectele sale unice. Participanții vor experimenta cu distorsiunile vizuale neașteptate și artefactele ce rezultă din acest proces și vor învăța să le utilizeze ca instrumente potente de a crea autenticitate și profunzime." +
+                    "<br/><br/> " +
+                    "Hai să descoperi tărâmul neîmblânzit al electronicelor modificate și al sintetizatoarelor video și să îmbrățisezi erorile ca pe o sursă de inspirație. " +
+                    "<br/><br/> " +
+                    "<b>Nu este necesară experiență anterioară pentru a participa la acest workshop. Este așteptat să te simți confortabil să fii filmat și să îți explorezi elemente subtile, subconștiente din portretul tău. Workshopul este susținut în limba engleză.</b>",
+                "text-main-author-error": "<b>M. Kardinal</b> is a Berlin-based visual artist working with photography, film, performance, and installation. She holds a Master of Arts degree in Fine Arts and has studied art history and fine arts in both Germany and Italy." +
+                    "<br/><br/> " +
+                    "Her particular interest in perceptual processes is reflected in her work, ultimately leading to the exploration and development of an abstract visual vocabulary that enables her to create a 'mental landscape of desire' in which the viewer actively participates in the process of conveying meaning. " +
+                    "<br/><br/> " +
+                    "In most of her work she uses obsolete analogue techniques and materials, fascinated by their unpredictable nature. Since 2016, she has collaborated with musicians, sound artists, and choreographers from Germany, Romania, Ukraine, and Canada to develop installations and audiovisual performances based on her artistic research into perceptual processes.",
+                "text-main-new-art-title": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;}",
+                "text-main-new-art": "The .NewArt {foundation;} & {collection;} is recognized not only for what it collects but also for how it does so. It has pioneered an entirely new approach to collecting, promoting programs for producing, preserving, and patronizing technological art, while encouraging debates on issues related to the integration of new technologies in art." +
+                    "<br/><br/> " +
+                    "Vicente Matallana, its director, with over 25 years of experience in the production, management, and development of technological art, is one of the foremost pioneers in this field." +
+                    "<br/><br/> " +
+                    "The .NewArt {foundation;} has established a series of stringent production and conservation protocols aimed at developing a sustainable technological artistic legacy for future generations. These protocols are made possible through collaborative efforts between the foundation and the Universitat Politècnica de València, and the Foundation have been further expanded and implemented through the NASS consortium, New Art Sustainable Services. This consortium includes partners such as Eurecat, Catalan Technological Center (ES), V2_ Lab for the Unstable Media (NL), Gallerie Charlot (FR), NIAL ART Boutique Law Firm (ES), Fraunhofer Institute for Applied Information Technology FIT (DE), and the .NewArt {foundation;} (ES)."+
+                    "<br/><br/> " +
+                    "Likewise, a set of best practices will be reviewed, encompassing contractual relationships with artists and institutions, project management protocols, and the development of sponsorship packages.",
+                "text-main-author-new-art": "<b>Vicente Matallana</b> is the director of the .NewArt { foundation;} & { collection;}, as well as the founder and director of LaAgencia, an independent new media art company created in 1998 in Madrid. LaAgencia is engaged in programs and projects focused on electronic art as an alternative paradigm of research and knowledge. With Joasia Krysa, he has been the co-director of the Kunsthal Aarhus, Aarhus. He is member of the advisory board of Kurator, and project director of ArtFutura, the veteran digital art festival in Spain. He is member of the steering committee of the HacTe, Barcelona’s new hub for Art, Science, and Technology.",
+                "text-main-title-rolypoly": "Rolypoly~ <br/> adaptive and generative drum machine",
+                "text-main-rolypoly": "The time axis is underrepresented in recent AI Art advances. However, audio timing/groove can also be a locus for augmentation and generation. This workshop introduces rolypoly~, an adaptive and generative drum machine designed for real-time performance. Supplementary materials (source code, online documentation and tutorials) are also available." +
+                    "<br/><br/>" +
+                    "The workshop has two parts; you can join one, the other, or both."+
+                    "<br/><br/>" +
+                    "1. <b>Standard practice.</b> We run through the following steps:<br/>"+
+                    "<ul>"+
+                    "<li>writing a (section of) a song with rolypoly~ in mind</li>"+
+                    "<li>\"rehearsing\" the song and fine tuning the model"+
+                    "<li>performing the song, including improvisation sections where the model is allowed to deviate from the score and generate beats on the fly</li>"+
+                    "</ul><br/>"+
+                    "2. <b>Technology.</b> We will cover the basics of:<br/>"+
+                    "<ul>"+
+                    "<li>representing timing/groove sequences as time series for prediction and generation in Transformer models</li>"+
+                    "<li>implementing these in PyTorch and pretraining on data such as the Groove MIDI Dataset</li>"+
+                    "<li>adapting the model in TorchScript and LibTorch for embedding in C++ projects</li>"+
+                    "<li>using the Min-API to implement the finetuning and inference pipelines into a Max object</li>"+
+                    "</ul><br/><br/>"+
+                    "At the end of the workshop, participants will have a comprehensive view of the options for creating and interacting with rolypoly~. They will also understand the inner workings of the rolypoly~ Max object and will have the ability to modify it or to create similar deep learning-powered tools.",
+                "text-main-author-rolypoly": "<b>Grigore Burloiu</b> is a lecturer in the Animation and Interactivity department of UNATC, where he coordinates the master’s degree program Interactive Technologies in Performing and Media Arts (ITPMA). There, he teaches creative coding and interactive musical instruments."+
+                    "<br/><br/>"+
+                    "Grigore develops expressive background systems for interactive music and tackles the use of AI in art - especially for sound and text. He collaborated on the creation of numerous art works, such as CORPUS VIDERUM (Ryan Walsh 2022, with Hans Brouwer), VIOLIN CONCERTO (Fred Popovici 2021, with Patricia Kopatchinskaja), LOST INTERFERENCES (Alexandru Berceanu 2021), URBAN DELTA SCAPES (Anne Dubos, IRCAM & CINETic 2019).<br/><br/>"+
+                    "Academic: <a href=\"https://orcid.org/0000-0002-9059-9621\">https://orcid.org/0000-0002-9059-9621</a><br/>"+
+                    "Site: <a href=\"https://rvirmoors.github.io/\">https://rvirmoors.github.io/</a><br/>"+
+                    "Code: <a href=\"https://github.com/rvirmoors\">https://github.com/rvirmoors</a><br/>"+
+                    "Email: grigore.burloiu@unatc.ro",
+                "text-main-sonic-explorations": "Explore the intersection of sound, electronics and the human habitat by building your contact microphone and capturing the unseen movements surrounding us."+
+                    "<br/><br/>"+
+                    "Through hands-on experiments, participants will be introduced to the \"musique concrète\" concept, which will help them understand the electronic music foundation, followed by building a contact microphone allowing them to navigate our space and search for sounds. Lastly, the gathered sounds will lay the foundation for a collaborative sound piece."+
+                    "<br/><br/>"+
+                    "The participant will keep the microphones they create within the workshop. ",
                 "when": "when",
                 "where": "where",
                 "excelsior": "Excelsior Theatre",
                 "areal": "AREAL Space for choreographic development",
+                "areal-detailed": "AREAL Space for choreographic development <br/> Anastasie Simu 2",
                 "cndb": "National Center for Dance Bucharest",
+                "cndb-detailed": "National Center for Dance Bucharest<br/>Blv. Marasesti 80-82",
                 "unteatru": "Unteatru",
                 "elvire-popesco": "Cinema Elvire Popesco",
                 "galateca": "Galateca Gallery",
+                "galateca-detailed": "Galateca Gallery <br/> C.A. Rosetti 2-4",
                 "text-main-new-home-of-mind": "Imagine the following situation: a self-conscious robot has an existential crisis, after having its life purpose removed from its code. Together with those who interact with the installation, he tries to find his reason for being, through an artificial spiritual interface presented as a divine robot."+
                     "<br/><br/>" +
                     "In this edition of NOVA, the artist Mónica Rikić presents an adaptation of her work to the exhibition space in the festival, specifically created for this presentation in Romania.",
@@ -322,9 +453,9 @@ jQuery(function ($) {
                 "text-main-nova-talks-program": "<b>\n" +
                     "SCHEDULE:\n" +
                     "<ul>\n" +
-                    "<li>PANEL I: 11:00 – 13:00 </li>\n" +
-                    "<li>COFFEE BREAK: 13:00 – 13:30 </li>\n" +
-                    "<li>PANEL II: 13:30 – 15:00</li>\n" +
+                    "<li>PANEL I: 12:00 - 13:15 </li>\n" +
+                    "<li>COFFEE BREAK: 13:15 - 13:45 </li>\n" +
+                    "<li>PANEL II: 13:45 - 15:00 </li>\n" +
                     "</ul>\n" +
                     "</b>",
                 "text-main-nova-talks": "<br/><br/>Through this event, NOVA proposes a marathon of inspiration and creates the context for fascinating discussions about the importance of new technologies in the creative process and in exploring human cognitive potential.\n" +
@@ -353,6 +484,35 @@ jQuery(function ($) {
                     "Currently she is leading the Creative Robotics Lab in Trbovlje, Slovenia in the frame of McRUK and Katapult. \n" +
                     "<br/><br/>\n" +
                     "<a href=\"http://masajazbec.si\">http://masajazbec.si</a>",
+                "text-main-nova-digi-sense": "<h2>DIGI-Sense – how the body understands, feels and goes through processes of sensemaking with digital tools</h2><br/><br/>" +
+                    "To understand and be able to use digital technologies and tools, we need to make sense of them. Usually, the sensemaking process (in the tradition proposed by Karl E. Weick) is studied as a process happening mainly cognitively, only giving a minor part to the body. In the  DIGI-Sense (Digital Sensemaking) project, we suggest bringing the body into the foreground to understand sensemaking, also and especially in digital environments. <br/><br/>The project invites performance artists and dancers to explore how the body perceives, translates, transforms and goes through the process of sensemaking with technological tools and in digital environments. How do our senses, our muscles, the way our limbs move, the velocity of our movements, among others, support the sensemaking processes we go through in moments, for example of digitization of information? ",
+                "text-main-author-nova-talks-digi-sense":"<b>Claudia Schnugg</b> is Principal Investigator of the Digital Sensemaking (DIGI-SENSE) project at the Johannes Kepler University Linz, which is realized at the Communications Engineering Institute. She holds a PhD in social and economic sciences with an additional focus on cultural sciences. Her research focuses on art, aesthetics and artistic initiatives in interdisciplinary and social settings, such as change processes, digitalization and knowledge management, and explores implications and organization of art-science collaboration. As curator and consultant she is working internationally with industrial, scientific and artistic organizations to realize art-sci-tech projects.<br/><br/>"+
+                    "<b>Daniela Brill</b> has a Master’s degree in Art & Science from the University of Applied ArtsVienna.  Daniela works in collaboration with scientific institutions and networks such as Art at CMS at CERN, the ORIGIN network of high energy physics, and with artistic institutions such as the ArtSci Center + Lab UCLA. Brill is the creator and co-organizer of Suratómica, a collaborative network of Art and Science based in Bogotá, Colombia. Daniela’s artistic and theoretical work focuses on the idea of in-disciplinarity and the wish to eliminate certain frontiers and boundaries aiming to find a space of queerness at many levels for creative processes and for the formation of new knowledge, researching mainly the areas of aesthetics and complexity.",
+                "text-main-nova-talks-new-art": "<h2>.NewArt { foundation;}. Explorând un nou om cibernetic prin artă</h2><br/><br/>" +
+                    "The .NewArt { foundation;} is based in Reus, Catalonia. Its ambition is to help the artistic community develop new technological, scientific, conceptual, and social practices. The foundation disseminates art at the intersection and transgression of science and technology, as a strategy for social development and empowerment. It acts not just as a witness, but as an active agent."+
+                    "<br/><br/>"+
+                    "One of its main challenges consists in the development, conservation, and preservation of an artistic legacy linked to science and technology, within the framework of the .NewArt { collection;}. A corpus of over 100 pieces that eclectically cover everything that has happened and is happening in this new means of expression.This project will be brought further by the creation of a new Art Center in the city of Reus."+
+                    "<br/><br/>"+
+                    "Guided by Vicente Matallana, director of the .NewArt {foundation;} & {collection;}, we will visit key works from the collection that explore the concept of a cybernetic human. A journey that will begin with the 1972 artwork \"Mano Térmica de Artista\" by Luís Lugán, considered the first robotic artwork created in Spain, and will extend to the latest productions and additions to the Collection.",
+                "text-main-author-nova-talks-new-art":"<b>Vicente Matallana</b> este directorul .NewArt { foundation;} & { collection;}, precum și fondatorul și directorul LaAgencia, o companie independentă de new media art creată în 1998 în Madrid. LaAgencia este implicată în programe și proiecte în jurul artei electronice ca paradigmă alternativă pentru cercetare și cunoaștere. Împreună cu Joasia Krysa, a fost co-directorul Kunsthal Aarhus, Aarhus. Este membru în boardul consultativ al Kurator, și director al proiectului ArtFutura, un festival de artă digitală veteran în Spania. Este membru în comitetul de conducere al HacTe, un important hub de artă x știință  x tehnologie al Barcelonei.",
+                "text-main-nova-talks-beyond-the-screen": "<h2>Beyond the Screen: Exploring Proprioception and Kinesthesia in the Digital Age, a digital creator perspective on what’s next </h2><br/><br/>" +
+                    "An eye-opening exploration of the convergence of cutting-edge technologies such as AR, XR, programmable art, and AI with the human senses of proprioception and kinesthesia, in the context of our rapidly evolving growingly digital world. As we embrace virtual and augmented reality within fashion & make-up , sports, socializing and work, arts, traveling, gaming, and immersive experiences of all sorts, we must consider how these technologies influence our perception of self and alter our fundamental connection to the physical realm. "+
+                    "<br/><br/>"+
+                    "Join renowned digital artist and emerging tech specialist Tammy Lovin, as they delve into the intriguing questions of whether being neurodivergent is a natural consequence of digital evolution and how these transformative experiences are shaping our minds today and redefining the essence of human existence in the near future. "+
+                    "<br/><br/>"+
+                    "Discover the potential implications and possibilities for personal growth, creativity, and the way we interact with the world around us. This talk will inspire you to reimagine the boundaries of human experience and ponder the profound impact of digital innovations on our boundaries between the virtual and the tangible. Prepare to be inspired and challenge your perceptions in this not-to-be-missed talk on the future of art and human experience.",
+                "text-main-author-nova-talks-beyond-the-screen":"<b>Tammy Lovin</b> is an internationally acclaimed digital artist that specializes in creating art experiences using a variety of emerging tech tools such as AR, XR , programmable art or A.I. Her work thrives on the blockchain or in the Metaverse, and it can range from whimsical colorful art compositions, digital fashion , VR performances or VR sculptures that can also be experimented as AR filters. The themes of her eye-candy artworks often address complex human experiences and deep inner thoughts.",
+                "text-main-nova-talks-white-contamination": "<h2>White Contamination</h2><br/><br/>" +
+                    "A personal insight on the amazing photography project, White contamination, for which the artist was awarded the first place at Sony World Photography Awards, Creative.  "+
+                    "<br/><br/>"+
+                    "In the snowy landscapes of the heights of Fukushima, Florian has captured the invisible pain of radiation. Inspired by the Japanese engravings, he hoped to capture the ever-shifting perceptions of nature, where radiation accumulates the most. "+
+                    "<br/><br/>"+
+                    "With a geiger counter, he measured the radioactive contamination’s presence in becquerels (Bq), a unit that expresses atom disintegration and its mutations number per second. By a digital process, he intended to show the atom’s alteration in his pictures. The transparency effects, the broken perspectives give rise to a shape that is in motion, an impermanent world as in traditionalJapanese engravings."+
+                    "<br/><br/>"+
+                    "Then, he created a vibration, a departure from the reality of the subject that reveals the presence of radiation in the image. The process reinvents and twists the very landscape, leading to a sort of vertigo or malaise, a threatening danger hidden behind the purity of the white of the landscapes. "+
+                    "<br/><br/>"+
+                    "Part of the images from this series were integrated within the interactive installation Walk, that can be visited within this edition of NOVA, between 26 and 29th September at Teatrelli. ",
+                "text-main-author-nova-talks-white-contamination":"<b>Florian Ruiz</b> is an artist well-known for his unique way to capture the atmosphere of abandoned or harmed places through human action. Always involved in sensitive projects that express important social realities through image, FLorian lives between France and Tokyo and is represented by Galerie Sit Down in Paris. His works have received numerous relevant awards and were exhibited in Japan, Holland, Great Britain, Germany, France, Italy and Slovakia.",
                 "text-main-nova-talks-costin": "<h2>How can neurotechnology improve the intimate communication between our conscious self and our subconscious?</h2><br/><br/>\n" +
                     "In a world where the flow of information is ever greater and our attention span becomes lower than the attention span of a goldfish, how could technology, help us use our inner resources more comprehensive?<br/><br/>\n" +
                     "At this point in our evolution, the issue of intimacy at a level of inner dialogue, becomes a key factor but how can we actually facilitate this inner process?<br/><br/>\n" +
@@ -414,12 +574,12 @@ jQuery(function ($) {
                 "expo": "Expo",
                 "performances": "Experiențe imersive",
                 "performance": "Experiență imersivă",
-                "immersive-performative-installation": "instalație imersivă performativă",
-                "immersive-interactive-installation": "instalație imersivă interactivă",
+                "immersive-performative-installation": "Instalație imersivă performativă",
+                "immersive-interactive-installation": "Instalație imersivă interactivă",
                 "open-till-23": "deschis pentru explorare până în 23.09",
-                "open-till-23-16_22": "deschis pentru explorare până în 23.09 16:00 - 22:00",
-                "open-till-28-14_22": "deschis pentru explorare până în 28.09 14:00 - 22:00",
-                "open-till-28-16_22": "deschis pentru explorare până în 28.09 16:00 - 22:00",
+                "open-till-23-16_22": "16:00 - 22:00",
+                "open-till-28-14_22": "12:00 - 20:00",
+                "open-till-28-16_22": "16:00 - 22:00",
                 "nova-grow": "NOVA Grow",
                 "artist-talks": "Talks",
                 "nova-talks": "Nova talks",
@@ -460,13 +620,13 @@ jQuery(function ($) {
                 "space-and-spatiality": "Spațiu și spațialitate în creația instalațiilor artistice // IULIA GHERGHESCU",
                 "space-and-spatiality-detail": "Spațiu și spațialitate în creația instalațiilor artistice",
                 "have-you-seen": "Have you seen my body? <br/><i>a seascape</i>",
-                "tammy-lovin": "Tammy Lovin, Centre for the Unknown Lisbon - Patricia Correia & Julia Salaroli, Vicente Matallana, Florian Ruiz, Monica Cure, Claudia Schnugg",
+                "tammy-lovin": "Claudia Schnugg (AT), Daniela Brill (AT), Vicente Matallana (ES), Tammy Lovin (RO), Florian Ruiz (FR)",
                 "walk-a-rhythm": "Walk <br/> <i>a rhythm</i>",
                 "roly-poly": "rolypoly~, an adaptive and generative drum machine designed for real-time performance // Grigore Burloiu",
-                "protocols-applied-to-production": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;} // Vicente Matallana",
+                "protocols-applied-to-production": "Protocoale aplicate în producția, întreținerea și prezervarea artei new media. Cazuri practice de la .NewArt {foundation;} // Vicente Matallana",
                 "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
                 "sonic-explorations": "Sonic Explorations // Denis Flueraru",
-                "aio-opening": "Vernisaj AIO all in one",
+                "aio-opening": "AIO all in one",
                 "an-error-has": "an error has occurred. <br/> The aesthetic appeal of imperfection and glitches in visual images// M Kardinal",
                 "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
                 "intro-to-metaverse-detail": "Intro to Metaverse: 360/VR Filmmaking",
@@ -499,14 +659,145 @@ jQuery(function ($) {
                     "Fostă cercetătoare la Media Lab al MIT, Chung este considerată un pionier în domeniul colaborării om-mașină. Chung a fost selectată drept Femeia Anului în Monaco pentru realizările în Arte și Științe și a primit Premiul Lumen pentru Artă în Tehnologie. Lucrările lui Chung explorează desenele realizate manual și desenele realizate de mașină printr-o abordare care duce la înțelegerea dinamicii dintre oameni și sisteme." +
                     "<br/><br/>" +
                     "Această practică critică speculativă include performance-uri, instalații și lucrări grafice. Acestea au fost prezentate în numeroase expoziții la muzee și galerii din întreaga lume, cum ar fi Espoo Museum of Modern Art, Espoo; Vancouver Art Gallery, Vancouver; Art Basel, Miami; National Art Center, Tokyo; NTT InterCommunication Center [ICC], Tokyo, Japan; ArtScience Museum, Singapore; MIT Media Lab, Cambridge; The Drawing Center, New York; The New Museum, New York; Museum of Contemporary Art, Geneva; Mana Contemporary, New York, Tribeca Film Festival, New York; The Hospital Club, London; Mutek Festival, Montreal & Mexico City; Sonar Festival, Barcelona.",
+                "text-main-drawing-exercises": "Drawing Exercises este un performance participativ creat de Antoni Rayzhekov pentru proiectul DIGI-Sense, o instalație în care publicul devine performerul. Doi participanți realizează împreună o serie de desene prin mișcare, aceștia trebuind să descopere, interacționând, traiectoriile, vitezele și strategiile potrivite pentru a reuși. " +
+                    "<br/><br/>"+
+                    "Experiența îi poartă pe participanți prin procese de înțelegere, de atribuire de sens. Treptat, aceștia își dau seama de noi metode să deseneze cu corpurile lor și să creeze reprezentările cerute de la ei în acest joc. " +
+                    "<br/><br/>" +
+                    "Mai multe seturi de senzori, îmbrăcate de participanți, digitizează în timp real informația produsă de corpurile lor, urmărind mișcarea, orientarea, pulsul și nivelul de stres pe care aceștia îl resimt. Aceste informații combinate produc un digital twin / geamăn digital al acțiunilor lor combinate - o linie cu care aceștia desenează. " +
+                    "<br/><br/>" +
+                    "Proiectul DIGI-Sense project este finanțat ca un Seed Project al Linz Institute of Technology, realizat la Institute of Communications Engineering, parte a Linz Business School de la Johannes Kepler University Linz. ",
+                "text-main-author-drawing-exercises": "<b>Antoni Rayzhekov</b> este un artist interdisciplinar ce lucrează la intersecția dintre muzică, teatru și arte digitale. Are un master în regie de teatru și este licențiat în arta actorului la Academia Națională de Teatru și Film din Sofia. A studiat improvizația de jazz la Conservatorul din Viena și programare la LearningTree in Londra. A fost consultant IT la biroul vienez al United Nations. Este co-fondatorul brandului new media THIS.PLAY[2013], specializat în artă și tehnologii interactive. Antoni predă, de asemenea, din 2012, Tehnologii Digitale și Media (experimental/ interactiv) la Universitatea de Științe Aplicate din St. Pölten, Austria și din 2016 este profesor invitat al Academiei Naționale de Artă din Sofia, în cadrul studiului masteral Arte Digitale. " +
+                    "<br/><br/>" +
+                    "<b>Claudia Schnugg</b> este cercetătorul principal al proiectului Digital Sensemaking (DIGI-SENSE), implementat la Universitatea Johannes Kepler din Linz prin Communications Engineering Institute. Deține un doctorat în științe sociale și economie, cu focus suplimentar pe cultură. Cercetarea sa se concentrează pe artă, estetică și inițiative creative în contexte sociale interdisciplinare, cum ar fi managementul cunoașterii, procese de digitalizare, facilitarea colaborării dintre artă și știință și implicațiile aduse de aceasta. În plus, Claudia este curator și consultant artistic pentru mai multe organizații, în plan internațional, care desfășoară inițiative art-sci-tech. " +
+                    "<br/><br/>" +
+                    "<b>Daniela Brill</b> are un masterat în Artă & Știință de la reputata Universitate de Arte Aplicate din Viena. Lucrează în colaborare cu instituții și rețele științifice ca Art at CMS al CERN, ORIGIN network of high energy physics, și cu instituții de artă ca ArtSci Center + Lab UCLA. Brill este și creatoarea și co-organizatoarea Suratómica, o rețea de colaborare la intersecția dintre artă și știință cu sediul în Bogotá, Columbia.  Focusul artistic și teoretic al Danielei este ideea de in-disciplinaritate și își propune să estompeze granițele și să găsească un loc de originalitate care să fie aplicat în procese de creație și de formare cu cunoștințe noi. În puține cuvinte, aria sa de cercetare este concentrată pe estetică și complexitate. ",
+                "text-main-aio-1": "Dezvoltată de Asociația Prezent Continuu, în colaborare cu Centrul de Cercetare în Augmentarea Performanțelor Neuronale Veruvis, AIO ilustrează creativ anxietatea și felul în care se manifestă ea în corp, traducând în sunet și imagine mai multe date de cercetare neuronală relevante." +
+                    "<br/><br/>" +
+                    "Muzica AIO conține pasaje obținute din conversia unor semnale EEG în note muzicale. Videoportretele umanizează experiența și devin canal pentru emoția ta, traducând prin mimică, gesturi și mișcare diverse grade de anxietate." +
+                    "<br/><br/>" +
+                    "<b>Direcție artistică:</b> Emilia Păunescu" +
+                    "<br/>"+
+                    "<b>Sound design:</b>: Bogdan Moroșanu" +
+                    "<br/>"+
+                    "<b>Imagine:</b> Florin Constantin" +
+                    "<br/>"+
+                    "<b>Programare interfață interactivă:</b> Dragoș Iulian Matei" +
+                    "<br/>"+
+                    "<b>Distribuție:</b> Ada Galeș, Alexandra Bălășoiu, Cătălin Diaconu, Cezar Grumăzescu, Denis Bolborea, Denisa Diaconescu, Dragoș Iulian Matei, Ema Alexandrescu, Florin Constantin, Oana Pușcatu, Simona Dabija",
+                "text-main-aio-2": "\"<i>Am pornit de la ideea că suntem cu toții cutii de rezonanță și amplificare unii pentru ceilalți și am imaginat acest cor neconvențional care îți cântă anxietatea și te ajută să o procesezi.<br/><br/>" +
+                    "În spațiul instalației exprimi această greutate și îi dai drumul să treacă prin sunet și prin corpurile oamenilor care formează corul. Îți vezi anxietatea transformând alte brațe, alte fețe, intrând pe sub pielea altor oameni și mișcându-le corpurile în tot felul de dinamici. <br/> <br/>" +
+                    "AIO - all in one - e un corp comun, cu multe dimensiuni. Are și partea copleșitoare a anxietății, care se simte ca \"toate deodată grămadă\", dar și partea luminoasă, în care realizăm că suntem întregi unii prin alții.\"<br/><br/><b>Emilia Păunescu</b></i> ",
+                "text-main-aio-3": "Pe ecranele AIO rulează, în total, 55 de videoportrete însoțite de 5 compoziții sonore în format Quadrophonic, toate aferente mai multor grade de intensitate a anxietății resimțite." +
+                    "<br/><br/> " +
+                    "Lucrarea este interactivă și îți permite să modulezi imaginea și sunetul din spațiu printr-o interfață digitală facilă, amplasată în incintă. Explorează spațiul, selectează pe tableta-interfață nivelul de anxietate pe care îl resimți în corp și alegerea ta este redată printr-o compoziție audio-vizuală. ",
+                "text-main-have-you-seen": "O experiență imersivă de aproximativ 15 minute care te duce în adâncul oceanelor pentru a te descoperi în feluri noi, neașteptate. La fel ca cealaltă instalație dezvoltată în cadrul NOVA lab, lucrarea urmărește să ofere, pe rând, pentru câte 2 vizitatori, sentimentul de a fi prezent în mai multe locuri în același timp." +
+                    "<br/><br/> " +
+                    "Pentru a crea această instalație interactivă, am adus împreună 6 artiști foto, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință." +
+                    "<br/><br/> " +
+                    "Înainte de a păși în spațiul instalației, îți înregistrăm vocea și te fotografiem în diferite posturi. Aceste amprente digitale ale corpului tău sunt integrate în timp real în cadrul audio-vizual al instalației." +
+                    "<br/><br/> " +
+                    "Acum scena e a ta. Ești în brațele valurilor. Nu-i niciodată ceva cert, așa-i? " +
+                    "Un performer te ghidează prin experiența ta pe scenă. " +
+                    "<br/><br/> " +
+                    "<b>Direcție artistică și text:</b> Emilia Păunescu" +
+                    "<br/>" +
+                    "<b>Artiști foto:</b> Felicia Simion (RO), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
+                    "<br/>" +
+                    "<b>Performeri:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
+                    "<br/>" +
+                    "<b>Grafică:</b> Ana Cârlan (RO)" +
+                    "<br/>" +
+                    "<b>Programare sisteme interactive:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
+                    "<br/>" +
+                    "<b>Profesioniști psihologie, comunicare, neuroștiință:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
+                    "<br/><br/> " +
+                    "Accesul se face în baza biletului asociat unui interval de timp. ",
+                "text-main-walk": "Dezvoltată în cadrul NOVA lab din colaborarea a 7 artiști foto, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință, Walk este o instalație interactivă care îți propune un joc simplu." +
+                    "<br/><br/> " +
+                    "Un performer te întâmpină pe scenă și împreună construiți un ritm al tău, personal, din felul în care tu reacționezi la imaginile de pe ecranele care vă înconjoară." +
+                    "<br/><br/> " +
+                    "Corpul tău digital, captat la intrarea în instalație, este introdus în imagini pe scenă. Astfel ajungi să “locuiești” aceste spații noi, în timp ce corpul tău fizic construiește cu performerul o mulțime de feluri de a te apropia și îndepărta de aceste imagini, de a reacționa la ele, generând un mers specific, cu o anumită muzicalitate." +
+                    "<br/><br/> " +
+                    "Walk este un fel de dialog corporal deschis cu tot ce te înconjoară. O formă jucăușă de a te cunoaște." +
+                    "<br/><br/> " +
+                    "<b>Direcție artistică:</b> Emilia Păunescu" +
+                    "<br/>" +
+                    "<b>Artiști foto:</b> Felicia Simion (RO), Florian Ruiz (FR), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
+                    "<br/>" +
+                    "<b>Performeri:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
+                    "<br/>" +
+                    "<b>Grafică:</b> Ana Cârlan (RO)" +
+                    "<br/>" +
+                    "<b>Programare sisteme interactive:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
+                    "<br/>" +
+                    "<b>Profesioniști psihologie, comunicare, neuroștiință:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
+                    "<br/><br/> " +
+                    "Access based on ticket and time slot reservation. ",
+                "text-main-error": "The experience delves into the world of analogue video techniques and modified electronics, examining the allure of imperfection and glitches in visual media, particularly in self-portraits. We will analyze different facets of the moving images by using malfunction circuits to reveal their inherent gestural character. " +
+                    "<br/><br/> " +
+                    "The aim is to celebrate the allure of imperfection as a powerful counter statement to the prevailing hyperreality and the pursuit of the flawless self-portrait that dominates contemporary visual culture." +
+                    "<br/><br/> " +
+                    "Through hands-on demonstrations, we will explore the fascination of vintage technology and its unique ability to evoke emotion through its unique flaws. Participants will discover how the unexpected visual distortions and artefacts that result from this process serve as powerful tools for conveying authenticity and depth." +
+                    "<br/><br/> " +
+                    "I encourage you to leave behind the pursuit of pixel-perfect images and explore the untamed realm of modified electronics and video synthesizers, embracing glitches and imperfections as a source of creative inspiration. " +
+                    "<br/><br/> " +
+                    "<b>Prior experience is not necessary for the workshop. You are expected to feel at ease while being recorded and exploring the subconscious elements of your portrait. The workshop will be held in English.</b>",
+                "text-main-author-error": "<b>M. Kardinal</b> este o artistă berlineză ce lucrează în special cu fotografie, film, performance și instalații. Deține un masterat în Arte Plastice și a studiat și istoria artei atât în Germania cât și în Italia." +
+                    "<br/><br/> " +
+                    "Lucrările sale reflectă interesul ei particular pentru procese de percepție. Astfel, practica ei este o explorare a unui vocabular vizual abstract care o ajută să creeze “peisaje mentale ale dorinței” în care vizitatorul participă activ și construiește însemnătatea lucrării." +
+                    "<br/><br/> " +
+                    "Fascinată de natura lor imprevizibilă, artista folosește tehnici și materiale depășite în majoritatea lucrărilor sale. Din 2016, a colaborat cu muzicieni, sound designeri și coregrafi din Germania, România, Ukraina și Canada, dezvoltând instalații și performance-uri audio-vizuale bazate pe cercetarea sa artistică în jurul percepției. ",
+                "text-main-new-art-title": "Protocoale aplicate în producția, întreținerea și prezervarea artei new media.  Cazuri practice de la .NewArt {foundation;}",
+                "text-main-new-art": ".NewArt {foundation;} & {collection;} este recunoscută nu doar pentru ceea ce colectează, ci și pentru modul în care o face. Fundația este creatoarea unei abordări cu totul inovatoare în ceea ce privește colectarea, susținerea producției, prezervarea și consumul artei tech, precum și încurajarea dezbaterii subiectelor importante ca integrarea noilor tehnologii cu sens în artă. " +
+                    "<br/><br/> " +
+                    "Vicente Matallana, directorul său, cu peste 25 de ani de experiență în producția, managementul și dezvoltarea de lucrări de artă new media, este unul dintre pionierii acestui domeniu." +
+                    "<br/><br/> " +
+                    ".NewArt {foundation;} a creat o serie de protocoale stringente de producție și conservare menite să facă durabilă în timp moștenirea tehnică și artistică adusă de aceste lucrări. Aceste protocoale sunt făcute posibile prin colaborarea fundației cu Universitatea Politehnică din Valencia, NASS consortium, New Art Sustainable Services.  Acest consorțiu include parteneri ca Eurecat, Catalan Technological Center (ES), V2_ Lab for the Unstable Media (NL), Gallerie Charlot (FR), NIAL ART Boutique Law Firm (ES), Fraunhofer Institute for Applied Information Technology FIT (DE), și .NewArt {foundation;} (ES)."+
+                    "<br/><br/> " +
+                    "De asemenea, la acest masterclass vei descoperi exemple de practici de succes și instrumente utile artiștilor și producătorilor din domeniul noilor media, care abordează aspecte ca relațiile contractuale cu artiști și instituții, management de proiect, atragerea de fonduri și sponsorizări.",
+                "text-main-author-new-art": "<b>Vicente Matallana</b> este directorul .NewArt { foundation;} & { collection;}, precum și fondatorul și directorul LaAgencia, o companie independentă de new media art creată în 1998 în Madrid. LaAgencia este implicată în programe și proiecte în jurul artei electronice ca paradigmă alternativă pentru cercetare și cunoaștere. Împreună cu Joasia Krysa, a fost co-directorul Kunsthal Aarhus, Aarhus. Este membru în boardul consultativ al Kurator, și director al proiectului ArtFutura, un festival de artă digitală veteran în Spania. Este membru în comitetul de conducere al HacTe, un important hub de artă x știință  x tehnologie al Barcelonei. ",
+                "text-main-title-rolypoly": "Rolypoly~ <br/> un drum machine adaptiv și generativ",
+                "text-main-rolypoly": "Axa timpului se regăsește rar între uneltele recente pentru artă AI. Totuși, și elemente de sincronizare / groove muzical pot fi augmentate sau generate. Acest atelier prezintă rolypoly~,un drum machine adaptiv și generativ conceput pentru cântat în timp real. Materiale suplimentare (cod sursă, documentație online, tutoriale) sunt și ele disponibile." +
+                    "<br/><br/>" +
+                    "Atelierul are două părți. Puteți participa la una, cealaltă, sau ambele."+
+                    "<br/><br/>" +
+                    "1. <b>Utilizare standard.</b> Trecem prin următorii pași:<br/>"+
+                    "<ul>"+
+                    "<li>scrierea unei părți de piesă pentru a fi cântată cu rolypoly~</li>"+
+                    "<li>\"repetiții\" ale piesei pentru reglarea modelului AI</li>"+
+                    "<li>cântarea live a piesei, incluzând secțiuni de improvizație unde modelului îi este permis să devieze de la partitură și să genereze ritmuri din mers</li>"+
+                    "</ul><br/>"+
+                    "2. <b>Tehnologie.</b> Vom acoperi noțiuni de:<br/>"+
+                    "<ul>"+
+                    "<li>reprezentare a secvențelor de tobe cu nuanțe de timing drept serii temporale pentru predicție și generare în modele tip Transformer</li>"+
+                    "<li>implementare a acestora în PyTorch și preantrenare pe seturi de date precum Groove MIDI Dataset</li>"+
+                    "<li>adaptarea modelului în TorchScript și LibTorch pentru includerea în proiecte C++</li>"+
+                    "<li>folosirea Min-API pentru a implementa traseele de reglare și inferență într-un obiect Max</li>"+
+                    "</ul><br/><br/>"+
+                    "La finalul atelierului, participanții vor avea o perspectivă completă a modurilor de creație și interacțiune cu rolypoly~. În plus, vor înțelege cum funcționează obiectul Max din punct de vedere tehnic și vor avea cunoștințele necesare pentru a îl modifica sau a crea unelte similare bazate pe deep learning.",
+                "text-main-author-rolypoly": "<b>Grigore Burloiu</b> este lector în departamentul Animație și Interactivitate al UNATC, unde coordonează programul de master Tehnologii interactive pentru arte performative și media (ITPMA), în cadrul căruia predă programare creativă și sisteme muzicale interactive."+
+                    "<br/><br/>"+
+                    "Grigore dezvoltă sisteme de acompaniament expresiv pentru muzica interactivă, și explorează utilizarea AI în artă - în special pentru sunet și text. A colaborat la numeroase lucrări artistice dintre care CORPUS VIDERUM (Ryan Walsh 2022, cu Hans Brouwer), VIOLIN CONCERTO (Fred Popovici 2021, cu Patricia Kopatchinskaja), LOST INTERFERENCES (Alexandru Berceanu 2021), URBAN DELTA SCAPES (Anne Dubos, IRCAM & CINETic 2019).<br/><br/>"+
+                    "Academic: <a href=\"https://orcid.org/0000-0002-9059-9621\">https://orcid.org/0000-0002-9059-9621</a><br/>"+
+                    "Site: <a href=\"https://rvirmoors.github.io/\">https://rvirmoors.github.io/</a><br/>"+
+                    "Cod: <a href=\"https://github.com/rvirmoors\">https://github.com/rvirmoors</a><br/>"+
+                    "Email: grigore.burloiu@unatc.ro",
+                "text-main-sonic-explorations": "Explorează intersecția dintre sunet, electronică și habitatul uman, construind microfonul tău de contact care te va ajuta să surprinzi mișcările nevăzute din spațiul înconjurător. "+
+                    "<br/><br/>"+
+                    "Prin experimente practice, participanții vor fi introduși în conceptul de \"musique concrète\", care îi va ajuta să înțeleagă fundația muzicii electronice apoi vor construi un microfon de contact ce va permite participanților navigarea și găsirea de sunete aflate în spațiul înconjurător. În final, sunetele adunate vor constitui bazele unei compoziții audio colaborative."+
+                    "<br/><br/>"+
+                    "Participanții păstrează microfoanele create în cadrul workshopului. ",
                 "when": "când",
                 "where": "unde",
                 "excelsior": "Teatrul Excelsior",
                 "areal": "AREAL Spațiu pentru dezvoltare coregrafică",
+                "areal-detailed": "AREAL Spațiu pentru dezvoltare coregrafică <br/> Anastasie Simu 2",
                 "cndb": "Centrul Național al Dansului București",
+                "cndb-detailed": "Centrul Național al Dansului București<br/>Blv. Marasesti 80-82",
                 "unteatru": "Unteatru",
                 "elvire-popesco": "Cinema Elvire Popesco",
                 "galateca": "Galateca Gallery",
+                "galateca-detailed": "Galateca Gallery <br/> C.A. Rosetti 2-4",
                 "text-main-headline-new-home-of-mind": "",
                 "text-main-new-home-of-mind": "Imaginează-ți următoarea situație: un robot conștient de sine are o criză existențială, după ce i-a fost îndepărtat din cod motivul de a trăi. Împreună cu cei care interacționează cu instalația, el încearcă să-și regăsească rațiunea de a fi, într-o căutare care aduce în discuție spiritualitatea în lumea inteligenței artificiale." +
                     "<br/><br/>" +
@@ -637,9 +928,9 @@ jQuery(function ($) {
                 "text-main-author-zimmt": "<div class=\"details-text-separator\"></div> <h2>5 DEC // 20:00 // WONDER // ALEXANDROS RAPTIS ȘI ANDREI COZLAC</h2>Primul eveniment este găzduit de Alexandros Raptis, artist pasionat de regia de teatru, light design-ul și compoziție muzicală, și Andrei Cozlac, artist video experimentalist, interesat de cele mai recente tehnologii multimedia. Aceștia au creat instalația de lumini reactive la sunet, WONDER, care va fi amplasată în interiorul instalației de sunet ZiMMT 3D Sound Lab. Special pentru acest eveniment, artiștii au dezvoltat și o muzică 3D, care va contribui la atmosfera imersivă indusă de instalația de sunet, dar și de cea de lumini. <br/><br/> <b>WONDER</b> este o instalație în care sunetul și lumina interacționează pentru a crea instanțe spațiu-timp care suscită imaginația și te ghidează să-ți creezi propriul fir narativ interior. Instalația va rămâne la Platforma Wolff în toate cele 4 zile de evenimente din cadrul ZiMMT 3D Sound Lab pentru a adăuga o nouă dimensiune spațiului și celorlalte spectacole.  <br/><br/> <b>ANDREI COZLAC</b> - este artist video și Lect. Univ. Dr. la Universitatea Națională de Arte George Enescu din Iași, Facultatea de Arte Vizuale, Secția Fotografie, Video și procesarea computerizată a imaginii, și profesor colaborator la secția de media a Facultății de Arte în Limba Română din Târgu Mureș. Experimentalist, interesat în ultimele tehnologii multimedia, a colaborat la numeroase proiecte independente de visuals, video-mapping, proiecții live. <b>ALEXANDROS-IOAN RAPTIS</b> - Principalele sale arii de interes sunt regia de teatru, lighting design-ul și compoziția muzicală. Locuiește și lucrează în București, dar se implică și în proiecte din alte orașe sau țări. Face muzică electronică împreună cu Andrei Raicu, în formula Al’iikhwa Ra, și este toboșarul formației MIDPOINT. În prezent, lucrează la o instalație interactivă audio numită „Chemical Soundscape”, prin care transformă proprietățile chimice ale substanțelor în compoziții sonore. <div class=\"details-text-separator\"></div><h2>6 DEC // JUDITH STATE ȘI RADU DUMITRIU </h2> <b><i>When the sound moves, it moves you.<br/> When the light goes on, you remember.</i></b> <br/><br/> Spectacolul invită participanții într-o călătorie de autocunoaștere prin intermediul muzicii și al dansului. Coregrafa Judith State și muzicianul Radu Dumitriu se vor întâlni cu publicul în spațiul Platformei Wolff pentru a porni împreună într-un proces de dezvăluire a sinelui, într-un context creat de instalația de lumini reactive la sunet, WONDER, precum și de instalația de sunet ZiMMT 3D Sound Lab. În cadrul acestui spectacol participativ, audiența, împreună cu artiștii, vor adăuga universului vizual și sonor creat de cele două instalații, straturi din istoria personală și, prin ele, vor crea o amprentă a prezentului comună cu cei care participă la această experiență. <br/><br/> Inspirați de arhitectura și estetica spațiului, de interacțiunea reciprocă, dar și de întâlnirea cu publicul și energia acestuia, cei doi performeri vor compune în timp real partituri muzicale, coregrafice și vocale pornind de la subiectele care stau la baza cercetării lor din ultimii patru ani: memoria, trecerea timpului și felul în care amintirile și formele pe care acestea le capătă în timp ne marchează în mod implacabil prezentul. <br/><br/> <b>JUDITH STATE</b> este dansatoare profesionistă, coregraf și actriță, cu o pregătire de bază în dansul clasic și licența în limbi străine. Bursieră a <b>Broadway Dance Centre</b> din New York și a <b>ImpulsTanz Vienna</b> prin Wild Card-ul oferit de Asociația 4Culture. În 2019, semnează conceptul proiectului modular <b>“Eemlék - amintire”</b> în cadrul căruia creează un performance cu muzică electronică live alături de muzicianul Radu Dumitriu, un scurtmetraj experimental de dans - <b>“You Who Never Arrived”</b>, selectat și premiat în festivaluri internaționale de film - un concert de muzică electronică și voce, și un atelier de mișcare și text adresat actorilor și dansatorilor profesioniști.<br/><br/> În 2022, continuă cercetarea pornită cu <b>“Emlék”</b> și creează performance-ul <b>“Ember(om)”</b>, analizând și aprofundând temele trecerii timpului, a informațiilor emoționale transmise transgenerațional, a memoriei, a amintirilor, a formelor pe care acestea le iau în timp și a felului în care ne marchează în mod implacabil prezentul. Este distribuită în filmul SIERANEVADA, în regia lui Cristi Puiu, care a avut premiera în 2016, la Festivalul de Film de la Cannes și este nominalizată la Premiile Gopo pentru cea mai bună actriță în rol secundar. În 2018, reia colaborarea cu Cristi Puiu pentru filmul „Malmkrog” și este distribuită în lungmetrajul de debut „Monștri.” al regizorului Marius Olteanu, care a avut premiera în 2019 la Festivalul De Film de la Berlin și îi aduce în 2020 premiul Gopo pentru cea mai bună actriță în rol principal. Urmează „Tata mută munții” al regizorului Daniel Sandu și filmul „REFUGIU”, în regia lui Liviu Mărghidan. Tot în 2021, colaborează cu regizorul ungur Krisztóf Gyuri la lungmetrajul de dans „Zenith”, iar în 2022 joacă în rolul principal al celui mai recent lungmetraj al regizorului Cristian Mungiu, „R.M.N.”, care a avut premiera la cea de-a 75-a ediție a Festivalului de Film de la Cannes. <br/><br/> <b>RADU DUMITRIU</b> - Compozitor/performer, absolvent al Universității Naționale de Muzică București și master la secția pian. Din 2006 colaborează în industria pop cu diverși artiști din mainstream atât ca instrumentist, cât și ca muzician de studio, iar din 2017 își creează propriul proiect de muzică electronică numit NEON, cu care și lansează propriul album în 2020, “Jupiter”. <br/><br/> În 2019, colaborează cu Judith State la toate cele patru părți ale proiectului modular “Emlék - amintire”: creează muzica live a performance-ului “Emlék”, scrie muzica filmului de scurtmetraj “You Who Never Arrived” (Best Original Score nominee Bucharest ShortCut CineFest), compune muzica pentru concertul electronic și voce și creează suportul sonor al atelierelor de mișcare, voce și sunet “Body Talks”, adresat dansatorilor și actorilor profesioniști. În 2022, continuă colaborarea cu Judith pentru performance-ul “Ember”, creând muzica pe baza aceleiași cercetări comune ce analizează trecerea timpului, memoria și felul în care amintirile ne modelează prezentul. <div class=\"details-text-separator\"></div><h2>7 DEC // ROCKABELLA – INvulnerabili // BOGDAN MOROȘANU</h2> Seria de performance-uri continuă în următoarea seară cu muzică. Astfel,  fanii trupei Rockabella vor putea descoperi noul album al acesteia, INvulnerabili, mixat live în format sonor tridimensional de Bogdan Moroșanu, membru al trupei. Rockabella îmbină influențe art-rock, indie pop și alternative în cântece-poveste despre momentele care ne transformă. Albumul urmează să fie lansat oficial în 9 decembrie. Prin adaptarea pieselor la formatul multi-channel al instalației, acestea vor genera o experiență muzicală complet diferită de cea a unui concert live sau intermediată de un sistem stereo.  <br/><br/> ROCKABELLA - a debutat în anul 2014 și are la activ numeroase concerte, showcase-uri și festivaluri în țară și în străinătate, precum și două albume de studio, “A World Outside” - 2015 și “Clarobscur -  2019. Din componența trupei fac parte: Teodora Moroșanu – voce, Ștefan Mustață – chitară, Bogdan Diaconeasa - chitară bass, Alina Horez -  vioară, Bogdan Moroșanu - tobe, producție muzicală. <br/><br/> Albumul “INvulnerabili” va fi lansat oficial în luna decembrie a acestui an. Este o colecție de zece cântece scrise în poate cea mai complicată perioadă a vieții trupei, pandemia fiind doar un fundal distopic pentru mișcările tectonice din viața membrilor. Albumul explorează ideea vulnerabilității ca sursă a curajului. Piese precum Hai să ne complicăm puțin! , Cutremur sau Harta dezvlăluie chipurile mascate ale traumei, pe când INvulnerabili, Arată-te și Până Departe povestesc despre curajul de a ne confrunta cu noi înșine și despre vindecarea prin apropiere.  <br/><br/> BOGDAN MOROȘANU - are peste 15 ani de experiență, în care a activat în toate laturile industriei: sunet de spectacol, sunet de film si TV, producție muzicală, dar și design și implementare de soluții audio și tratamente acustice. În ultimii 4 ani, activitatea lui a fost marcată de implicarea în cercetare și educație, Bogdan predând cursuri de producție audio la Facultatea de Electronică din cadrul Universității Politehnică din București, iar din 2021, a început studiile doctorale pe domeniul ingineriei de sunet. În domeniul muzical, Bogdan a lucrat cu trupe precum The Mono Jacks și Rockabella, în rol de muzician, dar și inginer de live și producător muzical; este adesea implicat în rol de consultant tehnic pentru festivaluri și evenimente muzicale din sfera rock și indie. <br/><br/> <div class=\"details-text-separator\"></div><h2>8 DEC // IF WE VANISH – IN SEARCH OF NATURAL SILENCE // FELIX DEUFEL & NIKHIL NAGARAJ</h2> Cel din urmă eveniment este susținut de <b>Felix Deufel, inițiatorul ZiMMT, și Nikhil Nagaraj, sound artist</b>, care prezintă la Platforma Wolff o parte din rezultatele proiectului If we vanish – In search of natural silence. Pornind de la capacitatea tehnologiei audio 3D de a reda fidel dinamica naturală a sunetelor în spațiu și a crea experiențe de ascultare similare cu realitatea, cei doi artiști și echipa lor au pornit spre cele mai sălbatice zone din India, neafectate de poluarea sonică sau de intervenția umană, pentru a înregistra amprenta sonoră a acestora. Pe parcursul proiectului, au captat peste 434 de ore material audio.  <br/><br/> Artiștii își vor prezenta colecția de date sonore ca o instalație de artă imersivă, în care publicul poate experimenta unele dintre aceste ultime locuri sălbatice. În această experiență, te vei cufunda în pădurile tropicale din sudul și nord-estul Indiei sau în peisajul montan arid din Himalaya și vei explora trei tipuri diferite de sunet: biofonie - produs de factori non-umani, geofonie - sunet natural non-biologic și antropofonie - zgomot generat de om.  <br/><br/> <b>NIKHIL NAGARAJ (Bangalore, India) și FELIX DEUFEL (Leipzig, Germania)</b> sunt doi sound designers și ingineri de sunet care au colaborat din 2017 în domeniul cercetării și producției audio 3D. Ambii împărtășesc o puternică fascinație pentru percepția auditivă umană, pentru sunet. Conceptele și lucrările lor îmbină designul, tehnologia, știința și filozofia. Experimente cu sunetul spațial în camere întunecate, eliminarea stimulului vizual complet le-a oferit artiștilor experiențe cruciale, halucinante. În lucrările lor, explorează influența sunetului și a muzicii asupra emoțiilor și imaginilor, puterea narativă și de amintire a sunetului și impactul său enorm asupra percepției spațiului. <br/><br/><b>ZiMMT</b> este o galerie, un spațiu de producție multimedia, o sală de concerte, un laborator de cercetare și o rețea de artiști și profesioniști care susțin inovația. Centrul oferă o platformă deosebită pentru diverse aplicații artistice imersive și experimente creative. Este una dintre puținele instituții culturale dotate cu un sistem audio 3D inovator format din 36 de difuzoare. Acesta permite dezvoltarea și prezentarea unor concerte imersive, care învăluie întregul spațiu, expoziții și performance-uri inedite. Pe lângă schimbul interdisciplinar dintre artiști și dezvoltatori, centrul se focusează în mod particular pe activități educaționale.",
                 "text-main-nova-talks-program": "<b>PROGRAM:\n" +
                     "<ul>\n" +
-                    "<li>PANELUL I: 11:00 – 13:00 </li>\n" +
-                    "<li>COFFEE BREAK: 13:00 – 13:30 </li>\n" +
-                    "<li>PANELUL AL II-LEA: 13:30 – 15:00 </li>\n" +
+                    "<li>PANELUL I: 12:00 - 13:15 </li>\n" +
+                    "<li>COFFEE BREAK: 13:15 - 13:45 </li>\n" +
+                    "<li>PANELUL AL II-LEA: 13:45 - 15:00 </li>\n" +
                     "</ul>\n" +
                     "</b>",
                 "text-main-nova-talks": "<br/><br/>Prin acest eveniment, NOVA propune un maraton al inspirației și creează contextul unor discuții fascinante despre importanța noilor tehnologii în procesul creativ și în explorarea potențialul cognitiv uman. \n" +
@@ -666,6 +957,33 @@ jQuery(function ($) {
                     "În prezent, conduce Laboratorul de Robotică Creativă din Trbovlje, Slovenia, în cadrul McRUK și Katapult.\n" +
                     "<br/><br/>\n" +
                     "<a href=\"http://masajazbec.si\">http://masajazbec.si</a>",
+                "text-main-nova-digi-sense": "<h2>DIGI-Sense – cum înțelege, simte și experimentează corpul procesele de atribuire de sens atunci când lucrează cu instrumente digitale</h2><br/><br/>" +
+                    "Pentru a înțelege și a fi capabili să folosim tehnologii și instrumente digitale, avem nevoie să le găsim sensul. De obicei, procesul de atribuire de sens (în tradiția propusă de Karl E. Weick) este studiat ca un proces predominant cognitiv, dând un rol foarte mic corpului. În proiectul DIGI-Sense (Digital Sensemaking) propunem să aducem corpul în prim plan pentru a înțelege cum ceva “are sens” pentru noi, în special în interacțiunea cu medii digitale. <br/><br/>Proiectul invită artiști și dansatori să exploreze cum corpul percepe, traduce, transformă și parcurge procese de atribuire de sens atunci când aceștia folosesc instrumente tech sau medii virtuale. În ce fel pot susține simțurile noastre, mușchii noștri, modul în care ne mișcăm membrele, viteza mișcărilor noastre, etc procesul de înțelegere a sensului? ",
+                "text-main-author-nova-talks-digi-sense":"<b>Claudia Schnugg</b> este cercetătorul principal al proiectului Digital Sensemaking (DIGI-SENSE), implementat la Universitatea Johannes Kepler din Linz prin Communications Engineering Institute. Deține un doctorat în științe sociale și economie, cu focus suplimentar pe cultură. Cercetarea sa se concentrează pe artă, estetică și inițiative creative în contexte sociale interdisciplinare, cum ar fi managementul cunoașterii, procese de digitalizare, facilitarea colaborării dintre artă și știință și implicațiile aduse de aceasta. În plus, Claudia este curator și consultant artistic pentru mai multe organizații, în plan internațional, care desfășoară inițiative art-sci-tech <br/><br/>"+
+                    "<b>Daniela Brill</b> are un masterat în Artă & Știință de la reputata Universitate de Arte Aplicate din Viena. Lucrează în colaborare cu instituții și rețele științifice ca Art at CMS al CERN, ORIGIN network of high energy physics, și cu instituții de artă ca ArtSci Center + Lab UCLA. Brill este și creatoarea și co-organizatoarea Suratómica, o rețea de colaborare la intersecția dintre artă și știință cu sediul în Bogotá, Columbia.  Focusul artistic și teoretic al Danielei este ideea de in-disciplinaritate și își propune să estompeze granițele și să găsească un loc de originalitate care să fie aplicat în procese de creație și de formare cu cunoștințe noi. În puține cuvinte, aria sa de cercetare este concentrată pe estetică și complexitate. ",
+                "text-main-nova-talks-new-art": "<h2>.NewArt { foundation;}. Explorând un nou om cibernetic prin artă</h2><br/><br/>" +
+                    ".NewArt { foundation;} este o organizație puternic implicată în sprijinirea comunității artistice în a dezvolta noi practici în plan tehnologic, științific, conceptual și social. Fundația promovează arta aflată la intersecția și transgresia cu știința și tehnologia, folosind asta ca o strategie de dezvoltare și împuternicire socială. Arta care nu este doar un martor, ci un agent activ."+
+                    "<br/><br/>"+
+                    "Una din principalele provocări ale fundației este dezvoltarea, conservarea și păstrarea moștenirii artistice venite din această interacțiune cu știința și tehnologia. Facem asta prin .NewArt { collection;} - un corp de peste 100 de lucrări ce acoperă, în mod eclectic, tot ce s-a întâmplat și tot ce se întâmplă în acest limbaj nou al artei. Următorul pas este crearea unui nou Centru de Artă în orașul Reus. "+
+                    "<br/><br/>"+
+                    "Ghidați de Vicente Matallana, directorul .NewArt {foundation;} & {collection;}, vom descoperi lucrări cheie ale colecției care abordează subiectul de om cibernetic. Această călătorie începe în 1972 cu lucrarea \"Mano Térmica de Artista\" de Luís Lugán, considerată a fi prima lucrare de artă robotică creată în Spania și se extinde până la cele mai recente producții și adăugiri la colecție. ",
+                "text-main-author-nova-talks-new-art":"<b>Vicente Matallana</b>  is the director of the .NewArt { foundation;} & { collection;}, as well as the founder and director of LaAgencia, an independent new media art company created in 1998 in Madrid. LaAgencia is engaged in programs and projects focused on electronic art as an alternative paradigm of research and knowledge. With Joasia Krysa, he has been the co-director of the Kunsthal Aarhus, Aarhus. He is member of the advisory board of Kurator, and project director of ArtFutura, the veteran digital art festival in Spain. He is member of the steering committee of the HacTe, Barcelona’s new hub for Art, Science, and Technology.",
+                "text-main-nova-talks-beyond-the-screen": "<h2>In spatele ecranului: Explorarea propriocepției și kinesteziei în era digitală, din perspectiva unui creator digital asupra viitorului </h2><br/><br/>" +
+                    "O explorare fascinantă a convergenței tehnologiilor de vârf precum AR, XR, artă programabilă și AI , cu simțurile umane ale propriocepției și kinesteziei, în contextul ascensiunii rapide a lumilor digitale. Realitatea virtuală și augmentată este tot mai folosită în domeniul modei și machiajului, al sporturilor, al socializării și muncii, al artelor, călătoriilor, jocurilor și experiențelor imersive de toate felurile, trebuie să luăm în considerare modul în care aceste tehnologii influențează percepția noastră despre sine și modul în care schimbă conexiunea noastră fundamentală cu lumea fizică. "+
+                    "<br/><br/>"+
+                    "Descoperă alături de renumitului artist digital și specialist în tehnologie emergentă, Tammy Lovin,  întrebările intrigante legate de neurodivergența ca o consecință naturală a evoluției digitale și cum aceste experiențe transformative ne modelează și redefinesc însăși esența existenței umane. Afla posibilele implicații și oportunități pentru a te dezvolta personal , a-ti spori creativitatea și a schimba modul în care interacționezi cu lumea din jur. "+
+                    "<br/><br/>"+
+                    "Această prezentare va reimagina limitele experienței umane și va pune în lumina impactului profund al inovațiilor digitale asupra granițelor dintre virtual și tangibil. Pregătește-te să fii inspirat și să-ți pui în discuție percepțiile în această prezentare de neratat despre viitorul artei și experienței umane.",
+                "text-main-author-nova-talks-beyond-the-screen":"<b>Tammy Lovin</b> este artist digital si specialistă în tehnologii emergente, precum AR, VR, XR , arta programabilă sau A.I art. , dar și NFT. Simultan Tammy dezvoltă proiecte de tip digital fashion și este arhitectă de spații în Metaverse. Lucrările sale eye-candy au fost expuse în multiple galerii internaționale din Miami, L.A. , Beijing, fiind prima româncă care a avut arta pe ecranele uriașe din Times Square NYC de mai multe ori, și care are o așa recunoaștere extinsă la nivel global în acest domeniu. Este frecvent invitată ca speaker specialist la conferințe internaționale și își continuă ascensiunea și pe social media cu videouri educative și tutoriale din zona de web3.",
+                "text-main-nova-talks-white-contamination": "<h2>White Contamination</h2><br/><br/>" +
+                    "O perspectivă personală asupra acestui proiect de fotografie extraordinar, White contamination (Contaminarea albă), pentru care artistul a primit locul 1 la secțiunea Creație a competiției Sony World Photography Awards. "+
+                    "<br/><br/>"+
+                    "În peisajele înzăpezite ale înălțimilor din Fukushima, Florian a surprins durerea invizibilă cauzată de radiații. Inspirat de gravurile japoneze, artistul spera să surprindă în lucrările sale percepțiile în continuă mișcare ale naturii, în locurile în care s-a acumulat cel mai ridicat grad de radiație."+
+                    "<br/><br/>"+
+                    "Cu un contor Geiger, Florian a măsurat gradul de contaminare radioactivă a locurilor în becquerel (Bq), o unitate de măsură care arată gradul de dezintegrare al atomului și numărul de mutații ale acestuia pe secundă. Printr-un proces de digitalizare, artistul a folosit aceste grade de radioactivitate măsurate și le-a aplicat prin diferite efecte grafice, pe imagini. Astfel, imaginile conțin această alterare a atomilor. Efectele de transparență, perspectivele sparte, crează această formă în mișcare, o lume efemeră, la fel ca în gravurile tradiționale japoneze. "+
+                    "<br/><br/>"+
+                    "Parte din imaginile din această serie sunt integrate în instalația interactivă Walk, ce poate fi vizitată, în cadrul acestei ediții a NOVA, între 26 și 29 septembrie, la Teatrelli.",
+                "text-main-author-nova-talks-white-contamination":"<b>Florian Ruiz</b> este un artist cunoscut pentru felul inedit în care reușește să redea atmosfera locurilor abandonate sau distruse de intervenția nocivă a activității umane. Implicat în proiecte unice de exprimare a realităților sociale stringente prin imagine, Florin locuiește între Franța și Tokyo și este reprezentat de Galerie Sit Down din Paris. Lucrările sale au primit numeroase premii relevante și au fost expuse în Japonia, Olanda, Marea Britanie, Germania, Franța, Italia și Slovacia.",
                 "text-main-nova-talks-costin": "<h2>COSTIN DĂMĂȘARU // Cum poate facilita neurotehologia comunicarea intimă dintre sinele conștient și cel subconștient?</h2><br/><br/>" +
                     "Într-o lume în care fluxul de informații este din ce în ce mai mare, iar attention span-ul devine mai mic decât al unui peștișor auriu, cum ar putea, în mod paradoxal, să ne ajute tehnologia să ne utilizăm mai inteligent resursele interioare?<br/><br/>\n" +
                     "Intimitatea la nivelul dialogului interior devine în acest moment al evoluției noastre un factor cheie, însă cum putem facilita de fapt acest proces interior?<br/><br/>\n" +
