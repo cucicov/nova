@@ -136,7 +136,7 @@ jQuery(function ($) {
                 "sep": "sep",
                 "buy-tickets-pass": "buy festival pass",
                 "buy-tickets-expo": "buy expo pass",
-                "buy-tickets": "buy ticket in the hall",
+                "buy-tickets": "buy tickets",
                 "buy-tickets-online": "buy ticket live stream",
                 "installation": "installation",
                 "interactive-installation": "multi-channel video installation",
@@ -234,7 +234,7 @@ jQuery(function ($) {
                 "text-main-aio-3": "On AIO’s screens you discover a total of 55 videoportraits, accompanied by 5 sound compositions rendered in Quadrophonic format. All these paired with a certain degree of intensity of anxiety." +
                     "<br/><br/> " +
                     "The work is interactive and allows the visitors to modulate the sound and image in the space through a simple digital interface. Explore the space, select on the interface the level of anxiety you consider describes how you are feeling and your choice is expressed in the installation through a sound and video composition. ",
-                "text-main-have-you-seen": "An immersive 15-minute experience that will take you deep in the oceans to find yourself in new, unexpected ways. Just like the other installation developed within NOVA lab, it’s purpose is to offer, for two visitors in turn, the feeling of being present in more than one place at the same time. " +
+                "text-main-have-you-seen": "An immersive 20-minute experience that will take you deep in the oceans to find yourself in new, unexpected ways. Just like the other installation developed within NOVA lab, it’s purpose is to offer, for two visitors in turn, the feeling of being present in more than one place at the same time. " +
                     "<br/><br/> " +
                     "6 photo artists joined forces with 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, to create this interactive installation." +
                     "<br/><br/> " +
@@ -276,20 +276,22 @@ jQuery(function ($) {
                     "<b>Psychology, communication & neuroscience professionals:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
                     "<br/><br/> " +
                     "Access based on ticket and time slot reservation. ",
-                "text-main-error": "Experiența te poartă în lumea tehnicilor video analog și a electronicelor modificate, explorând allura imperfectului și glitch-urilor în mediile vizuale, în special în autoportrete. Vom analiza diferite fațete ale imaginilor în mișcare folosindu-ne de circuite disfuncționale pentru a scoate la lumină modul în care acestea pot modela un gest. " +
+                "text-main-title-error": "an error has occurred <br/> The aesthetic appeal of imperfection and glitches in visual images",
+                "text-main-error": "The experience delves into the world of analogue video techniques and modified electronics, examining the allure of imperfection and glitches in visual media, particularly in self-portraits. We will analyze different facets of the moving images by using malfunction circuits to reveal their inherent gestural character. " +
                     "<br/><br/> " +
-                    "Scopul este să celebrăm imperfecțiunea, ca o declarație puternică la polul opus față de hyper-realitatea și goana după portretul perfect care domină cultura vizuală curentă." +
+                    "The aim is to celebrate the allure of imperfection as a powerful counter statement to the prevailing hyperreality and the pursuit of the flawless self-portrait that dominates contemporary visual culture." +
                     "<br/><br/> " +
-                    "Prin exerciții aplicate și demonstrații, vom descoperi fascinația tehnologiei vintage și abilitățile sale speciale să evoce emoția prin defectele sale unice. Participanții vor experimenta cu distorsiunile vizuale neașteptate și artefactele ce rezultă din acest proces și vor învăța să le utilizeze ca instrumente potente de a crea autenticitate și profunzime." +
+                    "Through hands-on demonstrations, we will explore the fascination of vintage technology and its unique ability to evoke emotion through its unique flaws. Participants will discover how the unexpected visual distortions and artefacts that result from this process serve as powerful tools for conveying authenticity and depth." +
                     "<br/><br/> " +
-                    "Hai să descoperi tărâmul neîmblânzit al electronicelor modificate și al sintetizatoarelor video și să îmbrățisezi erorile ca pe o sursă de inspirație. " +
+                    "I encourage you to leave behind the pursuit of pixel-perfect images and explore the untamed realm of modified electronics and video synthesizers, embracing glitches and imperfections as a source of creative inspiration. " +
                     "<br/><br/> " +
-                    "<b>Nu este necesară experiență anterioară pentru a participa la acest workshop. Este așteptat să te simți confortabil să fii filmat și să îți explorezi elemente subtile, subconștiente din portretul tău. Workshopul este susținut în limba engleză.</b>",
+                    "<b>Prior experience is not necessary for the workshop. You are expected to feel at ease while being recorded and exploring the subconscious elements of your portrait. The workshop will be held in English.</b>",
                 "text-main-author-error": "<b>M. Kardinal</b> is a Berlin-based visual artist working with photography, film, performance, and installation. She holds a Master of Arts degree in Fine Arts and has studied art history and fine arts in both Germany and Italy." +
                     "<br/><br/> " +
                     "Her particular interest in perceptual processes is reflected in her work, ultimately leading to the exploration and development of an abstract visual vocabulary that enables her to create a 'mental landscape of desire' in which the viewer actively participates in the process of conveying meaning. " +
                     "<br/><br/> " +
                     "In most of her work she uses obsolete analogue techniques and materials, fascinated by their unpredictable nature. Since 2016, she has collaborated with musicians, sound artists, and choreographers from Germany, Romania, Ukraine, and Canada to develop installations and audiovisual performances based on her artistic research into perceptual processes.",
+
                 "text-main-new-art-title": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;}",
                 "text-main-new-art": "The .NewArt {foundation;} & {collection;} is recognized not only for what it collects but also for how it does so. It has pioneered an entirely new approach to collecting, promoting programs for producing, preserving, and patronizing technological art, while encouraging debates on issues related to the integration of new technologies in art." +
                     "<br/><br/> " +
@@ -488,13 +490,13 @@ jQuery(function ($) {
                     "To understand and be able to use digital technologies and tools, we need to make sense of them. Usually, the sensemaking process (in the tradition proposed by Karl E. Weick) is studied as a process happening mainly cognitively, only giving a minor part to the body. In the  DIGI-Sense (Digital Sensemaking) project, we suggest bringing the body into the foreground to understand sensemaking, also and especially in digital environments. <br/><br/>The project invites performance artists and dancers to explore how the body perceives, translates, transforms and goes through the process of sensemaking with technological tools and in digital environments. How do our senses, our muscles, the way our limbs move, the velocity of our movements, among others, support the sensemaking processes we go through in moments, for example of digitization of information? ",
                 "text-main-author-nova-talks-digi-sense":"<b>Claudia Schnugg</b> is Principal Investigator of the Digital Sensemaking (DIGI-SENSE) project at the Johannes Kepler University Linz, which is realized at the Communications Engineering Institute. She holds a PhD in social and economic sciences with an additional focus on cultural sciences. Her research focuses on art, aesthetics and artistic initiatives in interdisciplinary and social settings, such as change processes, digitalization and knowledge management, and explores implications and organization of art-science collaboration. As curator and consultant she is working internationally with industrial, scientific and artistic organizations to realize art-sci-tech projects.<br/><br/>"+
                     "<b>Daniela Brill</b> has a Master’s degree in Art & Science from the University of Applied ArtsVienna.  Daniela works in collaboration with scientific institutions and networks such as Art at CMS at CERN, the ORIGIN network of high energy physics, and with artistic institutions such as the ArtSci Center + Lab UCLA. Brill is the creator and co-organizer of Suratómica, a collaborative network of Art and Science based in Bogotá, Colombia. Daniela’s artistic and theoretical work focuses on the idea of in-disciplinarity and the wish to eliminate certain frontiers and boundaries aiming to find a space of queerness at many levels for creative processes and for the formation of new knowledge, researching mainly the areas of aesthetics and complexity.",
-                "text-main-nova-talks-new-art": "<h2>.NewArt { foundation;}. Explorând un nou om cibernetic prin artă</h2><br/><br/>" +
+                "text-main-nova-talks-new-art": "<h2>.NewArt { foundation;}. Exploring a new cybernetic human through art</h2><br/><br/>" +
                     "The .NewArt { foundation;} is based in Reus, Catalonia. Its ambition is to help the artistic community develop new technological, scientific, conceptual, and social practices. The foundation disseminates art at the intersection and transgression of science and technology, as a strategy for social development and empowerment. It acts not just as a witness, but as an active agent."+
                     "<br/><br/>"+
                     "One of its main challenges consists in the development, conservation, and preservation of an artistic legacy linked to science and technology, within the framework of the .NewArt { collection;}. A corpus of over 100 pieces that eclectically cover everything that has happened and is happening in this new means of expression.This project will be brought further by the creation of a new Art Center in the city of Reus."+
                     "<br/><br/>"+
                     "Guided by Vicente Matallana, director of the .NewArt {foundation;} & {collection;}, we will visit key works from the collection that explore the concept of a cybernetic human. A journey that will begin with the 1972 artwork \"Mano Térmica de Artista\" by Luís Lugán, considered the first robotic artwork created in Spain, and will extend to the latest productions and additions to the Collection.",
-                "text-main-author-nova-talks-new-art":"<b>Vicente Matallana</b> este directorul .NewArt { foundation;} & { collection;}, precum și fondatorul și directorul LaAgencia, o companie independentă de new media art creată în 1998 în Madrid. LaAgencia este implicată în programe și proiecte în jurul artei electronice ca paradigmă alternativă pentru cercetare și cunoaștere. Împreună cu Joasia Krysa, a fost co-directorul Kunsthal Aarhus, Aarhus. Este membru în boardul consultativ al Kurator, și director al proiectului ArtFutura, un festival de artă digitală veteran în Spania. Este membru în comitetul de conducere al HacTe, un important hub de artă x știință  x tehnologie al Barcelonei.",
+                "text-main-author-nova-talks-new-art":"<b>Vicente Matallana</b>  is the director of the .NewArt { foundation;} & { collection;}, as well as the founder and director of LaAgencia, an independent new media art company created in 1998 in Madrid. LaAgencia is engaged in programs and projects focused on electronic art as an alternative paradigm of research and knowledge. With Joasia Krysa, he has been the co-director of the Kunsthal Aarhus, Aarhus. He is member of the advisory board of Kurator, and project director of ArtFutura, the veteran digital art festival in Spain. He is member of the steering committee of the HacTe, Barcelona’s new hub for Art, Science, and Technology.",
                 "text-main-nova-talks-beyond-the-screen": "<h2>Beyond the Screen: Exploring Proprioception and Kinesthesia in the Digital Age, a digital creator perspective on what’s next </h2><br/><br/>" +
                     "An eye-opening exploration of the convergence of cutting-edge technologies such as AR, XR, programmable art, and AI with the human senses of proprioception and kinesthesia, in the context of our rapidly evolving growingly digital world. As we embrace virtual and augmented reality within fashion & make-up , sports, socializing and work, arts, traveling, gaming, and immersive experiences of all sorts, we must consider how these technologies influence our perception of self and alter our fundamental connection to the physical realm. "+
                     "<br/><br/>"+
@@ -591,7 +593,7 @@ jQuery(function ($) {
                 "sep": "sep",
                 "buy-tickets-pass": "cumpără festival pass",
                 "buy-tickets-expo": "cumpără expo pass",
-                "buy-tickets": "cumpără bilet în sală",
+                "buy-tickets": "cumpără bilete",
                 "buy-tickets-online": "cumpără bilet live stream",
                 "installation": "instalație",
                 "interactive-installation": "instalație interactivă",
@@ -622,12 +624,12 @@ jQuery(function ($) {
                 "have-you-seen": "Have you seen my body? <br/><i>a seascape</i>",
                 "tammy-lovin": "Claudia Schnugg (AT), Daniela Brill (AT), Vicente Matallana (ES), Tammy Lovin (RO), Florian Ruiz (FR)",
                 "walk-a-rhythm": "Walk <br/> <i>a rhythm</i>",
-                "roly-poly": "rolypoly~, an adaptive and generative drum machine designed for real-time performance // Grigore Burloiu",
+                "roly-poly": "rolypoly~, un drum machine adaptiv și generativ // Grigore Burloiu",
                 "protocols-applied-to-production": "Protocoale aplicate în producția, întreținerea și prezervarea artei new media. Cazuri practice de la .NewArt {foundation;} // Vicente Matallana",
                 "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
                 "sonic-explorations": "Sonic Explorations // Denis Flueraru",
                 "aio-opening": "AIO all in one",
-                "an-error-has": "an error has occurred. <br/> The aesthetic appeal of imperfection and glitches in visual images// M Kardinal",
+                "an-error-has": "A apărut o eroare. <br/>Atracția estetică a imperfectului și glitch-ului în imagini// M Kardinal",
                 "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
                 "intro-to-metaverse-detail": "Intro to Metaverse: 360/VR Filmmaking",
                 "intro-to-metaverse-2": "Intro to Metaverse: from real to digital objects // MARIUS HODEA",
@@ -690,7 +692,7 @@ jQuery(function ($) {
                 "text-main-aio-3": "Pe ecranele AIO rulează, în total, 55 de videoportrete însoțite de 5 compoziții sonore în format Quadrophonic, toate aferente mai multor grade de intensitate a anxietății resimțite." +
                     "<br/><br/> " +
                     "Lucrarea este interactivă și îți permite să modulezi imaginea și sunetul din spațiu printr-o interfață digitală facilă, amplasată în incintă. Explorează spațiul, selectează pe tableta-interfață nivelul de anxietate pe care îl resimți în corp și alegerea ta este redată printr-o compoziție audio-vizuală. ",
-                "text-main-have-you-seen": "O experiență imersivă de aproximativ 15 minute care te duce în adâncul oceanelor pentru a te descoperi în feluri noi, neașteptate. La fel ca cealaltă instalație dezvoltată în cadrul NOVA lab, lucrarea urmărește să ofere, pe rând, pentru câte 2 vizitatori, sentimentul de a fi prezent în mai multe locuri în același timp." +
+                "text-main-have-you-seen": "O experiență imersivă de aproximativ 20 minute care te duce în adâncul oceanelor pentru a te descoperi în feluri noi, neașteptate. La fel ca cealaltă instalație dezvoltată în cadrul NOVA lab, lucrarea urmărește să ofere, pe rând, pentru câte 2 vizitatori, sentimentul de a fi prezent în mai multe locuri în același timp." +
                     "<br/><br/> " +
                     "Pentru a crea această instalație interactivă, am adus împreună 6 artiști foto, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință." +
                     "<br/><br/> " +
@@ -732,16 +734,17 @@ jQuery(function ($) {
                     "<br/>" +
                     "<b>Profesioniști psihologie, comunicare, neuroștiință:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
                     "<br/><br/> " +
-                    "Access based on ticket and time slot reservation. ",
-                "text-main-error": "The experience delves into the world of analogue video techniques and modified electronics, examining the allure of imperfection and glitches in visual media, particularly in self-portraits. We will analyze different facets of the moving images by using malfunction circuits to reveal their inherent gestural character. " +
+                    "Accesul se face în baza biletului asociat unui interval de timp.  ",
+                "text-main-title-error": "A apărut o eroare. <br/>Atracția estetică a imperfectului și glitch-ului în imagini",
+                "text-main-error": "Experiența te poartă în lumea tehnicilor video analog și a electronicelor modificate, explorând allura imperfectului și glitch-urilor în mediile vizuale, în special în autoportrete. Vom analiza diferite fațete ale imaginilor în mișcare folosindu-ne de circuite disfuncționale pentru a scoate la lumină modul în care acestea pot modela un gest. " +
                     "<br/><br/> " +
-                    "The aim is to celebrate the allure of imperfection as a powerful counter statement to the prevailing hyperreality and the pursuit of the flawless self-portrait that dominates contemporary visual culture." +
+                    "Scopul este să celebrăm imperfecțiunea, ca o declarație puternică la polul opus față de hyper-realitatea și goana după portretul perfect care domină cultura vizuală curentă." +
                     "<br/><br/> " +
-                    "Through hands-on demonstrations, we will explore the fascination of vintage technology and its unique ability to evoke emotion through its unique flaws. Participants will discover how the unexpected visual distortions and artefacts that result from this process serve as powerful tools for conveying authenticity and depth." +
+                    "Prin exerciții aplicate și demonstrații, vom descoperi fascinația tehnologiei vintage și abilitățile sale speciale să evoce emoția prin defectele sale unice. Participanții vor experimenta cu distorsiunile vizuale neașteptate și artefactele ce rezultă din acest proces și vor învăța să le utilizeze ca instrumente potente de a crea autenticitate și profunzime." +
                     "<br/><br/> " +
-                    "I encourage you to leave behind the pursuit of pixel-perfect images and explore the untamed realm of modified electronics and video synthesizers, embracing glitches and imperfections as a source of creative inspiration. " +
+                    "Hai să descoperi tărâmul neîmblânzit al electronicelor modificate și al sintetizatoarelor video și să îmbrățisezi erorile ca pe o sursă de inspirație. " +
                     "<br/><br/> " +
-                    "<b>Prior experience is not necessary for the workshop. You are expected to feel at ease while being recorded and exploring the subconscious elements of your portrait. The workshop will be held in English.</b>",
+                    "<b>Nu este necesară experiență anterioară pentru a participa la acest workshop. Este așteptat să te simți confortabil să fii filmat și să îți explorezi elemente subtile, subconștiente din portretul tău. Workshopul este susținut în limba engleză.</b>",
                 "text-main-author-error": "<b>M. Kardinal</b> este o artistă berlineză ce lucrează în special cu fotografie, film, performance și instalații. Deține un masterat în Arte Plastice și a studiat și istoria artei atât în Germania cât și în Italia." +
                     "<br/><br/> " +
                     "Lucrările sale reflectă interesul ei particular pentru procese de percepție. Astfel, practica ei este o explorare a unui vocabular vizual abstract care o ajută să creeze “peisaje mentale ale dorinței” în care vizitatorul participă activ și construiește însemnătatea lucrării." +
@@ -967,7 +970,7 @@ jQuery(function ($) {
                     "Una din principalele provocări ale fundației este dezvoltarea, conservarea și păstrarea moștenirii artistice venite din această interacțiune cu știința și tehnologia. Facem asta prin .NewArt { collection;} - un corp de peste 100 de lucrări ce acoperă, în mod eclectic, tot ce s-a întâmplat și tot ce se întâmplă în acest limbaj nou al artei. Următorul pas este crearea unui nou Centru de Artă în orașul Reus. "+
                     "<br/><br/>"+
                     "Ghidați de Vicente Matallana, directorul .NewArt {foundation;} & {collection;}, vom descoperi lucrări cheie ale colecției care abordează subiectul de om cibernetic. Această călătorie începe în 1972 cu lucrarea \"Mano Térmica de Artista\" de Luís Lugán, considerată a fi prima lucrare de artă robotică creată în Spania și se extinde până la cele mai recente producții și adăugiri la colecție. ",
-                "text-main-author-nova-talks-new-art":"<b>Vicente Matallana</b>  is the director of the .NewArt { foundation;} & { collection;}, as well as the founder and director of LaAgencia, an independent new media art company created in 1998 in Madrid. LaAgencia is engaged in programs and projects focused on electronic art as an alternative paradigm of research and knowledge. With Joasia Krysa, he has been the co-director of the Kunsthal Aarhus, Aarhus. He is member of the advisory board of Kurator, and project director of ArtFutura, the veteran digital art festival in Spain. He is member of the steering committee of the HacTe, Barcelona’s new hub for Art, Science, and Technology.",
+                "text-main-author-nova-talks-new-art":"<b>Vicente Matallana</b> este directorul .NewArt { foundation;} & { collection;}, precum și fondatorul și directorul LaAgencia, o companie independentă de new media art creată în 1998 în Madrid. LaAgencia este implicată în programe și proiecte în jurul artei electronice ca paradigmă alternativă pentru cercetare și cunoaștere. Împreună cu Joasia Krysa, a fost co-directorul Kunsthal Aarhus, Aarhus. Este membru în boardul consultativ al Kurator, și director al proiectului ArtFutura, un festival de artă digitală veteran în Spania. Este membru în comitetul de conducere al HacTe, un important hub de artă x știință  x tehnologie al Barcelonei.",
                 "text-main-nova-talks-beyond-the-screen": "<h2>In spatele ecranului: Explorarea propriocepției și kinesteziei în era digitală, din perspectiva unui creator digital asupra viitorului </h2><br/><br/>" +
                     "O explorare fascinantă a convergenței tehnologiilor de vârf precum AR, XR, artă programabilă și AI , cu simțurile umane ale propriocepției și kinesteziei, în contextul ascensiunii rapide a lumilor digitale. Realitatea virtuală și augmentată este tot mai folosită în domeniul modei și machiajului, al sporturilor, al socializării și muncii, al artelor, călătoriilor, jocurilor și experiențelor imersive de toate felurile, trebuie să luăm în considerare modul în care aceste tehnologii influențează percepția noastră despre sine și modul în care schimbă conexiunea noastră fundamentală cu lumea fizică. "+
                     "<br/><br/>"+
