@@ -3,7 +3,7 @@ jQuery(function ($) {
     $(function(){
         $("#footer-module").load("footer.html");
         $("#header-video").load("header-video.html");
-        // $("#modal-dialog-popup").load("modal.html");
+        $("#modal-dialog-popup").load("modal.html");
     });
 
     <!-- mobile check -->
@@ -128,6 +128,7 @@ jQuery(function ($) {
                 "nova-grow": "NOVA Grow",
                 "artist-talks": "Talks",
                 "nova-talks": "Nova Talks",
+                "nova-grow": "NOVA GROW",
                 "artist-talk": "Talk",
                 "workshops": "Edu",
                 "workshop": "Edu",
@@ -189,6 +190,13 @@ jQuery(function ($) {
                 "our-sponsors": "Our partners",
                 "media-partners": "Media partners",
                 "main-media-partner": "Main media partner",
+                "text-main-nova-grow" : "<b>We</b> continue, together with UniCredit Bank, the program <b>NOVA GROW</b>, through which we offer a development residency for 2 emerging artists, passionate about the role of new technologiesin the creative process."+
+                    "<br/><br/> NOVA GROW is based on a close collaboration with the festival’s international network of partners, research, creation and education centers exploring the intersection between art and science, expanding in 8 countries. Each year, one of these partners sends to Bucharest a promising artist as well as hosts a romanian artist in a development residency."+
+                    "<br/><br/> The Romanian artist selected for NOVA GROW 2023 will benefit from an educational residency at the National Art University in Sofia, in November next year, and will also have the opportunity to show a work for the next edition of International Digital Art Festival Sofia, an event with a 14-year old history. The costs for transportation and accommodation are covered by theorganizers."+
+                    "<br/><br/> Within the residency, the selected artists will enjoy visits at galleries and cultural spaces that show projects in their line of interest, exploring new creative technologies in specialized labs and practical workshops that help them develop new skills."+
+                    "<br/><br/> <b>To apply, send us your CV, artist portfolio and a text where you tell us why this residency is relevant for you now at <a href='mailto:contact@novanova.ro'>contact@novanova.ro</a>, no later than 30th September end of day.</b>" +
+                    "<br/><br/> Each application will be evaluated by a commission formed of representatives of NOVA and the Bulgarian partners involved. We’ll consider both the artistic value of the applicants, as well as the potential of the residency to trigger powerful results for the selected artists."+
+                    "<br/><br/> The winning applicants will be announced on <b>10th October</b>. <br/><br/>Last year’s NOVA GROW was offered to <b>Simona-Daniela Tudose</b>, whose new work is now showing at Speculum Artium Festival, as a result of the residency. Simona has described the experience of NOVA GROW as complex, stimulating and offering access to new perspectives in your artistic development in a way that can actually change things for your professional path.",
                 "text-main-headline-seeing-double": "'Two sets of eyes take in the same scene. The same light passes through two apertures that see completely different things. One is biological, the other is mechanical.'<br/><br/>",
                 "text-main-seeing-double": "At the invitation of NOVA, internationally renowned multidisciplinary artist and researcher, Sougwen 愫君 Chung, visits Romania for the first time with a spectacular audio-visually enhanced      performance-lecture for the opening of the festival, exploring the intersection of art, science and engineering.\n" +
                     "<br/><br/>" +
@@ -592,6 +600,7 @@ jQuery(function ($) {
                 "nova-grow": "NOVA Grow",
                 "artist-talks": "Talks",
                 "nova-talks": "Nova talks",
+                "nova-grow": "NOVA GROW",
                 "artist-talk": "Talk",
                 "workshops": "Edu",
                 "workshop": "Edu",
@@ -654,6 +663,13 @@ jQuery(function ($) {
                 "our-sponsors": "Partenerii noștri",
                 "media-partners": "Parteneri media",
                 "main-media-partner": "Partener media principal",
+                "text-main-nova-grow" : "<b>Continuăm</b>, alături de UniCredit Bank, programul <b>NOVA GROW</b>, prin care acordăm o bursă de dezvoltare pentru 2 artiști aflați la început de drum, pasionați de rolul noilor tehnologii în procesul creativ actual."+
+                    "<br/><br/> Conceptul NOVA GROW are la baza colaborarea apropiată cu partenerii din rețeaua internațională NOVA, care include centre de cercetare, creație și educație la confluența dintre artă și știință din 8 țări. În fiecare an unul dintre acești parteneri trimite la București un artist emergent promițător, în timp ce, la rândul său, găzduiește un artist român într-o rezidență de dezvoltare."+
+                    "<br/><br/> Câștigătorul ediției NOVA GROW 2023 va beneficia de o rezidență educațională în cadrul Universității Naționale de Artă din Sofia, în luna noiembrie a anului viitor, având șansa să-și prezinte o lucrare proprie pentru urm[toarea ediție a International Digital Art Festival Sofia, un eveniment cu o istorie de 14 ani. Costurile de transport și de cazare sunt acoperite integral de către organizatori."+
+                    "<br/><br/> În cadrul rezidenței, artiștii selectați se vor bucura de vizite la galerii și alte spații culturale care prezinta proiecte din sfera lor de interes, explorarea de noi tehnologii creative în laboratoare de profil și ateliere practice care îi vor ajuta să dezvolte abilități noi."+
+                    "<br/><br/> <b>Cei care își doresc să aplice pentru bursa NOVA GROW sunt invitați să trimită la adresa de e-mail <a href=\'mailto:contact@novanova.ro\'>contact@novanova.ro</a>, până la data de 30 septembrie 2023, <u>CV-ul, portofoliul de artist și un text prin care să argumenteze rolul acestei burse în dezvoltarea lor.</u></b>" +
+                    "<br/><br/> Fiecare aplicație va fi evaluată de o comisie formată din reprezentanți ai festivalului NOVA și ai partenerilor și va ține cont de valoarea artistică a aplicațiilor primite, precum și de potențialul de creștere pe care parcurgerea acestei experiențe l-ar putea oferi artiștilor selectați."+
+                    "<br/><br/> Câștigătorii bursei vor fi anunțati pe <b>10 octombrie</b>. <br/><br/>Bursa de anul trecut a fost câștigată de <b>Simona-Daniela Tudose</b>, a cărei lucrare a fost expusă în cadrul Speculum Artium Festival, unul dintre cele mai proeminente festivaluri de new media din Europa Centrală. Simona a descris experiența oferită de NOVA GROW ca fiind una complexă, stimulantă și care permite participanților să ia contact cu noile direcții de dezvoltare artistică într-o manieră care le poate schimba cu adevărat sensul profesional.",
                 "text-main-headline-seeing-double": "„Două perechi de ochi privesc aceeași scenă. Aceeași lumină trece prin două deschideri care văd lucruri complet diferite. Unul este biologic, celălalt este mecanic.”<br/><br/>",
                 "text-main-seeing-double": "La invitația NOVA, artista multidisciplinară și cercetătoarea de renume internațional, <b>Sougwen 愫君 Chung</b>, vine pentru prima dată în România și susține în deschiderea festivalului un performance-lecture spectaculos, îmbogățit de un conținut audio-video puternic, care explorează intersecția dintre artă, știință și inginerie." +
                     "<br/><br/>" +
@@ -1141,6 +1157,15 @@ jQuery(function ($) {
         if (is_mobile) {
             $(".submenu .main-menu-item ").on("click", function () {
                 let selectedOption = $(this).text();
+
+                // option to add direct link to page in the dropdown main menu
+                let customLink = $(this).find('.main-menu-item-text').attr('link');
+                if (customLink !== undefined) {
+                    window.location.href = customLink;
+                    return false;
+                }
+                // -----------------------------
+
                 $('#mobile-selected').html(selectedOption);
 
                 // toggle list back.
@@ -1165,6 +1190,15 @@ jQuery(function ($) {
         } else {
             $(".main-menu-item").on("click", function () {
                 let selectedOption = $(this).find(".main-menu-item-text").attr('id');
+
+                // option to add direct link to page in the dropdown main menu
+                let customLink = $(this).find('.main-menu-item-text').attr('link');
+                if (customLink !== undefined) {
+                    window.location.href = customLink;
+                    return false;
+                }
+                // -----------------------------
+
                 $(".main-menu-item").removeClass("active-main-menu-item");
                 $(this).addClass("active-main-menu-item");
 
@@ -1188,7 +1222,7 @@ jQuery(function ($) {
         });
 
         // set notification visibility
-        $("#bell").hide();
+        // $("#bell").hide();
 
         // calendar items links
         $(".calendar-day-container").on("click", function() {
