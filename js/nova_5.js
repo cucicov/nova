@@ -187,7 +187,8 @@ jQuery(function ($) {
                 "with-support-of": "With the support of",
                 "sponsors": "Partners",
                 "our-sponsors": "Our partners",
-                "media-partners": "Our media partners",
+                "media-partners": "Media partners",
+                "main-media-partner": "Main media partner",
                 "text-main-headline-seeing-double": "'Two sets of eyes take in the same scene. The same light passes through two apertures that see completely different things. One is biological, the other is mechanical.'<br/><br/>",
                 "text-main-seeing-double": "At the invitation of NOVA, internationally renowned multidisciplinary artist and researcher, Sougwen 愫君 Chung, visits Romania for the first time with a spectacular audio-visually enhanced      performance-lecture for the opening of the festival, exploring the intersection of art, science and engineering.\n" +
                     "<br/><br/>" +
@@ -236,7 +237,7 @@ jQuery(function ($) {
                     "The work is interactive and allows the visitors to modulate the sound and image in the space through a simple digital interface. Explore the space, select on the interface the level of anxiety you consider describes how you are feeling and your choice is expressed in the installation through a sound and video composition. ",
                 "text-main-have-you-seen": "An immersive 20-minute experience that will take you deep in the oceans to find yourself in new, unexpected ways. Just like the other installation developed within NOVA lab, it’s purpose is to offer, for two visitors in turn, the feeling of being present in more than one place at the same time. " +
                     "<br/><br/> " +
-                    "6 photo artists joined forces with 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, to create this interactive installation." +
+                    "6 visual artists joined forces with 2 sound designers, 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, to create this interactive installation." +
                     "<br/><br/> " +
                     "Before you enter the installation we record your voice and photograph you in various postures. These digital imprints of your body are integrated in real time in the audio-visual setting of the installation." +
                     "<br/><br/> " +
@@ -250,12 +251,14 @@ jQuery(function ($) {
                     "<br/>" +
                     "<b>Graphics:</b> Ana Cârlan (RO)" +
                     "<br/>" +
+                    "<b>Sound design:</b> Dragoș Petrișor (RO), Eugen Neluțescu (RO)" +
+                    "<br/>" +
                     "<b>Creative coders:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
                     "<br/>" +
                     "<b>Psychology, communication & neuroscience professionals:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
                     "<br/><br/> " +
                     "Access based on ticket and time slot reservation. ",
-                "text-main-walk": "Developed within NOVA lab, with the collaboration of 7 photo artists, 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, Walk is an interactive installation that invites you to a simple game. " +
+                "text-main-walk": "Developed within NOVA lab, with the collaboration of 7 visual artists, 3 sound designers, 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, Walk is an interactive installation that invites you to a simple game. " +
                     "<br/><br/> " +
                     "A performer meets you on stage and, together, you build a rhythm of your own, a personal walk, by moving in reaction to the images on the screens that surround you. " +
                     "<br/><br/> " +
@@ -270,6 +273,8 @@ jQuery(function ($) {
                     "<b>Performers:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
                     "<br/>" +
                     "<b>Graphics:</b> Ana Cârlan (RO)" +
+                    "<br/>" +
+                    "<b>Sound design:</b> Monocube (DE), Dragoș Petrișor (RO), Eugen Neluțescu (RO)" +
                     "<br/>" +
                     "<b>Creative coders:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
                     "<br/>" +
@@ -342,6 +347,7 @@ jQuery(function ($) {
                 "unteatru": "Unteatru",
                 "elvire-popesco": "Cinema Elvire Popesco",
                 "galateca": "Galateca Gallery",
+                "teatrellie": "CREART/Teatrelli <br/> Lahovari Square, nr. 7",
                 "galateca-detailed": "Galateca Gallery <br/> C.A. Rosetti 2-4",
                 "text-main-new-home-of-mind": "Imagine the following situation: a self-conscious robot has an existential crisis, after having its life purpose removed from its code. Together with those who interact with the installation, he tries to find his reason for being, through an artificial spiritual interface presented as a divine robot."+
                     "<br/><br/>" +
@@ -440,6 +446,7 @@ jQuery(function ($) {
                     "She holds a BA from the Ecole supérieure d’Art d’Aix-en-Provence and is currently engaged in a masters degree with a specialization in \"Real time Art\".",
                 "cinetic": "CINETic / The International Research and Education Centre in Innovative Creative Technologies, Str. Tudor Arghezi, 3B",
                 "available-places": "Available places",
+                "ticket": "Ticket",
                 "text-main-space-and-spatiality": "Art installations as a multi-sensory experiential artistic practice will deliberately blur the boundaries between form and function. One of their unifying functions is to redefine and re-organize space. <br/><br/> Unlike art forms such as painting and sculptural objects, which may be considered Fine Art, installation art directly influences how a viewer perceives their surroundings. An installation in situ, in three separate places, results in three very distinct and separate visual experiences. The formal and functional qualities of an installation are ultimately affected by the context of the work’s physical setting.  <br/><br/> Installation art as a practice marries concepts of transformation of space, socio-political visual commentary, and the need for human engagement and interaction in order for such works to become “complete.” Many contemporary artists work with spatial elements and the idea of spatiality, not only for the sake of space itself but also as a methodological tool to meet their own artistic needs. <br/><br/> This presentation explores a few perspectives on how space influences people’s perception of an art installation piece and tries to approach subjects like space as an extension of art installations, why space is essential in design, how we communicate through space, what are the elements through which a space communicates, interactions and space elements with a role in enhancing the immersive experience.",
                 "text-main-author-space-and-spatiality": "<b>Iulia Gherghescu</b> is a scenographer, researcher, and associate lecturer at UNATC. Her experience includes projects in theatre as a set and costume designer, in film, as a space designer for events, and creation of installations dedicated to performance art projects. As a designer and researcher, she is interested in the interdisciplinary methods of developing transformable and interactive spaces to amplify their scenographic potential.",
                 "text-main-metaverse-1": "Virtual reality and creating 360 films is becoming rapidly a fundamental part of the film and media entertainment industries. Through this workshop we propose a comprehensive  introduction to VR/360 creation, offering the participants the tools, knowledge and necessary skills to create their own immersive experiences. <br/><br/>With clear and precise explanations, Marius will walk you through the extensive process of creating real or virtual 360 content, from pre-production to distribution. The content of the course includes, among others: a general presentation of the field of VR/360 creation, terminology, technology, camera selection, camera functioning, positioning of camera and actors, light specs, editing, managing content for VR headsets and online environments. <br/><br/>The workshop is designed to offer a captivating, yet knowledgeable, practical and technical learning of this novel field. ",
@@ -646,6 +653,7 @@ jQuery(function ($) {
                 "sponsors": "Parteneri",
                 "our-sponsors": "Partenerii noștri",
                 "media-partners": "Parteneri media",
+                "main-media-partner": "Partener media principal",
                 "text-main-headline-seeing-double": "„Două perechi de ochi privesc aceeași scenă. Aceeași lumină trece prin două deschideri care văd lucruri complet diferite. Unul este biologic, celălalt este mecanic.”<br/><br/>",
                 "text-main-seeing-double": "La invitația NOVA, artista multidisciplinară și cercetătoarea de renume internațional, <b>Sougwen 愫君 Chung</b>, vine pentru prima dată în România și susține în deschiderea festivalului un performance-lecture spectaculos, îmbogățit de un conținut audio-video puternic, care explorează intersecția dintre artă, știință și inginerie." +
                     "<br/><br/>" +
@@ -694,7 +702,7 @@ jQuery(function ($) {
                     "Lucrarea este interactivă și îți permite să modulezi imaginea și sunetul din spațiu printr-o interfață digitală facilă, amplasată în incintă. Explorează spațiul, selectează pe tableta-interfață nivelul de anxietate pe care îl resimți în corp și alegerea ta este redată printr-o compoziție audio-vizuală. ",
                 "text-main-have-you-seen": "O experiență imersivă de aproximativ 20 minute care te duce în adâncul oceanelor pentru a te descoperi în feluri noi, neașteptate. La fel ca cealaltă instalație dezvoltată în cadrul NOVA lab, lucrarea urmărește să ofere, pe rând, pentru câte 2 vizitatori, sentimentul de a fi prezent în mai multe locuri în același timp." +
                     "<br/><br/> " +
-                    "Pentru a crea această instalație interactivă, am adus împreună 6 artiști foto, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință." +
+                    "Pentru a crea această instalație interactivă, am adus împreună 6 artiști vizuali, 2 sound designeri, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință." +
                     "<br/><br/> " +
                     "Înainte de a păși în spațiul instalației, îți înregistrăm vocea și te fotografiem în diferite posturi. Aceste amprente digitale ale corpului tău sunt integrate în timp real în cadrul audio-vizual al instalației." +
                     "<br/><br/> " +
@@ -709,12 +717,14 @@ jQuery(function ($) {
                     "<br/>" +
                     "<b>Grafică:</b> Ana Cârlan (RO)" +
                     "<br/>" +
+                    "<b>Sound design:</b> Dragoș Petrișor (RO), Eugen Neluțescu (RO)" +
+                    "<br/>" +
                     "<b>Programare sisteme interactive:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
                     "<br/>" +
                     "<b>Profesioniști psihologie, comunicare, neuroștiință:</b> Ana Mirodonie (RO), Caroline Heimerl (AT) & Champalimaud Center for the Unknown (PT), Monica Cure (RO/SUA)" +
                     "<br/><br/> " +
                     "Accesul se face în baza biletului asociat unui interval de timp. ",
-                "text-main-walk": "Dezvoltată în cadrul NOVA lab din colaborarea a 7 artiști foto, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință, Walk este o instalație interactivă care îți propune un joc simplu." +
+                "text-main-walk": "Dezvoltată în cadrul NOVA lab din colaborarea a 7 artiști vizuali, 3 sound designeri, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință, Walk este o instalație interactivă care îți propune un joc simplu." +
                     "<br/><br/> " +
                     "Un performer te întâmpină pe scenă și împreună construiți un ritm al tău, personal, din felul în care tu reacționezi la imaginile de pe ecranele care vă înconjoară." +
                     "<br/><br/> " +
@@ -729,6 +739,8 @@ jQuery(function ($) {
                     "<b>Performeri:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
                     "<br/>" +
                     "<b>Grafică:</b> Ana Cârlan (RO)" +
+                    "<br/>" +
+                    "<b>Sound design:</b> Monocube (DE), Dragoș Petrișor (RO), Eugen Neluțescu (RO)" +
                     "<br/>" +
                     "<b>Programare sisteme interactive:</b> Andrei Văcaru (RO), Victor Jercan (RO)" +
                     "<br/>" +
@@ -800,6 +812,7 @@ jQuery(function ($) {
                 "unteatru": "Unteatru",
                 "elvire-popesco": "Cinema Elvire Popesco",
                 "galateca": "Galateca Gallery",
+                "teatrellie": "CREART/Teatrelli <br/> Piața Lahovari, nr. 7",
                 "galateca-detailed": "Galateca Gallery <br/> C.A. Rosetti 2-4",
                 "text-main-headline-new-home-of-mind": "",
                 "text-main-new-home-of-mind": "Imaginează-ți următoarea situație: un robot conștient de sine are o criză existențială, după ce i-a fost îndepărtat din cod motivul de a trăi. Împreună cu cei care interacționează cu instalația, el încearcă să-și regăsească rațiunea de a fi, într-o căutare care aduce în discuție spiritualitatea în lumea inteligenței artificiale." +
@@ -917,6 +930,7 @@ jQuery(function ($) {
                     "Este licențiată la Ecole Supérieure d’Art d’Aix-en-Provence și este în prezent studentă la un masterat cu specializare în „Artă în timp real”.",
                 "cinetic": "CINETic / Centrul Internațional de Cercetare și Educație în Tehnologii Inovativ Creative, Str. Tudor Arghezi, 3B",
                 "available-places": "Locuri disponibile",
+                "ticket": "Bilet",
                 "text-main-space-and-spatiality": "Instalațiile de artă ca practică artistică experiențială multisenzorială vor estompa în mod deliberat granițele dintre formă și funcție. Una dintre funcțiile lor unificatoare este redefinirea și reorganizarea spațiului. <br/><br/> Spre deosebire de formele de artă plastică bidimensionale, cum ar fi pictură și obiectele sculpturale, instalațiile influențează direct modul în care un spectator percepe mediul înconjurător și invers. O instalație în situ, în trei locuri separate, are ca rezultat trei experiențe vizuale foarte distincte și separate. Calitățile formale și funcționale ale unei instalații sunt în cele din urmă afectate de contextul cadrului fizic al lucrării.  <br/><br/> Instalația ca practică îmbină conceptele de transformare a spațiului, comentariul vizual socio-politic și nevoia de implicare și interacțiune umană pentru ca astfel de lucrări să devină „complete”. Mulți artiști contemporani lucrează cu elemente spațiale și ideea de spațialitate, nu numai de dragul spațiului în sine, ci și folosindu-l ca instrument metodologic pentru a-și satisface propriile nevoi artistice.<br/><br/> Această prezentare explorează câteva perspective despre modul în care spațiul influențează percepția oamenilor asupra unei piese de instalație de artă și abordează subiecte precum spațiul ca o extensie a instalațiilor de artă, de ce spațiul este esențial în design, cum comunicăm prin spațiu, care sunt elementele prin care un spațiu comunică, interacțiunea și elemente spațiale care amplifică experiența imersivă.",
                 "text-main-author-space-and-spatiality": "<b>Iulia Gherghescu</b> este scenograf, cercetător și lector asociat în cadrul UNATC. Experiența sa cuprinde proiecte în teatru ca designer de décor si costume, in film, ca designer de spațiu pentru evenimente și creație de instalații pentru proiecte de performance art. Ca designer și în cercetare este interesată de metodele interdisciplinare de dezvoltare de spații transformabile și interactive pentru amplificarea potențialul lor scenografic.",
                 "text-main-metaverse-1": "Realitatea virtuală și realizarea de filme 360 devine rapid o parte fundamentală a industriilor de film si media entertainment. Propunem o introducere în creația de VR/360 cu un atelier cuprinzător, care oferă participanților instrumentele, cunoștințele și abilitățile necesare pentru a-și crea propriile experiențe imersive. Pe parcursul cursului, voi oferi o explicație clară și precisă a procesului de realizare a conținutului 360 real sau virtual, de la pre-producție până la distribuție. Conținutul cursului include, dar nu se limitează la, prezentarea generala a VR/360, terminologie, tehnologie, selecția camerei, funcționarea camerei, poziționarea camerei și a actorilor, iluminare, editare, stăpânire conținut pentru căștile de VR și online. Acest atelier este conceput pentru a oferi o abordare tehnică, captivantă și practică a învățării acestui nou mediu.",
