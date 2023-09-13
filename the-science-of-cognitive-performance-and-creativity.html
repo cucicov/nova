@@ -2,10 +2,19 @@
 <html class="no-js" lang="">
 
 <head>
-    <meta charset="utf-8">
-    <title>Nova - Intro to Metaverse 2</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LLYC0RGBQC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <!--    <link rel="manifest" href="site.webmanifest">-->
+        gtag('config', 'G-LLYC0RGBQC');
+    </script>
+    <meta charset="utf-8">
+    <title>Nova - The Science of Cognitive Performance and Creativity</title>
+
+<!--    <link rel="manifest" href="site.webmanifest">-->
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
 
@@ -393,17 +402,12 @@
     </defs>
 </svg>
 
-<div class="video-wrapper">
-    <video playsinline autoplay muted loop id="panamea">
-        <source src="img/panamea.mp4" type="video/mp4">
-    </video>
-</div>
+<div id="header-video"></div>
 
 <div id="isMobile"></div>
 
 <div class = "wrapper">
     <div class="content">
-
         <!-- HEADER -->
         <div class="content-container-row">
             <div id="logo" href="/">
@@ -417,7 +421,7 @@
                 </div>
             </div>
             <div class="main-menu-item-bell">
-                <a href="#" style="align-self: flex-end;">
+                <a href="#" id="bell-wrapper">
                     <div id="bell">
                         <img src="img/bell.svg"/>
                     </div>
@@ -438,32 +442,49 @@
                     <span style="color: #00001C" data-i18n-key="start-date">NOV. 22</span> <br/>
                     <span style="color: #FF95E7" data-i18n-key="ends">ENDS</span>
                     <span style="color: #00001C" data-i18n-key="end-date">DEC.17</span> <br/>
-                    <span style="color: #FF95E7">2022</span> <br/>
+                    <span style="color: #FF95E7">2023</span> <br/>
                 </div>
                 <div id="box1">
                 </div>
             </div>
         </div>
 
-        <div class="content-container-row">
-            <div id="program-hours" data-i18n-key="open-info">
-                The exhibition is open every day from 10AM to 7PM
-            </div>
-        </div>
+        <!--        <div class="content-container-row">-->
+        <!--            <div id="program-hours" data-i18n-key="open-info">-->
+        <!--                The exhibition is open every day from 10AM to 7PM-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <div class="content-container-row">
             <div id="box2">
             </div>
         </div>
 
-        <div class="content-container-row">
+        <!--        <div class="content-container-row pad-top-header-spacing tickets-desktop"-->
+        <!--             style="margin-bottom: 0px; justify-content: flex-end; flex-direction: column">-->
+        <!--            <div class="buy-tickets div-button-new-tab" href="https://eventbook.ro/other/bilete-festival-pass-nova">-->
+        <!--                <img src="img/ticket.svg" style="margin-right:10px"/>-->
+        <!--                <div  data-i18n-key="buy-tickets-pass">-->
+        <!--                    BUY FESTIVAL PASS-->
+        <!--                </div>-->
+        <!--            </div>-->
+
+        <!--            <div class="buy-tickets-disabled div-button-new-tab" href="https://eventbook.ro/other/bilete-nova-expo">-->
+        <!--                <img src="img/ticket-pink.svg" style="margin-right:10px"/>-->
+        <!--                <div  data-i18n-key="buy-tickets-expo">-->
+        <!--                    BUY EXPO PASS-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <div class="content-container-row" style="background: linear-gradient(180deg, rgba(2,0,36,0) 0%, rgba(9,9,121,0) 0%, rgb(0, 0, 0) 83%); margin-bottom: 0px; padding-bottom: 25px;">
 
             <!-- MENU MOBILE -->
 
             <div id="menu-mobile">
                 <div class="active-main-menu-item main-menu-item-workshops">
                     <div id="workshops" class="main-menu-item-text" data-i18n-key="workshop">
-                        heading
+                        workshop
                     </div>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
@@ -477,7 +498,7 @@
             <div id="menu-desktop">
                 <div class="active-main-menu-item main-menu-item-workshops">
                     <div id="workshops" class="main-menu-item-text" data-i18n-key="workshop">
-                        heading
+                        workshop
                     </div>
                     <div class="main-menu-arrow">
                         <img src="img/arrow.png"/>
@@ -499,50 +520,58 @@
             <div class="details-content">
 
                 <div class="details-author">
-                    Marius Hodea
+                    Luciana Baicea (RO)
                 </div>
 
-                <div class="details-title" data-i18n-key="intro-to-metaverse-2-detail">
-                    metaverse-1
+                <div class="details-title" data-i18n-key="text-main-the-science-title">
+                    text-main-the-science-title
                 </div>
 
                 <div class="details-text-wrapper">
                     <div class="details-text-main">
 
-                        <div data-i18n-key="text-main-metaverse-2">
+                        <div data-i18n-key="text-main-the-science">
                         </div>
+
+                        <img src="/img/details2023/the-science/atentia.png" class="details-content-image">
 
                     </div>
 
                     <div class="details-text-info">
+                        <div class="details-text-info-header" data-i18n-key="when">
+                            CÂND
+                        </div>
+                        <div class="details-text-info-content">
+                            27/SEP/2023 <br/>
+                            19:00 - 20:00
+                        </div>
                         <div class="details-text-info-header" data-i18n-key="where">
                             UNDE
                         </div>
                         <div class="details-text-info-content" data-i18n-key="cinetic">
-                            CINETic
+                            cinetic
                         </div>
-                        <div class="details-text-info-header" data-i18n-key="when">
-                            when
-                        </div>
-                        <div class="details-text-info-content">
-                            15/Dec/2022
-                            <br/>
-                            18:00- 21:00
-                        </div>
-                        <div class="details-text-info-header" data-i18n-key="available-places">
-                            places
-                        </div>
-                        <div class="details-text-info-content">
-                            10
-                        </div>
-                        <div class="details-text-info-content">
-                            <div class="buy-tickets div-button-new-tab" href="https://eventbook.ro/festival/nova-festival?hall=CINETic&date=2022-12-13">
-                                <img src="img/ticket.svg" style="margin-right:10px"/>
-                                <div  data-i18n-key="buy-tickets">
-                                    BUY FESTIVAL PASS
-                                </div>
-                            </div>
-                        </div>
+<!--                        <div class="details-text-info-header" data-i18n-key="available-places">-->
+<!--                            places-->
+<!--                        </div>-->
+<!--                        <div class="details-text-info-content">-->
+<!--                            30-->
+<!--                        </div>-->
+<!--                        <div class="details-text-info-header" data-i18n-key="ticket">-->
+<!--                            ticket-->
+<!--                        </div>-->
+<!--                        <div class="details-text-info-content">-->
+<!--                            27 RON-->
+<!--                        </div>-->
+<!--                        <div class="details-text-info-content">-->
+<!--                            <div class="buy-tickets div-button-new-tab" href="https://eventbook.ro/other/bilete-nova-festival-protocoale-aplicate-in-productia-intretinerea-si-prezervarea-artei-new-media">-->
+<!--                                <img src="img/ticket.svg" style="margin-right:10px"/>-->
+<!--                                <div  data-i18n-key="buy-tickets">-->
+<!--                                    BUY FESTIVAL PASS-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
                     </div>
                 </div>
 
@@ -550,13 +579,12 @@
 
                 <div class="details-text-wrapper-author">
                     <div class="details-text-main">
-
-                        <div data-i18n-key="text-main-author-metaverse-1">
+                        <div data-i18n-key="text-main-the-science-author">
                         </div>
                     </div>
 
                     <div class="details-text-info">
-                        <img src="/img/details/edu/marius_hodea.jpg" class="details-content-image-author">
+                        <img src="../img/artist-talks/luciana_ma.jpg" class="details-content-image-author">
                     </div>
                 </div>
 
@@ -576,6 +604,7 @@
     </div>
 
 </div>
+
 <!-- pop-up dialog -->
 <div id="modal-dialog-popup"></div>
 

@@ -171,6 +171,7 @@ jQuery(function ($) {
                 "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
                 "sonic-explorations": "Sonic Explorations // Denis Flueraru",
                 "protocols-applied-to-production": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;} // Vicente Matallana",
+                "the-science-of-cognitive": "The Science of Cognitive Performance and Creativity // Luciana Baicea (RO)",
                 "aio-opening": "AIO all in one",
                 "an-error-has": "an error has occurred. <br/> The aesthetic appeal of imperfection and glitches in visual images // M Kardinal",
                 "intro-to-metaverse": "Intro to Metaverse: 360/VR Filmmaking // MARIUS HODEA",
@@ -304,7 +305,9 @@ jQuery(function ($) {
                     "Her particular interest in perceptual processes is reflected in her work, ultimately leading to the exploration and development of an abstract visual vocabulary that enables her to create a 'mental landscape of desire' in which the viewer actively participates in the process of conveying meaning. " +
                     "<br/><br/> " +
                     "In most of her work she uses obsolete analogue techniques and materials, fascinated by their unpredictable nature. Since 2016, she has collaborated with musicians, sound artists, and choreographers from Germany, Romania, Ukraine, and Canada to develop installations and audiovisual performances based on her artistic research into perceptual processes.",
-
+                "text-main-the-science-title": "The Science of Cognitive Performance and Creativity",
+                "text-main-the-science": "In this talk we explore the notions of optimal stress, how a state of flow looks like and how they contribute to an increased level of creativity. We discover the importance of focus, but also the impact moments of interruptions or distracting elements can have when we try to access a state of flow and unfold a creative process.",
+                "text-main-the-science-author": "<b>Luciana Baicea</b> is passionate about communication and a better understanding of those around her, as well as how we, humans, function as part of a vaster system. <br/><br/> With a wide experience as a communication professional and project manager in the creative part of advertising industry, Luciana decided in 2020 to support with her abilities the Mind Architect project and its mission to bring closer to Romanians self-knowledge, based on neuroscience and psychology applied to everyday life experience. <br/><br/> Starting 2020 she works as the Project Manager of Mind Architect and contributes with voice to all episodes, using these as learning opportunities. Besides her dedication to Mind Architect, Luciana is actively involved in the development of the Jazz Roots Bucharest community, a project centered on dance, personal development through dance and learning about jazz as an artform with Afro-American roots. ",
                 "text-main-new-art-title": "Protocols applied to the production, maintenance, and preservation of new media art. Practical cases from the .NewArt {foundation;}",
                 "text-main-new-art": "The .NewArt {foundation;} & {collection;} is recognized not only for what it collects but also for how it does so. It has pioneered an entirely new approach to collecting, promoting programs for producing, preserving, and patronizing technological art, while encouraging debates on issues related to the integration of new technologies in art." +
                     "<br/><br/> " +
@@ -642,6 +645,7 @@ jQuery(function ($) {
                 "walk-a-rhythm": "Walk <br/> <i>a rhythm</i>",
                 "roly-poly": "rolypoly~, un drum machine adaptiv și generativ // Grigore Burloiu",
                 "protocols-applied-to-production": "Protocoale aplicate în producția, întreținerea și prezervarea artei new media. Cazuri practice de la .NewArt {foundation;} // Vicente Matallana",
+                "the-science-of-cognitive": "Știința performanței cognitive și a creativității // Luciana Baicea (RO)",
                 "bodies-of-light": "Bodies of light // Amélie Laurence-Fortin",
                 "sonic-explorations": "Sonic Explorations // Denis Flueraru",
                 "aio-opening": "AIO all in one",
@@ -778,6 +782,9 @@ jQuery(function ($) {
                     "Lucrările sale reflectă interesul ei particular pentru procese de percepție. Astfel, practica ei este o explorare a unui vocabular vizual abstract care o ajută să creeze “peisaje mentale ale dorinței” în care vizitatorul participă activ și construiește însemnătatea lucrării." +
                     "<br/><br/> " +
                     "Fascinată de natura lor imprevizibilă, artista folosește tehnici și materiale depășite în majoritatea lucrărilor sale. Din 2016, a colaborat cu muzicieni, sound designeri și coregrafi din Germania, România, Ukraina și Canada, dezvoltând instalații și performance-uri audio-vizuale bazate pe cercetarea sa artistică în jurul percepției. ",
+                "text-main-the-science-title": "Știința performanței cognitive și a creativității",
+                "text-main-the-science": "În acest talk vorbim despre stres optim, cum arată starea de flow și cum contribuie ele la un nivel crescut de creativitate. Descoperim importanta concentrarii, dar și impactul pe care le au momentele de întrerupere sau elementele care ne distrag atentia atunci cand incercam sa accesam starea de flow și sa desfasuram un proces de creație.",
+                "text-main-the-science-author": "<b>Luciana Baicea</b> este un om pasionat de comunicare și de o mai buna înțelegere a celor din jur și a modului în care noi, ca oameni, funcționăm ca parte dintr-un sistem mai amplu. <br/><br/>Om de comunicare la bază și cu experiență de project management în industria creativă a publicității, Luciana a hotărât în 2020 să își pună abilitățile în slujba proiectului Mind Architect și a misiunii acestuia de a aduce cunoașterea de sine fundamentată în neuroștiință și psihologie aplicate în viața de zi cu zi mai aproape de cât mai mulți români.<br/><br/>Din 2020, lucrează ca Project Manager al proiectului Mind Architect și contribuie cu vocea în toate episoadele, folosindu-le pe acestea ca oportunități de învățare și contribuie activ în dezvoltarea comunității Jazz Roots Bucharest, un proiect concentrat în jurul dansului, a dezvoltării personale prin dans, dar și a învățării despre jazz ca formă de artă cu rădăcini afro-americane.",
                 "text-main-new-art-title": "Protocoale aplicate în producția, întreținerea și prezervarea artei new media.  Cazuri practice de la .NewArt {foundation;}",
                 "text-main-new-art": ".NewArt {foundation;} & {collection;} este recunoscută nu doar pentru ceea ce colectează, ci și pentru modul în care o face. Fundația este creatoarea unei abordări cu totul inovatoare în ceea ce privește colectarea, susținerea producției, prezervarea și consumul artei tech, precum și încurajarea dezbaterii subiectelor importante ca integrarea noilor tehnologii cu sens în artă. " +
                     "<br/><br/> " +
