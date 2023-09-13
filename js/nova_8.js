@@ -243,7 +243,7 @@ jQuery(function ($) {
                 "text-main-aio-3": "On AIO’s screens you discover a total of 55 videoportraits, accompanied by 5 sound compositions rendered in Quadrophonic format. All these paired with a certain degree of intensity of anxiety." +
                     "<br/><br/> " +
                     "The work is interactive and allows the visitors to modulate the sound and image in the space through a simple digital interface. Explore the space, select on the interface the level of anxiety you consider describes how you are feeling and your choice is expressed in the installation through a sound and video composition. ",
-                "text-main-have-you-seen": "An immersive 20-minute experience that will take you deep in the oceans to find yourself in new, unexpected ways. Just like the other installation developed within NOVA lab, it’s purpose is to offer, for two visitors in turn, the feeling of being present in more than one place at the same time. " +
+                "text-main-have-you-seen": "An immersive 20-minute experience that will take you deep in the oceans to find yourself in new, unexpected ways. Just like the other installation developed within NOVA lab, it’s purpose is to offer, in a one-to-one experience, the feeling of being present in more than one place at the same time. " +
                     "<br/><br/> " +
                     "6 visual artists joined forces with 2 sound designers, 4 performers, 1 art director, 1 graphic designer, 2 creative coders and 4 professionals from psychology, communication and neuroscience, to create this interactive installation." +
                     "<br/><br/> " +
@@ -253,7 +253,7 @@ jQuery(function ($) {
                     "<br/><br/> " +
                     "<b>Art direction and texts:</b> Emilia Păunescu" +
                     "<br/>" +
-                    "<b>Photo artists:</b> Felicia Simion (RO), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
+                    "<b>Visual artists:</b> Felicia Simion (RO), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
                     "<br/>" +
                     "<b>Performers:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
                     "<br/>" +
@@ -716,7 +716,7 @@ jQuery(function ($) {
                 "text-main-aio-3": "Pe ecranele AIO rulează, în total, 55 de videoportrete însoțite de 5 compoziții sonore în format Quadrophonic, toate aferente mai multor grade de intensitate a anxietății resimțite." +
                     "<br/><br/> " +
                     "Lucrarea este interactivă și îți permite să modulezi imaginea și sunetul din spațiu printr-o interfață digitală facilă, amplasată în incintă. Explorează spațiul, selectează pe tableta-interfață nivelul de anxietate pe care îl resimți în corp și alegerea ta este redată printr-o compoziție audio-vizuală. ",
-                "text-main-have-you-seen": "O experiență imersivă de aproximativ 20 minute care te duce în adâncul oceanelor pentru a te descoperi în feluri noi, neașteptate. La fel ca cealaltă instalație dezvoltată în cadrul NOVA lab, lucrarea urmărește să ofere, pe rând, pentru câte 2 vizitatori, sentimentul de a fi prezent în mai multe locuri în același timp." +
+                "text-main-have-you-seen": "O experiență imersivă de aproximativ 20 minute care te duce în adâncul oceanelor pentru a te descoperi în feluri noi, neașteptate. La fel ca cealaltă instalație dezvoltată în cadrul NOVA lab, lucrarea urmărește să ofere pentru vizitatori, in o experiență 1 la 1, sentimentul de a fi prezent în mai multe locuri în același timp." +
                     "<br/><br/> " +
                     "Pentru a crea această instalație interactivă, am adus împreună 6 artiști vizuali, 2 sound designeri, 4 performeri, un director artistic, un grafician, 2 programatori creativi și 4 profesioniști din psihologie, comunicare și neuroștiință." +
                     "<br/><br/> " +
@@ -727,7 +727,7 @@ jQuery(function ($) {
                     "<br/><br/> " +
                     "<b>Direcție artistică și text:</b> Emilia Păunescu" +
                     "<br/>" +
-                    "<b>Artiști foto:</b> Felicia Simion (RO), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
+                    "<b>Artiști vizuali:</b> Felicia Simion (RO), Mads Nissen (DK), Michele Bressan (IT/RO), M Kardinal (DE), Rachel Talibart (UK), Valentina Fusco (IT)" +
                     "<br/>" +
                     "<b>Performeri:</b> Alexandra Bălășoiu (RO), Denisa Nicolae (RO), Ema Alexandrescu (RO), Judith State (RO)" +
                     "<br/>" +
