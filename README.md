@@ -1,2 +1,2 @@
 # nova
-[https://copiiiexplicaistoria.ro/#/](https://copiiiexplicaistoria.ro/#/)
+[https://novanova.ro/](https://novanova.ro/)
